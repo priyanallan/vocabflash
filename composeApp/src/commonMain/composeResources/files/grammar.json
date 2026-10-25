@@ -1,0 +1,3052 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "draft-2026.10.3",
+  "levels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "categories": [
+    {
+      "id": "word-order",
+      "title": "Sentence structure",
+      "order": 1
+    },
+    {
+      "id": "cases-articles",
+      "title": "Nouns, articles & cases",
+      "order": 2
+    },
+    {
+      "id": "pronouns",
+      "title": "Pronouns & possessives",
+      "order": 3
+    },
+    {
+      "id": "verbs",
+      "title": "Verbs",
+      "order": 4
+    },
+    {
+      "id": "prepositions",
+      "title": "Prepositions & everyday patterns",
+      "order": 6
+    },
+    {
+      "id": "adjectives",
+      "title": "Adjectives & adverbs",
+      "order": 5
+    }
+  ],
+  "sourceReferences": [
+    {
+      "id": "wikibooks-german",
+      "title": "German (Wikibooks)",
+      "url": "https://en.wikibooks.org/wiki/German",
+      "license": "CC BY-SA 3.0 / GFDL (Wikibooks; see page history and license terms)",
+      "usage": "Topic outline and grammar cross-check; snippet wording and examples in this file are original."
+    },
+    {
+      "id": "wikipedia-german-declension",
+      "title": "German declension (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/German_declension",
+      "license": "CC BY-SA 4.0",
+      "usage": "Case and inflection cross-check; snippet wording and examples in this file are original."
+    },
+    {
+      "id": "deutschfokus-toolkit",
+      "title": "DeutschFokus German Learning Toolkit",
+      "url": "https://github.com/DeutschFokus/german-learning-toolkit",
+      "license": "MIT",
+      "usage": "Beginner-topic outline; verify repository license before release."
+    },
+    {
+      "id": "lingolia-grammar-index",
+      "title": "Lingolia German Grammar (topic index)",
+      "url": "https://deutsch.lingolia.com/en/grammar",
+      "license": "Proprietary — used as a coverage checklist only; no text, tables, or examples copied.",
+      "usage": "Completeness check of the concept list (2026-10-22)."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "a1.word-order.main-clause",
+      "level": "A1",
+      "category": "word-order",
+      "title": "Main clauses: verb in position 2",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Variant",
+            "Position 1",
+            "Finite verb",
+            "Rest"
+          ],
+          "rows": [
+            {
+              "label": "Subject first",
+              "cells": [
+                "Ich",
+                "lerne",
+                "heute Deutsch."
+              ]
+            },
+            {
+              "label": "Time first",
+              "cells": [
+                "Heute",
+                "lerne",
+                "ich Deutsch."
+              ]
+            },
+            {
+              "label": "Place first",
+              "cells": [
+                "Zu Hause",
+                "lerne",
+                "ich Deutsch."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "In a main clause, the finite verb is in position 2. Position 1 is one sentence element; it can contain more than one word."
+        }
+      ]
+    },
+    {
+      "id": "a1.word-order.questions",
+      "level": "A1",
+      "category": "word-order",
+      "title": "Yes/no and W-questions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Question",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "Yes/no",
+              "cells": [
+                "Verb + subject + …?",
+                "Kommst du heute?"
+              ]
+            },
+            {
+              "label": "W-question",
+              "cells": [
+                "W-word + verb + subject + …?",
+                "Wann kommst du?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The finite verb comes first in a yes/no question. In a W-question, the question word comes first and the verb follows it."
+        }
+      ]
+    },
+    {
+      "id": "a1.word-order.coordinating-conjunctions",
+      "level": "A1",
+      "category": "word-order",
+      "title": "Joining main clauses",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Conjunction",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "und",
+              "cells": [
+                "and",
+                "Ich lerne Deutsch und meine Schwester lernt Englisch."
+              ]
+            },
+            {
+              "label": "aber",
+              "cells": [
+                "but",
+                "Ich bin müde, aber ich lerne noch."
+              ]
+            },
+            {
+              "label": "oder",
+              "cells": [
+                "or",
+                "Fährst du mit dem Bus oder gehst du zu Fuß?"
+              ]
+            },
+            {
+              "label": "denn",
+              "cells": [
+                "because",
+                "Ich bleibe zu Hause, denn ich bin krank."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These conjunctions join main clauses; the usual main-clause word order stays in each clause."
+        }
+      ]
+    },
+    {
+      "id": "a1.word-order.negation",
+      "level": "A1",
+      "category": "word-order",
+      "title": "Nicht or kein?",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "kein: negate a noun with an indefinite/no article",
+              "cells": [
+                "Ich habe einen Hund. → Ich habe keinen Hund."
+              ]
+            },
+            {
+              "label": "nicht: negate a verb, adjective, or other sentence element",
+              "cells": [
+                "Ich komme heute. → Ich komme heute nicht."
+              ]
+            },
+            {
+              "label": "nicht: negate an adjective",
+              "cells": [
+                "Das Essen ist teuer. → Das Essen ist nicht teuer."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Kein changes its ending like ein. The position of nicht depends on what is being negated."
+        }
+      ]
+    },
+    {
+      "id": "a1.pattern.es-gibt",
+      "level": "A1",
+      "category": "word-order",
+      "title": "Es gibt + accusative",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "pattern",
+          "label": "Pattern",
+          "template": "Es gibt + accusative object",
+          "meaning": "There is / there are"
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Es gibt einen Park.",
+              "en": "There is a park."
+            },
+            {
+              "de": "Es gibt viele Cafés.",
+              "en": "There are many cafés."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The object after es gibt is accusative: einen Park, not ein Park."
+        }
+      ]
+    },
+    {
+      "id": "a1.cases.case-roles",
+      "level": "A1",
+      "category": "cases-articles",
+      "title": "The cases at a glance",
+      "sourceRefs": [
+        "wikipedia-german-declension",
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Common role / question",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "Nominative",
+              "cells": [
+                "Subject — who/what?",
+                "Der Mann schläft."
+              ]
+            },
+            {
+              "label": "Accusative",
+              "cells": [
+                "Direct object — whom/what?",
+                "Ich sehe den Mann."
+              ]
+            },
+            {
+              "label": "Dative",
+              "cells": [
+                "Often the indirect object — to/for whom?",
+                "Ich gebe dem Mann das Buch."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Prepositions and some verbs also determine the case. This is a quick guide to common roles, not a complete list of uses."
+        }
+      ]
+    },
+    {
+      "id": "a1.articles.definite-nom-acc-dat",
+      "level": "A1",
+      "category": "cases-articles",
+      "title": "Definite articles across cases",
+      "sourceRefs": [
+        "wikipedia-german-declension",
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Masculine",
+            "Feminine",
+            "Neuter",
+            "Plural"
+          ],
+          "rows": [
+            {
+              "label": "Nominative",
+              "cells": [
+                "der",
+                "die",
+                "das",
+                "die"
+              ]
+            },
+            {
+              "label": "Accusative",
+              "cells": [
+                "den",
+                "die",
+                "das",
+                "die"
+              ]
+            },
+            {
+              "label": "Dative",
+              "cells": [
+                "dem",
+                "der",
+                "dem",
+                "den"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Dative plural: the article is den; the noun often adds -n if it does not already end in -n or -s (den Kindern)."
+        }
+      ]
+    },
+    {
+      "id": "a1.articles.indefinite-nom-acc-dat",
+      "level": "A1",
+      "category": "cases-articles",
+      "title": "Ein-words: case forms",
+      "sourceRefs": [
+        "wikipedia-german-declension",
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Masculine",
+            "Feminine",
+            "Neuter"
+          ],
+          "rows": [
+            {
+              "label": "Nominative",
+              "cells": [
+                "ein",
+                "eine",
+                "ein"
+              ]
+            },
+            {
+              "label": "Accusative",
+              "cells": [
+                "einen",
+                "eine",
+                "ein"
+              ]
+            },
+            {
+              "label": "Dative",
+              "cells": [
+                "einem",
+                "einer",
+                "einem"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "There is no plural form of ein. Kein and possessive determiners use similar endings: kein Hund, keine Katze, kein Kind."
+        }
+      ]
+    },
+    {
+      "id": "a1.articles.gender-cues",
+      "level": "A1",
+      "category": "cases-articles",
+      "title": "Clues to noun gender",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Gender",
+            "Clue",
+            "Examples"
+          ],
+          "rows": [
+            {
+              "label": "Masculine",
+              "cells": [
+                "days, months, seasons; -ling",
+                "der Montag, der Januar, der Frühling"
+              ]
+            },
+            {
+              "label": "Feminine",
+              "cells": [
+                "-ung, -heit, -keit, -schaft, -ion",
+                "die Zeitung, die Freiheit, die Nation"
+              ]
+            },
+            {
+              "label": "Neuter",
+              "cells": [
+                "-chen, -lein, -ment",
+                "das Mädchen, das Büchlein, das Instrument"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These are useful clues, not rules without exceptions. Learn each noun together with its article."
+        }
+      ]
+    },
+    {
+      "id": "a1.nouns.plurals",
+      "level": "A1",
+      "category": "cases-articles",
+      "title": "Common plural patterns",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Pattern",
+            "Singular → plural"
+          ],
+          "rows": [
+            {
+              "label": "-(e)n",
+              "cells": [
+                "die Frau → die Frauen; die Lampe → die Lampen"
+              ]
+            },
+            {
+              "label": "-e (sometimes umlaut)",
+              "cells": [
+                "der Tag → die Tage; der Baum → die Bäume"
+              ]
+            },
+            {
+              "label": "-er (sometimes umlaut)",
+              "cells": [
+                "das Kind → die Kinder; das Buch → die Bücher"
+              ]
+            },
+            {
+              "label": "-s",
+              "cells": [
+                "das Auto → die Autos"
+              ]
+            },
+            {
+              "label": "No ending (sometimes umlaut)",
+              "cells": [
+                "der Lehrer → die Lehrer; der Vater → die Väter"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Plural forms are not fully predictable. Learn the plural with the noun."
+        }
+      ]
+    },
+    {
+      "id": "a1.pronouns.personal-nominative",
+      "level": "A1",
+      "category": "pronouns",
+      "title": "Personal pronouns: subject forms",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Person",
+            "Singular",
+            "Plural"
+          ],
+          "rows": [
+            {
+              "label": "1st",
+              "cells": [
+                "ich",
+                "wir"
+              ]
+            },
+            {
+              "label": "2nd informal",
+              "cells": [
+                "du",
+                "ihr"
+              ]
+            },
+            {
+              "label": "3rd",
+              "cells": [
+                "er / sie / es",
+                "sie"
+              ]
+            },
+            {
+              "label": "Formal address",
+              "cells": [
+                "Sie",
+                "Sie"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Formal Sie is capitalized and uses the same verb form as sie (they)."
+        }
+      ]
+    },
+    {
+      "id": "a1.pronouns.personal-accusative",
+      "level": "A1",
+      "category": "pronouns",
+      "title": "Personal pronouns: accusative",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Person",
+            "Nominative",
+            "Accusative"
+          ],
+          "rows": [
+            {
+              "label": "1st singular",
+              "cells": [
+                "ich",
+                "mich"
+              ]
+            },
+            {
+              "label": "2nd singular",
+              "cells": [
+                "du",
+                "dich"
+              ]
+            },
+            {
+              "label": "3rd singular",
+              "cells": [
+                "er / sie / es",
+                "ihn / sie / es"
+              ]
+            },
+            {
+              "label": "1st plural",
+              "cells": [
+                "wir",
+                "uns"
+              ]
+            },
+            {
+              "label": "2nd plural",
+              "cells": [
+                "ihr",
+                "euch"
+              ]
+            },
+            {
+              "label": "3rd / formal plural",
+              "cells": [
+                "sie / Sie",
+                "sie / Sie"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Ich sehe ihn.",
+              "en": "I see him."
+            },
+            {
+              "de": "Sie besucht uns.",
+              "en": "She visits us."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.pronouns.personal-dative",
+      "level": "A1",
+      "category": "pronouns",
+      "title": "Personal pronouns: dative",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Person",
+            "Nominative",
+            "Dative"
+          ],
+          "rows": [
+            {
+              "label": "1st singular",
+              "cells": [
+                "ich",
+                "mir"
+              ]
+            },
+            {
+              "label": "2nd singular",
+              "cells": [
+                "du",
+                "dir"
+              ]
+            },
+            {
+              "label": "3rd singular",
+              "cells": [
+                "er / sie / es",
+                "ihm / ihr / ihm"
+              ]
+            },
+            {
+              "label": "1st plural",
+              "cells": [
+                "wir",
+                "uns"
+              ]
+            },
+            {
+              "label": "2nd plural",
+              "cells": [
+                "ihr",
+                "euch"
+              ]
+            },
+            {
+              "label": "3rd / formal plural",
+              "cells": [
+                "sie / Sie",
+                "ihnen / Ihnen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Ich helfe dir.",
+              "en": "I help you."
+            },
+            {
+              "de": "Er gibt ihnen das Buch.",
+              "en": "He gives them the book."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.pronouns.interrogative",
+      "level": "A1",
+      "category": "pronouns",
+      "title": "Interrogative pronouns (W-words)",
+      "sourceRefs": [
+        "wikibooks-german",
+        "lingolia-grammar-index"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "W-word",
+            "Asks for",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "wer / wen / wem",
+              "cells": [
+                "a person (subject / object)",
+                "Wer ist das? — Wen siehst du?"
+              ]
+            },
+            {
+              "label": "was",
+              "cells": [
+                "a thing",
+                "Was machst du?"
+              ]
+            },
+            {
+              "label": "wann",
+              "cells": [
+                "time",
+                "Wann beginnt der Film?"
+              ]
+            },
+            {
+              "label": "wo / woher / wohin",
+              "cells": [
+                "place / origin / destination",
+                "Wo wohnst du? — Woher kommst du?"
+              ]
+            },
+            {
+              "label": "wie",
+              "cells": [
+                "manner, quality",
+                "Wie heißt du?"
+              ]
+            },
+            {
+              "label": "warum / wieso",
+              "cells": [
+                "reason",
+                "Warum lernst du Deutsch?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Use the case that answers the question: wer is nominative, wen accusative, wem dative."
+        }
+      ]
+    },
+    {
+      "id": "a1.pronouns.possessive",
+      "level": "A1",
+      "category": "pronouns",
+      "title": "Possessive determiners",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Owner",
+            "Base form",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "ich",
+              "cells": [
+                "mein-",
+                "mein Bruder / meine Schwester"
+              ]
+            },
+            {
+              "label": "du",
+              "cells": [
+                "dein-",
+                "dein Bruder / deine Schwester"
+              ]
+            },
+            {
+              "label": "er / es",
+              "cells": [
+                "sein-",
+                "sein Bruder / seine Schwester"
+              ]
+            },
+            {
+              "label": "sie (she)",
+              "cells": [
+                "ihr-",
+                "ihr Bruder / ihre Schwester"
+              ]
+            },
+            {
+              "label": "wir",
+              "cells": [
+                "unser-",
+                "unser Bruder / unsere Schwester"
+              ]
+            },
+            {
+              "label": "ihr (you plural)",
+              "cells": [
+                "euer-",
+                "euer Bruder / eure Schwester"
+              ]
+            },
+            {
+              "label": "sie (they) / Sie (formal)",
+              "cells": [
+                "ihr- / Ihr-",
+                "ihr Bruder / Ihr Bruder"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The ending agrees with the noun, like ein: mein Bruder, meinen Bruder, meine Schwester. Formal Ihr is capitalized."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.present-regular",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Regular verbs in the present",
+      "sourceRefs": [
+        "wikibooks-german",
+        "deutschfokus-toolkit"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Subject",
+            "Ending",
+            "lernen"
+          ],
+          "rows": [
+            {
+              "label": "ich",
+              "cells": [
+                "-e",
+                "lerne"
+              ]
+            },
+            {
+              "label": "du",
+              "cells": [
+                "-st",
+                "lernst"
+              ]
+            },
+            {
+              "label": "er / sie / es",
+              "cells": [
+                "-t",
+                "lernt"
+              ]
+            },
+            {
+              "label": "wir",
+              "cells": [
+                "-en",
+                "lernen"
+              ]
+            },
+            {
+              "label": "ihr",
+              "cells": [
+                "-t",
+                "lernt"
+              ]
+            },
+            {
+              "label": "sie / Sie",
+              "cells": [
+                "-en",
+                "lernen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Remove -en from the infinitive to find the stem: lern- + personal ending."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.sein-haben",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Sein and haben",
+      "sourceRefs": [
+        "wikibooks-german",
+        "deutschfokus-toolkit"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Subject",
+            "sein",
+            "haben"
+          ],
+          "rows": [
+            {
+              "label": "ich",
+              "cells": [
+                "bin",
+                "habe"
+              ]
+            },
+            {
+              "label": "du",
+              "cells": [
+                "bist",
+                "hast"
+              ]
+            },
+            {
+              "label": "er / sie / es",
+              "cells": [
+                "ist",
+                "hat"
+              ]
+            },
+            {
+              "label": "wir",
+              "cells": [
+                "sind",
+                "haben"
+              ]
+            },
+            {
+              "label": "ihr",
+              "cells": [
+                "seid",
+                "habt"
+              ]
+            },
+            {
+              "label": "sie / Sie",
+              "cells": [
+                "sind",
+                "haben"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Both verbs are highly irregular; learn these forms directly."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.present-stem-change",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Common present-tense stem changes",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Change",
+            "Infinitive",
+            "du",
+            "er / sie / es"
+          ],
+          "rows": [
+            {
+              "label": "e → i",
+              "cells": [
+                "sprechen",
+                "du sprichst",
+                "er spricht"
+              ]
+            },
+            {
+              "label": "e → ie",
+              "cells": [
+                "sehen",
+                "du siehst",
+                "sie sieht"
+              ]
+            },
+            {
+              "label": "a → ä",
+              "cells": [
+                "fahren",
+                "du fährst",
+                "er fährt"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The vowel change usually appears in du and er/sie/es. The other present-tense forms keep the stem vowel: wir sprechen, wir fahren."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.modal",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Modal verbs + infinitive",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Modal verb",
+            "Common meaning"
+          ],
+          "rows": [
+            {
+              "label": "können",
+              "cells": [
+                "can, be able to"
+              ]
+            },
+            {
+              "label": "müssen",
+              "cells": [
+                "must, have to"
+              ]
+            },
+            {
+              "label": "wollen",
+              "cells": [
+                "want to"
+              ]
+            },
+            {
+              "label": "dürfen",
+              "cells": [
+                "may, be allowed to"
+              ]
+            },
+            {
+              "label": "sollen",
+              "cells": [
+                "should, be supposed to"
+              ]
+            },
+            {
+              "label": "mögen",
+              "cells": [
+                "like"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pattern",
+          "label": "Sentence frame",
+          "template": "Subject + conjugated modal (position 2) + … + infinitive (at the end)",
+          "meaning": "Ich kann heute kommen. — I can come today."
+        },
+        {
+          "type": "note",
+          "text": "The modal is conjugated; the second verb stays in the infinitive at the end of the clause."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.separable",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Separable verbs",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Form",
+            "Example with aufstehen"
+          ],
+          "rows": [
+            {
+              "label": "Infinitive",
+              "cells": [
+                "aufstehen"
+              ]
+            },
+            {
+              "label": "Main clause",
+              "cells": [
+                "Ich stehe um sieben Uhr auf."
+              ]
+            },
+            {
+              "label": "With a modal",
+              "cells": [
+                "Ich muss früh aufstehen."
+              ]
+            },
+            {
+              "label": "Perfekt",
+              "cells": [
+                "Ich bin früh aufgestanden."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "In a simple main clause, the conjugated verb comes second and the separable prefix goes to the end. With an infinitive, the prefix stays attached."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.imperative",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Giving a simple command",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Address",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "du (informal, singular)",
+              "cells": [
+                "verb stem (often)",
+                "Komm! / Lerne!"
+              ]
+            },
+            {
+              "label": "ihr (informal, plural)",
+              "cells": [
+                "same form as ihr present; omit ihr",
+                "Kommt! / Lernt!"
+              ]
+            },
+            {
+              "label": "Sie (formal)",
+              "cells": [
+                "infinitive + Sie",
+                "Kommen Sie! / Lernen Sie!"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The du imperative can have spelling or stem-vowel changes: Lies! from lesen. These examples show common regular patterns."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.perfekt-frame",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Perfekt: sentence frame",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "pattern",
+          "label": "Pattern",
+          "template": "Subject + haben / sein (position 2) + … + past participle (at the end)",
+          "meaning": "A common way to talk about the past."
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Ich habe einen Film gesehen.",
+              "en": "I watched a film."
+            },
+            {
+              "de": "Wir sind nach Hause gegangen.",
+              "en": "We went home."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The auxiliary is conjugated. The past participle usually goes at the end of the clause."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.perfekt-auxiliary",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Perfekt: haben or sein?",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Auxiliary",
+            "Typical cases",
+            "Examples"
+          ],
+          "rows": [
+            {
+              "label": "haben",
+              "cells": [
+                "Most verbs; verbs with an accusative object",
+                "machen → hat gemacht; sehen → hat gesehen"
+              ]
+            },
+            {
+              "label": "sein",
+              "cells": [
+                "Many verbs of movement or change of state; also sein, bleiben, werden",
+                "gehen → ist gegangen; aufwachen → ist aufgewacht"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "This is a rule of thumb, not a complete rule. Learn the auxiliary with the verb; some verbs can take either auxiliary with a change in meaning."
+        }
+      ]
+    },
+    {
+      "id": "a1.verbs.participle",
+      "level": "A1",
+      "category": "verbs",
+      "title": "Building the past participle",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Verb type",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "Regular",
+              "cells": [
+                "ge- + stem + -t",
+                "machen → gemacht"
+              ]
+            },
+            {
+              "label": "Stem ends in -t / -d",
+              "cells": [
+                "often ge- + stem + -et",
+                "arbeiten → gearbeitet"
+              ]
+            },
+            {
+              "label": "Many irregular verbs",
+              "cells": [
+                "often ge- + changed stem + -en",
+                "sehen → gesehen"
+              ]
+            },
+            {
+              "label": "Infinitive in -ieren",
+              "cells": [
+                "stem + -t; no ge-",
+                "studieren → studiert"
+              ]
+            },
+            {
+              "label": "Separable prefix",
+              "cells": [
+                "prefix + ge- + stem + ending",
+                "einkaufen → eingekauft"
+              ]
+            },
+            {
+              "label": "Inseparable prefix",
+              "cells": [
+                "no ge-",
+                "besuchen → besucht"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These are common patterns; many strong verbs have forms that must be learned individually."
+        }
+      ]
+    },
+    {
+      "id": "a1.adjectives.predicative",
+      "level": "A1",
+      "category": "adjectives",
+      "title": "Adjectives and adverbs: one form",
+      "sourceRefs": [
+        "wikibooks-german",
+        "lingolia-grammar-index"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "Adjective after sein / werden / bleiben",
+              "cells": [
+                "Das Auto ist neu. / Das Wetter bleibt schön."
+              ]
+            },
+            {
+              "label": "Adverb with a verb",
+              "cells": [
+                "Er fährt schnell. / Sie singt gut."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Used like this, the adjective has no ending and the adverb has the same form as the adjective (gut, schnell). Declined adjectives before a noun come at A2."
+        }
+      ]
+    },
+    {
+      "id": "a1.prepositions.accusative",
+      "level": "A1",
+      "category": "prepositions",
+      "title": "Common accusative prepositions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Preposition",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "durch",
+              "cells": [
+                "Wir gehen durch den Park."
+              ]
+            },
+            {
+              "label": "für",
+              "cells": [
+                "Das Geschenk ist für meinen Bruder."
+              ]
+            },
+            {
+              "label": "gegen",
+              "cells": [
+                "Der Zug fährt gegen zehn Uhr."
+              ]
+            },
+            {
+              "label": "ohne",
+              "cells": [
+                "Ich trinke Kaffee ohne Milch."
+              ]
+            },
+            {
+              "label": "um",
+              "cells": [
+                "Wir sitzen um den Tisch."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These prepositions take the accusative. The list is a beginner's core set, not an exhaustive list."
+        }
+      ]
+    },
+    {
+      "id": "a1.prepositions.dative",
+      "level": "A1",
+      "category": "prepositions",
+      "title": "Common dative prepositions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Preposition",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "aus",
+              "cells": [
+                "Sie kommt aus der Schweiz."
+              ]
+            },
+            {
+              "label": "bei",
+              "cells": [
+                "Er wohnt bei seinen Eltern."
+              ]
+            },
+            {
+              "label": "mit",
+              "cells": [
+                "Wir fahren mit dem Bus."
+              ]
+            },
+            {
+              "label": "nach",
+              "cells": [
+                "Ich fahre nach Berlin."
+              ]
+            },
+            {
+              "label": "seit",
+              "cells": [
+                "Sie lernt seit einem Jahr Deutsch."
+              ]
+            },
+            {
+              "label": "von",
+              "cells": [
+                "Das Geschenk ist von meiner Schwester."
+              ]
+            },
+            {
+              "label": "zu",
+              "cells": [
+                "Ich gehe zu meiner Freundin."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These prepositions take the dative. Learn the preposition together with its case."
+        }
+      ]
+    },
+    {
+      "id": "a1.prepositions.time",
+      "level": "A1",
+      "category": "prepositions",
+      "title": "Common time prepositions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Use",
+            "Form",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "Clock time",
+              "cells": [
+                "um",
+                "Der Film beginnt um acht Uhr."
+              ]
+            },
+            {
+              "label": "Days / dates",
+              "cells": [
+                "am",
+                "Am Montag habe ich Zeit."
+              ]
+            },
+            {
+              "label": "Months / seasons",
+              "cells": [
+                "im",
+                "Im Sommer fahren wir ans Meer."
+              ]
+            },
+            {
+              "label": "Start and end",
+              "cells": [
+                "von … bis",
+                "Der Kurs ist von Montag bis Freitag."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "In these time expressions, am = an dem and im = in dem."
+        }
+      ]
+    },
+    {
+      "id": "a1.prepositions.contractions",
+      "level": "A1",
+      "category": "prepositions",
+      "title": "Preposition + article contractions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Short form",
+            "Full form",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "am",
+              "cells": [
+                "an dem",
+                "am Montag"
+              ]
+            },
+            {
+              "label": "ans",
+              "cells": [
+                "an das",
+                "ans Meer"
+              ]
+            },
+            {
+              "label": "im",
+              "cells": [
+                "in dem",
+                "im Haus"
+              ]
+            },
+            {
+              "label": "ins",
+              "cells": [
+                "in das",
+                "ins Kino"
+              ]
+            },
+            {
+              "label": "zum",
+              "cells": [
+                "zu dem",
+                "zum Bahnhof"
+              ]
+            },
+            {
+              "label": "zur",
+              "cells": [
+                "zu der",
+                "zur Schule"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These common contractions are standard in everyday German. The full form may be used when the article is stressed."
+        }
+      ]
+    },
+    {
+      "id": "a2.cases.genitive",
+      "level": "A2",
+      "category": "cases-articles",
+      "title": "The genitive case",
+      "sourceRefs": [
+        "wikipedia-german-declension",
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Masculine",
+            "Feminine",
+            "Neuter",
+            "Plural"
+          ],
+          "rows": [
+            {
+              "label": "Genitive",
+              "cells": [
+                "des",
+                "der",
+                "des",
+                "der"
+              ]
+            },
+            {
+              "label": "ein-word",
+              "cells": [
+                "eines",
+                "einer",
+                "eines",
+                "(keiner)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Das Auto des Vaters ist alt.",
+              "en": "The father's car is old."
+            },
+            {
+              "de": "Die Farbe des Hauses ist weiß.",
+              "en": "The colour of the house is white."
+            },
+            {
+              "de": "Eines Tages war er weg.",
+              "en": "One day he was gone."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Masculine and neuter nouns add -s or -es: des Mannes, des Kindes. The genitive shows possession and follows certain prepositions (B1)."
+        }
+      ]
+    },
+    {
+      "id": "a2.cases.dative-accusative",
+      "level": "A2",
+      "category": "cases-articles",
+      "title": "Verbs with a dative and an accusative object",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Verb",
+            "Example (dative person, accusative thing)"
+          ],
+          "rows": [
+            {
+              "label": "geben",
+              "cells": [
+                "Er gibt dem Kind das Spielzeug."
+              ]
+            },
+            {
+              "label": "zeigen",
+              "cells": [
+                "Sie zeigt dem Gast die Stadt."
+              ]
+            },
+            {
+              "label": "schenken",
+              "cells": [
+                "Ich schenke meiner Mutter ein Buch."
+              ]
+            },
+            {
+              "label": "schicken",
+              "cells": [
+                "Wir schicken den Freunden eine Karte."
+              ]
+            },
+            {
+              "label": "erklären",
+              "cells": [
+                "Der Lehrer erklärt den Schülern die Regel."
+              ]
+            },
+            {
+              "label": "empfehlen",
+              "cells": [
+                "Ich empfehle dir dieses Restaurant."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The person (dative) usually comes first: Ich gebe dem Kind das Spielzeug. With pronouns the accusative pronoun comes first: Ich gebe es dem Kind / Ich gebe es ihm."
+        }
+      ]
+    },
+    {
+      "id": "a2.nouns.n-declension",
+      "level": "A2",
+      "category": "cases-articles",
+      "title": "Weak masculine nouns (-n declension)",
+      "sourceRefs": [
+        "wikipedia-german-declension",
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Nominative → other cases"
+          ],
+          "rows": [
+            {
+              "label": "der Junge",
+              "cells": [
+                "den Jungen, dem Jungen, des Jungen"
+              ]
+            },
+            {
+              "label": "der Student",
+              "cells": [
+                "den Studenten, dem Studenten, des Studenten"
+              ]
+            },
+            {
+              "label": "der Herr",
+              "cells": [
+                "den Herrn, dem Herrn, des Herrn"
+              ]
+            },
+            {
+              "label": "der Kollege",
+              "cells": [
+                "den Kollegen, dem Kollegen, des Kollegen"
+              ]
+            },
+            {
+              "label": "der Nachbar",
+              "cells": [
+                "den Nachbarn, dem Nachbarn, des Nachbarn"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Many masculine nouns for people (and a few others) add -(e)n in every case except nominative singular. Exception: das Herz — dem Herzen."
+        }
+      ]
+    },
+    {
+      "id": "a2.verbs.praeteritum",
+      "level": "A2",
+      "category": "verbs",
+      "title": "Präteritum: sein, haben & modal verbs",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Subject",
+            "sein",
+            "haben"
+          ],
+          "rows": [
+            {
+              "label": "ich / er",
+              "cells": [
+                "war",
+                "hatte"
+              ]
+            },
+            {
+              "label": "du",
+              "cells": [
+                "warst",
+                "hattest"
+              ]
+            },
+            {
+              "label": "wir / sie / Sie",
+              "cells": [
+                "waren",
+                "hatten"
+              ]
+            },
+            {
+              "label": "ihr",
+              "cells": [
+                "wart",
+                "hattet"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "columns": [
+            "Modal (ich / er)",
+            "du",
+            "Meaning"
+          ],
+          "rows": [
+            {
+              "label": "konnte",
+              "cells": [
+                "konntest",
+                "was able to"
+              ]
+            },
+            {
+              "label": "musste",
+              "cells": [
+                "musstest",
+                "had to"
+              ]
+            },
+            {
+              "label": "wollte",
+              "cells": [
+                "wolltest",
+                "wanted to"
+              ]
+            },
+            {
+              "label": "durfte",
+              "cells": [
+                "durftest",
+                "was allowed to"
+              ]
+            },
+            {
+              "label": "sollte",
+              "cells": [
+                "solltest",
+                "was supposed to"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The Präteritum of sein, haben and modals is the normal past in written German and common in speech: Ich hatte keine Zeit. — Er musste arbeiten."
+        }
+      ]
+    },
+    {
+      "id": "a2.verbs.dative-verbs",
+      "level": "A2",
+      "category": "verbs",
+      "title": "Verbs that take the dative",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Verb",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "helfen",
+              "cells": [
+                "Ich helfe dem Mann."
+              ]
+            },
+            {
+              "label": "danken",
+              "cells": [
+                "Ich danke dir für die Hilfe."
+              ]
+            },
+            {
+              "label": "gefallen",
+              "cells": [
+                "Der Film gefällt mir."
+              ]
+            },
+            {
+              "label": "gehören",
+              "cells": [
+                "Das Auto gehört meinem Vater."
+              ]
+            },
+            {
+              "label": "passen",
+              "cells": [
+                "Die Jacke passt mir nicht."
+              ]
+            },
+            {
+              "label": "schmecken",
+              "cells": [
+                "Die Suppe schmeckt den Kindern."
+              ]
+            },
+            {
+              "label": "antworten",
+              "cells": [
+                "Er hat mir nicht geantwortet."
+              ]
+            },
+            {
+              "label": "fehlen",
+              "cells": [
+                "Mir fehlen die Wörter."
+              ]
+            },
+            {
+              "label": "gratulieren",
+              "cells": [
+                "Ich gratuliere dir zum Geburtstag."
+              ]
+            },
+            {
+              "label": "folgen",
+              "cells": [
+                "Folge mir bitte!"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These verbs take a dative object, not an accusative: Ich helfe dir (not: ich helfe dich). Learn the verb together with its case."
+        }
+      ]
+    },
+    {
+      "id": "a2.verbs.reflexive",
+      "level": "A2",
+      "category": "verbs",
+      "title": "Reflexive verbs and pronouns",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Subject",
+            "Reflexive pronoun (accusative)"
+          ],
+          "rows": [
+            {
+              "label": "ich",
+              "cells": [
+                "mich"
+              ]
+            },
+            {
+              "label": "du",
+              "cells": [
+                "dich"
+              ]
+            },
+            {
+              "label": "er / sie / es",
+              "cells": [
+                "sich"
+              ]
+            },
+            {
+              "label": "wir",
+              "cells": [
+                "uns"
+              ]
+            },
+            {
+              "label": "ihr",
+              "cells": [
+                "euch"
+              ]
+            },
+            {
+              "label": "sie / Sie",
+              "cells": [
+                "sich"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Ich wasche mich.",
+              "en": "I wash myself."
+            },
+            {
+              "de": "Wir verspäten uns.",
+              "en": "We are late."
+            },
+            {
+              "de": "Ich freue mich auf den Urlaub.",
+              "en": "I'm looking forward to the holiday."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Some reflexive verbs take a dative reflexive pronoun: Ich putze mir die Zähne. Many are fixed: sich freuen, sich interessieren, sich verspäten."
+        }
+      ]
+    },
+    {
+      "id": "a2.verbs.inseparable",
+      "level": "A2",
+      "category": "verbs",
+      "title": "Inseparable verbs",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Prefix",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "be-",
+              "cells": [
+                "besuchen → Ich besuche dich."
+              ]
+            },
+            {
+              "label": "ver-",
+              "cells": [
+                "verstehen → Ich verstehe dich."
+              ]
+            },
+            {
+              "label": "er-",
+              "cells": [
+                "erzählen → Er erzählt eine Geschichte."
+              ]
+            },
+            {
+              "label": "ent-",
+              "cells": [
+                "entdecken → Wir entdecken etwas Neues."
+              ]
+            },
+            {
+              "label": "emp-",
+              "cells": [
+                "empfehlen → Ich empfehle den Kuchen."
+              ]
+            },
+            {
+              "label": "ge-",
+              "cells": [
+                "gebrauchen (rare)"
+              ]
+            },
+            {
+              "label": "zer-",
+              "cells": [
+                "zerbrechen → Die Tasse zerbricht."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Inseparable verbs never split and their participles have no ge-: erzählt, besucht, verstanden. Stress falls on the stem: erZÄhlen."
+        }
+      ]
+    },
+    {
+      "id": "a2.word-order.subordinate-clauses",
+      "level": "A2",
+      "category": "word-order",
+      "title": "Subordinate clauses: verb to the end",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Conjunction",
+            "Meaning"
+          ],
+          "rows": [
+            {
+              "label": "weil",
+              "cells": [
+                "because"
+              ]
+            },
+            {
+              "label": "dass",
+              "cells": [
+                "that"
+              ]
+            },
+            {
+              "label": "wenn",
+              "cells": [
+                "if, when(ever)"
+              ]
+            },
+            {
+              "label": "obwohl",
+              "cells": [
+                "although"
+              ]
+            },
+            {
+              "label": "bevor",
+              "cells": [
+                "before"
+              ]
+            },
+            {
+              "label": "damit",
+              "cells": [
+                "so that"
+              ]
+            },
+            {
+              "label": "ob",
+              "cells": [
+                "whether"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pattern",
+          "label": "Pattern",
+          "template": "Main clause + conjunction + subject + … + verb (at the end)",
+          "meaning": "Ich bleibe zu Hause, weil ich krank bin."
+        },
+        {
+          "type": "note",
+          "text": "After a subordinating conjunction the finite verb goes to the end of the clause."
+        }
+      ]
+    },
+    {
+      "id": "a2.word-order.als-wenn",
+      "level": "A2",
+      "category": "word-order",
+      "title": "als or wenn?",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "als: one point in the past",
+              "cells": [
+                "Als ich ein Kind war, wohnte ich in Köln."
+              ]
+            },
+            {
+              "label": "wenn: repeated / present / future",
+              "cells": [
+                "Wenn ich Zeit habe, lese ich."
+              ]
+            },
+            {
+              "label": "wann: only in questions",
+              "cells": [
+                "Wann kommst du?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "After als/wenn the verb goes to the end of the clause. wann asks questions; als/wenn introduce time clauses."
+        }
+      ]
+    },
+    {
+      "id": "a2.adjectives.declension-der-words",
+      "level": "A2",
+      "category": "adjectives",
+      "title": "Adjective endings after der-words",
+      "sourceRefs": [
+        "wikipedia-german-declension",
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Masculine",
+            "Feminine",
+            "Neuter",
+            "Plural"
+          ],
+          "rows": [
+            {
+              "label": "Nominative",
+              "cells": [
+                "der -e",
+                "die -e",
+                "das -e",
+                "die -en"
+              ]
+            },
+            {
+              "label": "Accusative",
+              "cells": [
+                "den -en",
+                "die -e",
+                "das -e",
+                "die -en"
+              ]
+            },
+            {
+              "label": "Dative",
+              "cells": [
+                "dem -en",
+                "der -en",
+                "dem -en",
+                "den -en"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "der neue Wagen — der Wagen ist neu.",
+              "en": "the new car"
+            },
+            {
+              "de": "Ich kaufe den neuen Wagen.",
+              "en": "I'm buying the new car."
+            },
+            {
+              "de": "mit dem neuen Wagen",
+              "en": "with the new car"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "After a der-word the adjective shows the case only where the article does not: mostly -e or -en."
+        }
+      ]
+    },
+    {
+      "id": "a2.adjectives.declension-ein-words",
+      "level": "A2",
+      "category": "adjectives",
+      "title": "Adjective endings after ein-words",
+      "sourceRefs": [
+        "wikipedia-german-declension",
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Masculine",
+            "Feminine",
+            "Neuter",
+            "Plural (kein/meine)"
+          ],
+          "rows": [
+            {
+              "label": "Nominative",
+              "cells": [
+                "ein -er",
+                "eine -e",
+                "ein -es",
+                "keine -en"
+              ]
+            },
+            {
+              "label": "Accusative",
+              "cells": [
+                "einen -en",
+                "eine -e",
+                "ein -es",
+                "keine -en"
+              ]
+            },
+            {
+              "label": "Dative",
+              "cells": [
+                "einem -en",
+                "einer -en",
+                "einem -en",
+                "keinen -en"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "ein neuer Wagen — einen neuen Wagen — einem neuen Wagen",
+              "en": "a new car (cases)"
+            },
+            {
+              "de": "keine neuen Bücher — meinen neuen Büchern",
+              "en": "no new books — my new books"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Where the article (ein) shows no ending, the adjective must: der/ein difference. Singular nouns without an article take strong endings: guter Wein."
+        }
+      ]
+    },
+    {
+      "id": "a2.adjectives.comparative-superlative",
+      "level": "A2",
+      "category": "adjectives",
+      "title": "Comparative and superlative",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Adjective",
+            "Comparative",
+            "Superlative"
+          ],
+          "rows": [
+            {
+              "label": "klein",
+              "cells": [
+                "kleiner",
+                "am kleinsten"
+              ]
+            },
+            {
+              "label": "gut",
+              "cells": [
+                "besser",
+                "am besten"
+              ]
+            },
+            {
+              "label": "viel",
+              "cells": [
+                "mehr",
+                "am meisten"
+              ]
+            },
+            {
+              "label": "gern",
+              "cells": [
+                "lieber",
+                "am liebsten"
+              ]
+            },
+            {
+              "label": "hoch",
+              "cells": [
+                "höher",
+                "am höchsten"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pattern",
+          "label": "Comparisons",
+          "template": "… comparative + als … / so … wie …",
+          "meaning": "Berlin ist größer als Bonn. — Er ist so groß wie ich."
+        },
+        {
+          "type": "note",
+          "text": "Short adjectives usually umlaut (alt → älter). Superlative before a noun: der beste Tag."
+        }
+      ]
+    },
+    {
+      "id": "a2.prepositions.two-way",
+      "level": "A2",
+      "category": "prepositions",
+      "title": "Two-way prepositions: wo? or wohin?",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Question",
+            "Case",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "wo? (location)",
+              "cells": [
+                "Dative",
+                "Die Lampe steht auf dem Tisch."
+              ]
+            },
+            {
+              "label": "wohin? (destination)",
+              "cells": [
+                "Accusative",
+                "Ich stelle die Lampe auf den Tisch."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "an, auf, hinter, in, neben, über, unter, vor, zwischen — all take either case. Verbs of motion (gehen, legen, stellen) → accusative; verbs of position (sein, liegen, stehen) → dative. Countries needing an article change: Ich fahre in die Schweiz."
+        }
+      ]
+    },
+    {
+      "id": "a2.prepositions.time-more",
+      "level": "A2",
+      "category": "prepositions",
+      "title": "More time prepositions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Preposition",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "vor",
+              "cells": [
+                "ago",
+                "vor einem Jahr — a year ago"
+              ]
+            },
+            {
+              "label": "nach",
+              "cells": [
+                "after",
+                "nach der Arbeit — after work"
+              ]
+            },
+            {
+              "label": "ab",
+              "cells": [
+                "from … on",
+                "ab morgen — from tomorrow"
+              ]
+            },
+            {
+              "label": "gegen",
+              "cells": [
+                "around (approx.)",
+                "gegen acht Uhr — around eight"
+              ]
+            },
+            {
+              "label": "während",
+              "cells": [
+                "during",
+                "während des Kurses — during the course"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "während is officially genitive (während des Kurses); in speech the dative is common (während dem Kurs)."
+        }
+      ]
+    },
+    {
+      "id": "b1.word-order.relative-clauses",
+      "level": "B1",
+      "category": "word-order",
+      "title": "Relative clauses",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Case",
+            "Masculine",
+            "Feminine",
+            "Neuter",
+            "Plural"
+          ],
+          "rows": [
+            {
+              "label": "Nominative",
+              "cells": [
+                "der",
+                "die",
+                "das",
+                "die"
+              ]
+            },
+            {
+              "label": "Accusative",
+              "cells": [
+                "den",
+                "die",
+                "das",
+                "die"
+              ]
+            },
+            {
+              "label": "Dative",
+              "cells": [
+                "dem",
+                "der",
+                "dem",
+                "denen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Onkel.",
+              "en": "The man standing there is my uncle."
+            },
+            {
+              "de": "Das Buch, das ich lese, ist spannend.",
+              "en": "The book I'm reading is exciting."
+            },
+            {
+              "de": "Die Frau, der ich geholfen habe, dankt mir.",
+              "en": "The woman I helped thanks me."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The relative pronoun matches the antecedent's gender and number, but takes the case of its role in the relative clause. The verb goes to the end."
+        }
+      ]
+    },
+    {
+      "id": "b1.word-order.temporal-clauses",
+      "level": "B1",
+      "category": "word-order",
+      "title": "Time clauses: nachdem, bevor, während …",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Conjunction",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "nachdem",
+              "cells": [
+                "after",
+                "Nachdem ich gegessen hatte, ging ich schlafen."
+              ]
+            },
+            {
+              "label": "bevor",
+              "cells": [
+                "before",
+                "Bevor ich gehe, räume ich auf."
+              ]
+            },
+            {
+              "label": "während",
+              "cells": [
+                "while",
+                "Während er kocht, hört er Musik."
+              ]
+            },
+            {
+              "label": "bis",
+              "cells": [
+                "until",
+                "Warte, bis ich komme!"
+              ]
+            },
+            {
+              "label": "seitdem",
+              "cells": [
+                "since",
+                "Seitdem ich jogge, schlafe ich besser."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "nachdem needs an earlier time in its clause: Perfekt before a present main clause, Plusquamperfekt before a past one."
+        }
+      ]
+    },
+    {
+      "id": "b1.word-order.infinitive-clauses",
+      "level": "B1",
+      "category": "word-order",
+      "title": "Infinitive clauses: um … zu, ohne … zu",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Pattern",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "um … zu",
+              "cells": [
+                "in order to",
+                "Ich lerne Deutsch, um in Deutschland zu studieren."
+              ]
+            },
+            {
+              "label": "ohne … zu",
+              "cells": [
+                "without doing",
+                "Er ging, ohne sich zu verabschieden."
+              ]
+            },
+            {
+              "label": "statt … zu",
+              "cells": [
+                "instead of doing",
+                "Sie schreibt, statt anzurufen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The zu goes before the infinitive, which ends the clause; with separable verbs it sits inside: anzurufen. Both clauses need the same subject (for a different subject, use damit)."
+        }
+      ]
+    },
+    {
+      "id": "b1.verbs.passive",
+      "level": "B1",
+      "category": "verbs",
+      "title": "The passive: werden + Partizip II",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Tense",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "Present",
+              "cells": [
+                "wird … Partizip II",
+                "Das Auto wird repariert."
+              ]
+            },
+            {
+              "label": "Präteritum",
+              "cells": [
+                "wurde … Partizip II",
+                "Das Auto wurde repariert."
+              ]
+            },
+            {
+              "label": "Perfekt",
+              "cells": [
+                "ist … worden",
+                "Das Auto ist repariert worden."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "The doer can appear with von (person) or durch (means): Das Auto wird vom Mechaniker repariert. Modal + passive: Das Auto muss repariert werden."
+        }
+      ]
+    },
+    {
+      "id": "b1.verbs.plusquamperfekt",
+      "level": "B1",
+      "category": "verbs",
+      "title": "Plusquamperfekt: the past before the past",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "pattern",
+          "label": "Pattern",
+          "template": "hatte / war + Partizip II",
+          "meaning": "Ich hatte gefrühstückt. — Ich war schon gegangen."
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Als ich ankam, war der Zug schon abgefahren.",
+              "en": "When I arrived, the train had already left."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Used for the earlier of two past events, usually in a nachdem clause: Nachdem ich gefrühstückt hatte, ging ich zur Arbeit."
+        }
+      ]
+    },
+    {
+      "id": "b1.verbs.konjunktiv-ii",
+      "level": "B1",
+      "category": "verbs",
+      "title": "Konjunktiv II: would, could, might",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Form",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "würde + infinitive",
+              "cells": [
+                "Ich würde gern reisen."
+              ]
+            },
+            {
+              "label": "hätte",
+              "cells": [
+                "Ich hätte gern einen Kaffee."
+              ]
+            },
+            {
+              "label": "wäre",
+              "cells": [
+                "Das wäre schön."
+              ]
+            },
+            {
+              "label": "könnte",
+              "cells": [
+                "Könnten Sie mir helfen?"
+              ]
+            },
+            {
+              "label": "müsste / sollte",
+              "cells": [
+                "Du müsstest mehr schlafen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "hätte/wäre/könnte are preferred to würde + haben/sein/können. Common for polite requests and hypotheticals: Ich würde das nicht machen."
+        }
+      ]
+    },
+    {
+      "id": "b1.verbs.futur",
+      "level": "B1",
+      "category": "verbs",
+      "title": "Futur I: werden + infinitive",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "pattern",
+          "label": "Pattern",
+          "template": "werden (conjugated, position 2) + … + infinitive (end)",
+          "meaning": "Ich werde morgen kommen."
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "de": "Wir werden das Ergebnis sehen.",
+              "en": "We will see the result."
+            },
+            {
+              "de": "Sie wird wohl im Stress sein.",
+              "en": "She's probably stressed."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Everyday speech often uses the present with a time word instead: Ich komme morgen. Futur I also expresses an assumption: Sie wird wohl krank sein."
+        }
+      ]
+    },
+    {
+      "id": "b1.verbs.verbs-with-prepositions",
+      "level": "B1",
+      "category": "verbs",
+      "title": "Verbs with fixed prepositions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Verb + preposition",
+            "Case",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "warten auf",
+              "cells": [
+                "Akk",
+                "Ich warte auf den Bus."
+              ]
+            },
+            {
+              "label": "sich freuen auf",
+              "cells": [
+                "Akk",
+                "Sie freut sich auf den Urlaub."
+              ]
+            },
+            {
+              "label": "sich freuen über",
+              "cells": [
+                "Akk",
+                "Er freut sich über das Geschenk."
+              ]
+            },
+            {
+              "label": "denken an",
+              "cells": [
+                "Akk",
+                "Ich denke an dich."
+              ]
+            },
+            {
+              "label": "sich interessieren für",
+              "cells": [
+                "Akk",
+                "Er interessiert sich für Musik."
+              ]
+            },
+            {
+              "label": "teilnehmen an",
+              "cells": [
+                "Dat",
+                "Sie nimmt am Kurs teil."
+              ]
+            },
+            {
+              "label": "abhängen von",
+              "cells": [
+                "Dat",
+                "Es hängt vom Wetter ab."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Learn the verb together with its preposition and case; the preposition's case decides the article/pronoun endings."
+        }
+      ]
+    },
+    {
+      "id": "b1.prepositions.genitive",
+      "level": "B1",
+      "category": "prepositions",
+      "title": "Genitive prepositions",
+      "sourceRefs": [
+        "wikibooks-german"
+      ],
+      "snippet": [
+        {
+          "type": "table",
+          "columns": [
+            "Preposition",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            {
+              "label": "wegen",
+              "cells": [
+                "because of",
+                "Wegen des Regens bleiben wir zu Hause."
+              ]
+            },
+            {
+              "label": "trotz",
+              "cells": [
+                "despite",
+                "Trotz der Kälte geht er laufen."
+              ]
+            },
+            {
+              "label": "während",
+              "cells": [
+                "during",
+                "Während des Films ist das Handy aus."
+              ]
+            },
+            {
+              "label": "statt",
+              "cells": [
+                "instead of",
+                "Statt des Autos nehmen wir das Fahrrad."
+              ]
+            },
+            {
+              "label": "aufgrund",
+              "cells": [
+                "on account of",
+                "Aufgrund des Sturms fällt der Flug aus."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "text": "These prepositions take the genitive. In casual speech wegen is often heard with the dative (wegen dem Regen), but the genitive is the standard."
+        }
+      ]
+    }
+  ]
+}

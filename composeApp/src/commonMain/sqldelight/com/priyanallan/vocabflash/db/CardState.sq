@@ -1,0 +1,77 @@
+CREATE TABLE card_state (
+  entry_id TEXT NOT NULL,
+  mode TEXT NOT NULL,
+  state TEXT NOT NULL,
+  due INTEGER NOT NULL,
+  last_review INTEGER,
+  stability REAL NOT NULL,
+  difficulty REAL NOT NULL,
+  reps INTEGER NOT NULL,
+  lapses INTEGER NOT NULL,
+  scheduled_days INTEGER NOT NULL,
+  elapsed_days INTEGER NOT NULL,
+  flagged INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (entry_id, mode)
+);
+
+-- Per-day counters (D14): how many new Cards were introduced today.
+CREATE TABLE daily_stats (
+  day TEXT NOT NULL PRIMARY KEY,
+  new_introduced INTEGER NOT NULL DEFAULT 0
+);
+
+-- Small key/value store for learner settings.
+CREATE TABLE settings (
+  key TEXT NOT NULL PRIMARY KEY,
+  value TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM card_state;
+
+selectByEntryMode:
+SELECT * FROM card_state WHERE entry_id = ? AND mode = ?;
+
+selectFlagged:
+SELECT * FROM card_state WHERE flagged = 1 ORDER BY due;
+
+isFlagged:
+SELECT flagged FROM card_state WHERE entry_id = ? AND mode = ?;
+
+countAll:
+SELECT count(*) FROM card_state;
+
+countFlagged:
+SELECT count(*) FROM card_state WHERE flagged = 1;
+
+upsert:
+INSERT OR REPLACE INTO card_state(
+  entry_id, mode, state, due, last_review, stability, difficulty,
+  reps, lapses, scheduled_days, elapsed_days, flagged
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+ensureRow:
+INSERT OR IGNORE INTO card_state(
+  entry_id, mode, state, due, last_review, stability, difficulty,
+  reps, lapses, scheduled_days, elapsed_days, flagged
+)
+VALUES (?, ?, 'New', 0, NULL, 0, 0, 0, 0, 0, 0, 0);
+
+flagCard:
+UPDATE card_state SET flagged = 1 WHERE entry_id = ? AND mode = ?;
+
+unflagCard:
+UPDATE card_state SET flagged = 0 WHERE entry_id = ? AND mode = ?;
+
+selectDailyNew:
+SELECT new_introduced FROM daily_stats WHERE day = ?;
+
+upsertDailyNew:
+INSERT OR REPLACE INTO daily_stats(day, new_introduced) VALUES (?, ?);
+
+getSetting:
+SELECT value FROM settings WHERE key = ?;
+
+putSetting:
+INSERT OR REPLACE INTO settings(key, value) VALUES (?, ?);

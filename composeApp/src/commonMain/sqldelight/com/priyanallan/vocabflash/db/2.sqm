@@ -1,0 +1,10 @@
+-- Migration 2 → 3: daily new-card counters (D14) and a learner settings store.
+CREATE TABLE daily_stats (
+  day TEXT NOT NULL PRIMARY KEY,
+  new_introduced INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE settings (
+  key TEXT NOT NULL PRIMARY KEY,
+  value TEXT NOT NULL
+);
