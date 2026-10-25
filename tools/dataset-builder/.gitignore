@@ -1,0 +1,22 @@
+# Never commit downloaded or extracted third-party/content data.
+# Goethe Wortliste PDFs and any extracted/derived Goethe content are copyrighted
+# and private-only (see docs/adr/0002-copyrighted-goethe-list-private-use.md).
+*.pdf
+*.tsv
+*.csv
+*.jsonl
+*.jsonl.gz
+/data/
+/input/
+/output/
+/out/
+
+# Build output
+build/
+.gradle/
+.kotlin/
+
+# Keep the tiny, synthetic test fixtures (they contain no real Goethe content).
+!src/test/resources/fixtures/**
+# Keep the synthetic example inputs (authored by us, no copyrighted content).
+!example/**

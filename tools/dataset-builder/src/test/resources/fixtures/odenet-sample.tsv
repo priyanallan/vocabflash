@@ -1,0 +1,13 @@
+lemma	relation	related
+Haus	similar	Gebäude
+Haus	broader	Immobilie
+Haus	narrower	Villa
+Haus	narrower	Wohnhaus
+Haus	similar	Heim
+Haus	narrower	Bauwerk
+Haus	similar	Unterkunft
+Haus	similar	Hütte
+Haus	similar	Haus
+laufen	narrower	rennen
+laufen	broader	sich bewegen
+laufen	similar	traben
