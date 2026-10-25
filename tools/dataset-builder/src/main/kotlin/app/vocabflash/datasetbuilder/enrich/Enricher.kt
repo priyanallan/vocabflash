@@ -66,7 +66,7 @@ object Enricher {
             lemma = row.lemma,
             normalizedLemma = normalizeLemma(row.lemma),
             level = row.level,
-            pos = row.pos,
+            pos = row.pos ?: kaikki?.pos, // wordlist wins; Kaikki supplies POS when the wordlist has none
             article = article,
             gender = gender,
             plural = row.plural ?: kaikki?.plural,

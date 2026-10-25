@@ -5,7 +5,28 @@ enum class Level(val code: String) {
     A1("A1"), A2("A2"), B1("B1"), B2("B2")
 }
 
-enum class PartOfSpeech { Noun, Verb, Adjective, Adverb, Phrase, Other }
+/**
+ * Part of speech, as displayed on the card back. Values map from the dataset's `pos`
+ * field (Kaikki/Wiktextract tags) in [data.DatasetLoader]; unknown tags fall back to [Other].
+ */
+enum class PartOfSpeech(val label: String) {
+    Noun("Noun"),
+    Verb("Verb"),
+    Adjective("Adjective"),
+    Adverb("Adverb"),
+    Pronoun("Pronoun"),
+    Preposition("Preposition"),
+    Conjunction("Conjunction"),
+    Determiner("Determiner"),
+    Article("Article"),
+    Numeral("Numeral"),
+    Interjection("Interjection"),
+    Particle("Particle"),
+    ProperNoun("Proper noun"),
+    Contraction("Contraction"),
+    Phrase("Phrase"),
+    Other("Other"),
+}
 
 /** How a Card asks for retrieval. One Entry yields one Card per active mode. */
 enum class StudyMode(val label: String) {

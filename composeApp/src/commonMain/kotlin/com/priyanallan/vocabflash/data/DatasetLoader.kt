@@ -36,6 +36,17 @@ internal fun DatasetEntryDto.toDomain(): Entry? {
         "verb" -> PartOfSpeech.Verb
         "adj", "adjective" -> PartOfSpeech.Adjective
         "adv", "adverb" -> PartOfSpeech.Adverb
+        "pron" -> PartOfSpeech.Pronoun
+        "prep" -> PartOfSpeech.Preposition
+        "conj" -> PartOfSpeech.Conjunction
+        "det" -> PartOfSpeech.Determiner
+        "article" -> PartOfSpeech.Article
+        "num" -> PartOfSpeech.Numeral
+        "intj" -> PartOfSpeech.Interjection
+        "particle" -> PartOfSpeech.Particle
+        "name" -> PartOfSpeech.ProperNoun
+        "contraction" -> PartOfSpeech.Contraction
+        "postp" -> PartOfSpeech.Other // rare; keep generic rather than invent a category
         "phrase" -> PartOfSpeech.Phrase
         else -> PartOfSpeech.Other
     }
