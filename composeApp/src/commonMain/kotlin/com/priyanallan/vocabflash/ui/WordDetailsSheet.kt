@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -73,12 +74,13 @@ fun WordDetailsSheet(
                 .fillMaxWidth()
                 .clickable(enabled = false) {},
         ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(24.dp)
-                    .verticalScroll(rememberScrollState()),
-            ) {
+            SelectionContainer {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(24.dp)
+                        .verticalScroll(rememberScrollState()),
+                ) {
                 Header(entry.displayForm, onClose)
 
                 if (entry.related.isNotEmpty()) {
@@ -115,6 +117,7 @@ fun WordDetailsSheet(
                 }
 
                 Spacer(Modifier.height(8.dp))
+                }
             }
         }
     }

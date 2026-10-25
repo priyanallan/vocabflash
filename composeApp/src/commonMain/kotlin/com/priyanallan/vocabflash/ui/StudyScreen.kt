@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -153,9 +154,10 @@ fun StudyScreen(
     val isQuiz = card.mode == StudyMode.GenderDrill
     var chosen by remember(index) { mutableStateOf<String?>(null) }
 
-    // Word Details (D51): closed when null, else shows that Entry's sheet.
-    var detailsEntry by remember { mutableStateOf<Entry?>(null) }
-    // Related-word peek modal, shown above the details sheet.
+    // Word Details (D51): a stack of visited sheets. Opening a related word's sheet pushes;
+    // × pops back to the previous sheet, and only the last × returns to the cards.
+    val detailsStack = remember { mutableStateListOf<Entry>() }
+    // Related-word peek modal, shown above the top details sheet.
     var peekEntry by remember { mutableStateOf<Entry?>(null) }
 
     // D53: progress reflects position; counter shows Cards still unrated.
@@ -369,13 +371,16 @@ fun StudyScreen(
                     contentColor = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier
                         .align(Alignment.BottomEnd)
-                        .padding(14.dp)
-                        .clickable { detailsEntry = entry },
+                        // Comfortable touch target: the pill itself plus breathing room, so a
+                        // slightly-off tap opens details instead of flipping the card.
+                        .padding(end = 10.dp, bottom = 10.dp)
+                        .sizeIn(minWidth = 56.dp, minHeight = 44.dp)
+                        .clickable { detailsStack.add(entry) },
                 ) {
                     Text(
                         "More",
                         style = MaterialTheme.typography.labelMedium,
-                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                        modifier = Modifier.padding(horizontal = 18.dp, vertical = 12.dp),
                     )
                 }
             }
@@ -402,11 +407,16 @@ fun StudyScreen(
         }
     }
 
-    detailsEntry?.let { shown ->
+    detailsStack.lastOrNull()?.let { shown ->
         WordDetailsSheet(
             entry = shown,
             // While a related-word peek is open, the sheet must not close underneath it.
-            onClose = { if (peekEntry == null) detailsEntry = null },
+            onClose = {
+                if (peekEntry == null) {
+                    if (detailsStack.size > 1) detailsStack.removeAt(detailsStack.lastIndex)
+                    else detailsStack.clear()
+                }
+            },
             onOpenRelated = { word -> lookupEntry(word)?.let { peekEntry = it } },
         )
     }
@@ -417,7 +427,7 @@ fun StudyScreen(
             onClose = { peekEntry = null },
             onMore = {
                 peekEntry = null
-                detailsEntry = related
+                detailsStack.add(related)
             },
         )
     }
@@ -583,6 +593,11 @@ private fun CardBack(entry: Entry, mode: StudyMode, onSpeak: () -> Unit) {
         Text("/$it/", style = MaterialTheme.typography.bodySmall, modifier = Modifier.alpha(0.65f))
     }
     TextButton(onClick = onSpeak) { Text("\uD83D\uDD0A Listen") }
+    Text(
+        entry.partOfSpeech.name,
+        style = MaterialTheme.typography.labelMedium,
+        modifier = Modifier.alpha(0.6f),
+    )
 }
 
 /**
