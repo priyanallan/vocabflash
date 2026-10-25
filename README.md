@@ -4,13 +4,6 @@ An offline-first German vocabulary app for Android and iOS — CEFR A1–B2 stru
 repetition, Enriched word details, offline pronunciation, and a browse-only grammar deck. Built with
 Kotlin Multiplatform and Compose Multiplatform. No accounts, no backend, no tracking.
 
-> **Learning project.** Vocab Flash exists first as a vehicle for learning Compose Multiplatform,
-> Kotlin Multiplatform, mobile architecture and spaced-repetition scheduling. Where a choice existed
-> between "fastest shipped result" and "the path that teaches the most", it deliberately takes the
-> learning path (see [`docs/adr/0004-learning-first-purpose.md`](docs/adr/0004-learning-first-purpose.md)).
-> That is why the FSRS-6 scheduler, the navigation stack and the dependency wiring are hand-rolled
-> rather than pulled from libraries.
-
 ## Highlights
 
 - **Spaced repetition, implemented from the FSRS-6 spec** — a pure, deterministic scheduler in
