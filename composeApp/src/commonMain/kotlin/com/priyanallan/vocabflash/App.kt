@@ -72,7 +72,7 @@ sealed interface Screen {
 fun App(repository: ProgressRepository? = null) {
     var darkTheme by remember { mutableStateOf(false) }
 
-    // Load the bundled Goethe→Kaikki Dataset; falls back to SampleEntries if absent (ADR-0005).
+    // Load the bundled wordlist→Kaikki Dataset; falls back to SampleEntries if absent (ADR-0005).
     val entries by produceState(initialValue = SampleEntries) { value = loadBundledDataset() }
     // Grammar Deck content (D58–D60); empty content renders an "unavailable" state.
     val grammar by produceState(initialValue = GrammarContent()) { value = loadBundledGrammar() }

@@ -325,15 +325,11 @@ fun AttributionsScreen() {
         Text("Attribution", style = MaterialTheme.typography.headlineMedium)
 
         Attribution(
-            title = "Goethe-Institut Wortliste (A1/A2/B1)",
-            detail = "The vocabulary and CEFR levels come from the official Wortliste PDFs. " +
-                "© Goethe-Institut e.V. — all rights reserved. Used here only for private, " +
-                "unpublished study; not for redistribution.",
-            links = listOf(
-                "goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A1_Wortliste.pdf",
-                "goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf",
-                "goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_B1_Wortliste.pdf",
-            ),
+            title = "german-cefr-wordlist & FrequencyWords",
+            detail = "The level-tagged headwords (A1–B1) come from ph98/german-cefr-wordlist, " +
+                "which maps the FrequencyWords German list into approximate CEFR bands. " +
+                "Levels are frequency-estimated, not official CEFR. MIT licence.",
+            links = listOf("github.com/ph98/german-cefr-wordlist", "github.com/hermitdave/FrequencyWords"),
         )
         Attribution(
             title = "Kaikki.org / Wiktextract",
@@ -359,6 +355,19 @@ fun AttributionsScreen() {
             detail = "Related words come from OdeNet's synonym groups. " +
                 "Licensed CC BY-SA 4.0 — attribution and share-alike.",
             links = listOf("github.com/hdaSprachtechnologie/odenet"),
+        )
+        Attribution(
+            title = "Universal Dependencies — German GSD",
+            detail = "Fallback accusative/dative usage examples. Licensed CC BY-SA 4.0 — " +
+                "attribution and share-alike.",
+            links = listOf("universaldependencies.org/treebanks/de_gsd"),
+        )
+        Attribution(
+            title = "Grammar references",
+            detail = "Grammar concepts are written originally; topic coverage and factual checks " +
+                "used Wikibooks German and Wikipedia's German declension articles (CC BY-SA). " +
+                "See grammar.json for per-concept source references.",
+            links = listOf("en.wikibooks.org/wiki/German", "en.wikipedia.org/wiki/German_declension"),
         )
         Attribution(
             title = "Poppins",

@@ -147,7 +147,7 @@ class Deck(val level: Level, val cards: List<Card>) {
     }
 }
 
-/** Levels currently shipped — B2 has no free Goethe list yet (D10). */
+/** Levels currently shipped — B2 is not in the bundled open dataset yet (D10). */
 val SupportedLevels: List<Level> = listOf(Level.A1, Level.A2, Level.B1)
 
 /** Study modes active in v1 (D8). Gender drill only applies to nouns. */

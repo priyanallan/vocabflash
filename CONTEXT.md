@@ -48,7 +48,7 @@ _Avoid_: Practice, drill, lesson
 
 **Dataset**:
 The bundled, versioned collection of Entries shipped with the app.
-_Avoid_: Wordlist (reserve for the external published Goethe/telc sources), content, database
+_Avoid_: Wordlist (reserve for external published exam-wordlist sources), content, database
 
 **Deck**:
 A level-based study collection of Cards the learner studies together (e.g. the A1 Deck). Surfaced on

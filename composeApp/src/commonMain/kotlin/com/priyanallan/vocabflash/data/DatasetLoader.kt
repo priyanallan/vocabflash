@@ -18,7 +18,7 @@ private const val DATASET_PATH = "files/dataset.json"
 private val json = Json { ignoreUnknownKeys = true }
 
 /**
- * Loads the bundled Dataset produced by the Goethe/KEFR → Kaikki pipeline (ADR-0005).
+ * Loads the bundled Dataset produced by the wordlist → Kaikki pipeline (ADR-0005).
  * Falls back to [SampleEntries] if the resource is missing or malformed, so the app never
  * fails to start on a bad dataset.
  */
