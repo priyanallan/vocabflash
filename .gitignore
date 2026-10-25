@@ -1,0 +1,42 @@
+# Gradle / Kotlin
+.gradle/
+build/
+**/build/
+.kotlin/
+local.properties
+gradle/gradle-daemon-jvm.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+captures/
+
+# Design exports are kept, but ignore temp downloads
+*.tar.gz
+
+# --- Dataset inputs and build outputs (never commit third-party source data) ---
+# Wordlists, PDFs and corpora you feed the builder belong outside git.
+tools/dataset-builder/input/
+tools/dataset-builder/out/
+tools/dataset-builder/output/
+tools/dataset-builder/data/
+*.pdf
+*.tsv.bz2
+*.conllu
+*.jsonl
+*.jsonl.gz
+*.xml.bz2
+
+# Exception: the pipeline ships tiny synthetic fixtures and a synthetic example input.
+!tools/dataset-builder/example/**
+!tools/dataset-builder/src/test/resources/fixtures/**
+
+# Android signing / secrets
+*.jks
+*.keystore
+keystore.properties
+.env

@@ -1,0 +1,46 @@
+# NOTICE — content attribution
+
+This repository's **source code** is licensed under the MIT licence (see `LICENSE`).
+The **bundled word data** (`composeApp/src/commonMain/composeResources/files/dataset.json`) is a
+derived work of the sources below and remains under their licences. The grammar content
+(`grammar.json`) is hand-authored, using openly licensed references for topic coverage and
+cross-checking only.
+
+## Vocabulary dataset
+
+- **Wiktionary / Wiktextract / Kaikki** — definitions, gender, plurals, verb forms, IPA and example
+  sentences. Source: <https://kaikki.org/dictionary/German/>.
+  Licence: **CC BY-SA 4.0** (share-alike). Copyright Wiktionary contributors.
+- **Tatoeba** — German–English example sentence pairs. Source: <https://tatoeba.org>.
+  Licence: **CC BY 2.0 FR**. Copyright Tatoeba contributors.
+- **OdeNet — Open German WordNet** — semantic relations (broader/narrower/similar).
+  Licence: **CC BY-SA 4.0**.
+- **Universal Dependencies — German GSD** — fallback case-usage examples.
+  Licence: **CC BY-SA 4.0**.
+- **german-cefr-wordlist** (`ph98`) — level-tagged lemma list, derived from FrequencyWords.
+  Source: <https://github.com/ph98/german-cefr-wordlist>. Licence: **MIT**.
+  Copyright (c) 2026; includes data from **FrequencyWords** (MIT), Copyright (c) 2016 Hermit Dave.
+- **hermitdave/FrequencyWords** — German frequency list underpinning the CEFR estimates.
+  Licence: **MIT**.
+
+Because Kaikki-derived content is **share-alike**, redistributing a modified `dataset.json` requires
+keeping it under CC BY-SA 4.0 and preserving this attribution.
+
+## Grammar content
+
+The 52 grammar concepts are written originally. Topic coverage and factual cross-checks used:
+
+- **Wikibooks — German** (<https://en.wikibooks.org/wiki/German>), CC BY-SA 3.0 / GFDL.
+- **Wikipedia — German declension** (<https://en.wikipedia.org/wiki/German_declension>), CC BY-SA 4.0.
+- **DeutschFokus German Learning Toolkit** (<https://github.com/DeutschFokus/german-learning-toolkit>), MIT.
+- **Lingolia German Grammar** — used as a coverage checklist only; no text or tables copied.
+
+## Fonts
+
+- **Poppins** — SIL Open Font License 1.1.
+
+## Note on official exam wordlists
+
+No Goethe-Institut, telc or other copyrighted exam wordlist is included. The dataset builder accepts
+any level-tagged wordlist you are entitled to use; levels shipped here are frequency-derived
+approximations, not official CEFR certifications.
