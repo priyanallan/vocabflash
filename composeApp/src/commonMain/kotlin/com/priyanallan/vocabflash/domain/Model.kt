@@ -8,24 +8,25 @@ enum class Level(val code: String) {
 /**
  * Part of speech, as displayed on the card back. Values map from the dataset's `pos`
  * field (Kaikki/Wiktextract tags) in [data.DatasetLoader]; unknown tags fall back to [Other].
+ * [label] is the English name; [labelDe] the German grammatical term shown beside it.
  */
-enum class PartOfSpeech(val label: String) {
-    Noun("Noun"),
-    Verb("Verb"),
-    Adjective("Adjective"),
-    Adverb("Adverb"),
-    Pronoun("Pronoun"),
-    Preposition("Preposition"),
-    Conjunction("Conjunction"),
-    Determiner("Determiner"),
-    Article("Article"),
-    Numeral("Numeral"),
-    Interjection("Interjection"),
-    Particle("Particle"),
-    ProperNoun("Proper noun"),
-    Contraction("Contraction"),
-    Phrase("Phrase"),
-    Other("Other"),
+enum class PartOfSpeech(val label: String, val labelDe: String) {
+    Noun("Noun", "Substantiv"),
+    Verb("Verb", "Verb"),
+    Adjective("Adjective", "Adjektiv"),
+    Adverb("Adverb", "Adverb"),
+    Pronoun("Pronoun", "Pronomen"),
+    Preposition("Preposition", "Präposition"),
+    Conjunction("Conjunction", "Konjunktion"),
+    Determiner("Determiner", "Determinativ"),
+    Article("Article", "Artikel"),
+    Numeral("Numeral", "Zahlwort"),
+    Interjection("Interjection", "Interjektion"),
+    Particle("Particle", "Partikel"),
+    ProperNoun("Proper noun", "Eigenname"),
+    Contraction("Contraction", "Kontraktion"),
+    Phrase("Phrase", "Phrase"),
+    Other("Other", "Sonstiges"),
 }
 
 /** How a Card asks for retrieval. One Entry yields one Card per active mode. */

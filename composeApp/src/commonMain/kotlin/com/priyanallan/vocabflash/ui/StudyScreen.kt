@@ -594,7 +594,7 @@ private fun CardBack(entry: Entry, mode: StudyMode, onSpeak: () -> Unit) {
     }
     TextButton(onClick = onSpeak) { Text("\uD83D\uDD0A Listen") }
     Text(
-        entry.partOfSpeech.label,
+        "${entry.partOfSpeech.label} · ${entry.partOfSpeech.labelDe}",
         style = MaterialTheme.typography.labelMedium,
         modifier = Modifier.alpha(0.6f),
     )
