@@ -97,7 +97,8 @@ fun DeckListScreen(
     ) {
         Text("Today", style = MaterialTheme.typography.headlineMedium)
         Text(
-            "${queue.all.size} cards ready · new cards capped at $newPerDay/day",
+            "${queue.all.size} cards ready — ${queue.due.size} due · ${queue.new.size} new " +
+                "(daily limit caps new cards only, at $newPerDay/day)",
             style = MaterialTheme.typography.bodyMedium,
         )
 

@@ -101,24 +101,30 @@ fun StudyScreen(
     }
 
     // D14 daily queue, then D49 spacing so an Entry's modes are never adjacent.
-    val session = remember(cards, applyDailyLimit, now) {
+    // Keys include the limits: changing the daily allowance must rebuild the queue.
+    data class BuiltSession(val cards: List<StudyCard>, val dueCount: Int, val newCount: Int)
+    val built = remember(cards, applyDailyLimit, now, newPerDay, introducedToday) {
         // Randomise the presentation order so a session does not always start with "aber".
         val shuffled = cards.shuffled()
-        val queue = if (!applyDailyLimit) {
-            shuffled
-        } else {
-            buildStudyQueue(
-                cards = shuffled,
-                infoOf = { card ->
-                    scheduleByCard[card]?.let { QueueInfo(it.reps, it.due) } ?: QueueInfo.New
-                },
-                now = now,
-                newPerDay = newPerDay,
-                newIntroducedToday = introducedToday,
-            ).all
-        }
-        spaceOut(queue)
+        val queue = buildStudyQueue(
+            cards = shuffled,
+            infoOf = { card ->
+                scheduleByCard[card]?.let { QueueInfo(it.reps, it.due) } ?: QueueInfo.New
+            },
+            now = now,
+            newPerDay = newPerDay,
+            newIntroducedToday = introducedToday,
+        )
+        BuiltSession(
+            cards = if (applyDailyLimit) spaceOut(queue.all) else spaceOut(shuffled),
+            dueCount = queue.due.size,
+            newCount = queue.new.size,
+        )
     }
+    val session = built.cards
+    // Due/new split, shown in the header so the session size is never a mystery (due Reviews are
+    // uncapped by design — D14 — only new Cards obey the daily allowance).
+    val sessionSplit = if (applyDailyLimit) built.dueCount to built.newCount else null
 
     if (session.isEmpty()) {
         Column(Modifier.fillMaxSize().padding(20.dp)) {
@@ -271,6 +277,13 @@ fun StudyScreen(
             progress = { (index + 1).toFloat() / session.size },
             modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
         )
+        sessionSplit?.let { (due, new) ->
+            Text(
+                "$due due · $new new — the daily limit applies to new cards only",
+                style = MaterialTheme.typography.labelSmall,
+                modifier = Modifier.alpha(0.55f).padding(top = 2.dp),
+            )
+        }
 
         Spacer(Modifier.weight(1f))
 

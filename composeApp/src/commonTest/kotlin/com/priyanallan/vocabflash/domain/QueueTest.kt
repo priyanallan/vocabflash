@@ -17,6 +17,26 @@ class QueueTest {
         StudyCard(Entry(id, id, PartOfSpeech.Noun, Level.A1), mode)
 
     @Test
+    fun sessionSizeCombinesUncappedDueReviewsWithCappedNewCards() {
+        // newPerDay = 5 with 7 due reviews and plenty of new cards → session size is 12, not 5
+        // (D14: the daily allowance limits NEW cards; due reviews are always included).
+        val due = (1..7).map { card("d$it") }
+        val fresh = (1..9).map { card("n$it") }
+        val cards = due + fresh
+        val info = due.associateWith { QueueInfo(reps = 1, due = 100) }
+        val queue = buildStudyQueue(
+            cards = cards,
+            infoOf = { info[it] ?: QueueInfo.New },
+            now = 1_000,
+            newPerDay = 5,
+            newIntroducedToday = 0,
+        )
+        assertEquals(7, queue.due.size)
+        assertEquals(5, queue.new.size)
+        assertEquals(12, queue.all.size)
+    }
+
+    @Test
     fun dueReviewsAreAlwaysIncludedEvenWhenNewAllowanceIsZero() {
         val cards = listOf(card("a"), card("b"))
         val info = mapOf(
