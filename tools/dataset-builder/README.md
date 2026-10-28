@@ -147,6 +147,16 @@ Entry IDs are **stable** and derived from normalized lemma + level (+ `pos` when
 4. **Enrich** — the supplied wordlist is authoritative; Kaikki only fills gaps.
 5. **Emit** — deterministic, sorted JSON + manifest + QA + unmatched report.
 
+## Translation quality
+
+Inflected-form entries (erste, alten, besser, dem …) carry *form descriptions* in Kaikki ("inflection
+of gut:", "dative masculine/neuter singular of der: the"), not meanings. The parser extracts the real
+meaning when the gloss carries one ("better", "the", the quoted tail) and otherwise falls back to the
+referenced base lemma, then to mechanical de-inflection of the wordlist lemma. Wordlist rows that end
+up with **no usable translation at all** (mostly inflected verb forms like *bist*, *warst*,
+*geschworen*) are **dropped** and reported in the QA report — a card without a meaning is unusable in
+both study directions.
+
 ## Limitations / not yet implemented
 
 - **No PDF extraction.** The wordlist input is a prepared TSV/CSV.

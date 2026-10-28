@@ -1,5 +1,6 @@
 package app.vocabflash.datasetbuilder.enrich
 
+import app.vocabflash.datasetbuilder.match.KaikkiIndexLookup
 import app.vocabflash.datasetbuilder.wordlist.WordListRow
 import app.vocabflash.datasetbuilder.kaikki.CompactKaikki
 import app.vocabflash.datasetbuilder.model.CaseUsage
@@ -34,14 +35,45 @@ data class EnrichLimits(
  */
 object Enricher {
 
-    fun enrich(row: WordListRow, kaikki: CompactKaikki?, limits: EnrichLimits): DatasetEntry {
+    fun enrich(
+        row: WordListRow,
+        kaikki: CompactKaikki?,
+        limits: EnrichLimits,
+        /** Resolves a base lemma to its Kaikki entry, for inflected wordlist rows. */
+        lookupBase: KaikkiIndexLookup? = null,
+    ): DatasetEntry {
         val gender = row.gender ?: kaikki?.gender
         val article = row.article ?: articleForGender(gender)
 
-        val translations = LinkedHashSet<String>().apply {
+        var translations: List<String> = LinkedHashSet<String>().apply {
             addAll(row.translations)
             kaikki?.translations?.forEach { add(it) }
         }.take(limits.maxTranslations)
+
+        // An inflected-form entry (erste, alten, …) describes its base word instead of carrying a
+        // meaning. When nothing real remains after filtering, fall back to the base lemma's gloss:
+        // first the base named in the "inflection of …" gloss, then mechanical de-inflection of the
+        // wordlist lemma (ersten → erst → "first"). Keeps translations empty when nothing matches.
+        if (translations.isEmpty() && lookupBase != null) {
+            val candidates = buildList {
+                kaikki?.inflectionBase?.let { add(it) }
+                val lemma = row.lemma
+                for (suffix in listOf("en", "er", "es", "em", "e", "n", "s")) {
+                    if (lemma.length > suffix.length + 2 && lemma.endsWith(suffix)) {
+                        add(lemma.removeSuffix(suffix))
+                    }
+                }
+                add(lemma.lowercase())
+            }.distinct()
+            for (candidate in candidates) {
+                val baseEntry = lookupBase.lookup(candidate)
+                val baseTranslations = baseEntry?.translations?.take(limits.maxTranslations).orEmpty()
+                if (baseTranslations.isNotEmpty()) {
+                    translations = baseTranslations
+                    break
+                }
+            }
+        }
 
         val verb = if (
             row.pos == "verb" || row.praeteritum != null || row.partizipII != null ||

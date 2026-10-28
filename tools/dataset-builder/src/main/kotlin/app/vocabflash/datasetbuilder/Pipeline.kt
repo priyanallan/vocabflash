@@ -98,6 +98,7 @@ class Pipeline(private val toolVersion: String = "0.1.0") {
         // Surface form (normalized) → wordlist lemma(s), for locating inflected forms in Tatoeba.
         val formToLemmas = HashMap<String, MutableSet<String>>()
         var matched = 0
+        var droppedNoTranslation = 0
 
         for (row in rows) {
             val kaikki = when (val m = matcher.match(row)) {
@@ -105,7 +106,14 @@ class Pipeline(private val toolVersion: String = "0.1.0") {
                 is MatchResult.Unmatched -> { unmatched.add(UnmatchedLemma(row.level, m.lemma)); null }
             }
 
-            val entry = Enricher.enrich(row, kaikki, config.limits)
+            val entry = Enricher.enrich(row, kaikki, config.limits, lookupBase = index::lookup)
+            // A card without any meaning is unusable in both study directions; wordlist rows like
+            // "bist"/"warst"/"geschworen" are inflected verb forms, not vocabulary. Drop them and
+            // say so in the QA report rather than shipping cards that show "—".
+            if (entry.translations.isEmpty()) {
+                droppedNoTranslation++
+                continue
+            }
             registerForms(formToLemmas, row.lemma, kaikki)
 
             // Guarantee id uniqueness while keeping ids deterministic. Collisions happen only when
@@ -121,6 +129,13 @@ class Pipeline(private val toolVersion: String = "0.1.0") {
                 suffixed
             }
             entries.add(finalEntry)
+        }
+
+        if (droppedNoTranslation > 0) {
+            notes.add(
+                "Dropped $droppedNoTranslation wordlist rows without any usable translation " +
+                    "(mostly inflected verb forms, e.g. participles and imperatives).",
+            )
         }
 
         // 4) Optional enrichment stages (absent-safe).

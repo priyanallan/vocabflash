@@ -28,6 +28,12 @@ data class CompactKaikki(
      * widen the search keys when matching Tatoeba sentences to a lemma (inflected forms).
      */
     val forms: List<String> = emptyList(),
+    /**
+     * The base lemma referenced by this entry's "inflection of …" gloss, if its glosses are
+     * inflection descriptions rather than meanings. Lets the enricher fall back to the base
+     * lemma's real translations for wordlist entries that are inflected forms.
+     */
+    val inflectionBase: String? = null,
 ) {
     /** Rough "is this the better of two same-lemma entries?" heuristic. */
     fun richness(): Int =

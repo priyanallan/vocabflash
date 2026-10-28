@@ -23,6 +23,50 @@ object KaikkiParser {
 
     private val GENDER_KEYS = listOf("g", "gen", "gender")
 
+    /**
+     * Wiktextract glosses on inflected-form entries describe the base lemma instead of a meaning
+     * ("inflection of erste.: …", "comparative degree of gut; better"). Group 2 captures the base.
+     */
+    private val inflectionBaseRegex =
+        Regex("(?i)^((?:inflection of)|(?:alternative (?:spelling |form )?of)|(?:obsolete spelling of)|(?:comparative (?:form |degree )?of)|(?:superlative (?:form |degree )?of))\\s+([\\p{L}\\-]+)")
+
+    /** "inflection of all (“all”)" — the quoted tail is the actual meaning. */
+    private val quotedMeaningRegex = Regex("[“\"]([^”\"]+)[”\"]")
+
+    /**
+     * "dative masculine/neuter singular of der: the" / "comparative degree of gut; better" —
+     * group 1 is the base lemma, group 2 the meaning that follows ":" or ";".
+     */
+    private val meaningAfterOfRegex =
+        Regex("(?i).*\\bof\\s+([\\p{L}\\-]+)\\s*[:;]\\s*(.+)")
+
+    /** True when a gloss consists only of declension keywords — a form description, not a meaning. */
+    private val DECLENSION_WORDS = setOf(
+        "strong", "weak", "mixed", "masculine", "feminine", "neuter",
+        "nominative", "accusative", "genitive", "dative",
+        "singular", "plural", "all", "gender", "case", "comparative", "superlative",
+    )
+
+    /**
+     * "dative plural of der" / "genitive masculine/neuter singular of der" — a pure case-form
+     * description; group 1 (when present) is the referenced base lemma.
+     */
+    private val caseFormRegex = Regex(
+        "(?i)^(?:[a-z]+[ /])*(?:nominative|accusative|genitive|dative)(?:[ /][a-z]+)*(?:[ /](?:singular|plural))(?: of ([\\p{L}\\-]+))?$",
+    )
+
+    /** "Dative singular masculine and neutral gender forms of alles" — base in the trailing "of". */
+    private val formsOfRegex = Regex("(?i)^(?:nominative|accusative|genitive|dative)\\b.*\\bforms? of ([\\p{L}\\-]+)\\b")
+
+    private fun isDeclensionOnlyGloss(gloss: String): Boolean {
+        val words = gloss.lowercase()
+            .replace(',', ' ').replace('/', ' ').replace('-', ' ')
+            .split(Regex("\\s+"))
+            .filter { it.isNotBlank() }
+        if (words.isEmpty()) return false
+        return words.all { it in DECLENSION_WORDS }
+    }
+
     fun parse(word: String, obj: JsonObject): CompactKaikki {
         val pos = obj.str("pos")
         val posKey = pos?.lowercase()
@@ -105,6 +149,7 @@ object KaikkiParser {
 
         // German extracts usually have no `translations`; the English meaning is the sense gloss.
         val translations = LinkedHashSet<String>()
+        var capturedInflectionBase: String? = null
         for (sense in senseObjs) {
             for (t in sense.arr("translations")?.mapNotNull { it as? JsonObject }.orEmpty()) {
                 if (t.str("lang") == "English") {
@@ -113,12 +158,65 @@ object KaikkiParser {
             }
         }
         if (translations.isEmpty()) {
+            var inflectionBase: String? = null
             for (sense in senseObjs) {
-                for (gloss in sense.strList("glosses")) {
-                    val cleaned = gloss.substringBefore(" (").trim().trimEnd('.')
+                val senseGlosses = sense.strList("glosses")
+                if ("form-of" in sense.tags()) {
+                    // Form-of senses (inflected forms, comparative/superlative forms, alt spellings)
+                    // describe a base lemma, but often carry the real meaning after "of"/quotes:
+                    //   "comparative degree of gut; better"            → "better"
+                    //   "dative masculine/neuter singular of der: the" → "the"
+                    //   "inflection of all (“all”)"                    → "all"
+                    //   "inflection of gut:"                           → (nothing; base "gut")
+                    for (gloss in senseGlosses) {
+                        // Pure case-form descriptions inside form-of senses ("dative plural of der").
+                        val formMatch = caseFormRegex.find(gloss) ?: formsOfRegex.find(gloss)
+                        if (formMatch != null) {
+                            val base = formMatch.groupValues[1]
+                            if (inflectionBase == null && base.isNotEmpty()) inflectionBase = base
+                            quotedMeaningRegex.find(gloss)?.let { q ->
+                                q.groupValues[1].trim().takeIf { it.isNotEmpty() }?.let { translations.add(it) }
+                            }
+                            continue
+                        }
+                        inflectionBaseRegex.find(gloss)?.let { m ->
+                            if (inflectionBase == null) inflectionBase = m.groupValues[2]
+                        }
+                        quotedMeaningRegex.find(gloss)?.let { m ->
+                            m.groupValues[1].trim().takeIf { it.isNotEmpty() }?.let { translations.add(it) }
+                        }
+                        meaningAfterOfRegex.find(gloss)?.let { m ->
+                            if (inflectionBase == null) inflectionBase = m.groupValues[1]
+                            m.groupValues[2].trim().trimEnd('.').takeIf { it.isNotEmpty() }
+                                ?.let { translations.add(it) }
+                        }
+                    }
+                    continue
+                }
+                for (gloss in senseGlosses) {
+                    // Form descriptions outside the form-of tag: capture the base, never the case text.
+                    val inflection = inflectionBaseRegex.find(gloss)
+                    if (inflection != null) {
+                        if (inflectionBase == null) inflectionBase = inflection.groupValues[2]
+                        continue
+                    }
+                    val formMatch = caseFormRegex.find(gloss) ?: formsOfRegex.find(gloss)
+                    if (formMatch != null) {
+                        val base = formMatch.groupValues[1]
+                        if (inflectionBase == null && base.isNotEmpty()) inflectionBase = base
+                        quotedMeaningRegex.find(gloss)?.let { q ->
+                            q.groupValues[1].trim().takeIf { it.isNotEmpty() }?.let { translations.add(it) }
+                        }
+                        continue
+                    }
+                    // A gloss consisting only of declension keywords ("strong genitive masculine/neuter
+                    // singular") is a form description, not a meaning.
+                    if (isDeclensionOnlyGloss(gloss)) continue
+                    val cleaned = gloss.substringBefore(" (").trim().trimEnd('.', ',', ';', ':')
                     if (cleaned.isNotEmpty()) translations.add(cleaned)
                 }
             }
+            capturedInflectionBase = inflectionBase
         }
 
         val ipa = LinkedHashSet<String>()
@@ -147,6 +245,7 @@ object KaikkiParser {
             presentEr = presentEr,
             presentIhr = presentIhr,
             translations = translations.toList(),
+            inflectionBase = capturedInflectionBase,
             ipa = ipa.toList(),
             examples = examples,
             forms = allForms,

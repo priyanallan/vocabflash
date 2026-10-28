@@ -595,7 +595,16 @@ private fun CardBack(entry: Entry, mode: StudyMode, onSpeak: () -> Unit) {
     } else {
         entry.displayForm
     }
-    Text(headline, style = MaterialTheme.typography.titleLarge, textAlign = TextAlign.Center)
+    if (headline.isBlank()) {
+        Text(
+            "—",
+            style = MaterialTheme.typography.titleLarge,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.alpha(0.4f),
+        )
+    } else {
+        Text(headline, style = MaterialTheme.typography.titleLarge, textAlign = TextAlign.Center)
+    }
 
     // The answer side stays minimal: meaning, plural, pronunciation, audio.
     // Examples and the full word table live in Word Details (behind "More").
