@@ -33,6 +33,20 @@ class EnricherTest {
     }
 
     @Test
+    fun nonNounsNeverGetAnArticle() {
+        // Kaikki's form-of sense tags leak "masculine"; an adjective must not become "der erster".
+        val adj = CompactKaikki(word = "erster", pos = "adj", gender = "masculine", translations = listOf("first"))
+        val entry = Enricher.enrich(row("erster"), adj, limits)
+        assertEquals(null, entry.article)
+        assertEquals(null, entry.gender)
+
+        // Nouns keep theirs.
+        val noun = CompactKaikki(word = "Mann", pos = "noun", gender = "masculine")
+        val nounEntry = Enricher.enrich(row("Mann"), noun, limits)
+        assertEquals("der", nounEntry.article)
+    }
+
+    @Test
     fun wordlistTranslationsAlwaysWin() {
         val kaikki = CompactKaikki(word = "Haus", pos = "noun", translations = listOf("house"))
         val entry = Enricher.enrich(

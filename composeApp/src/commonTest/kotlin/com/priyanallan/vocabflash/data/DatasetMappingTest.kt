@@ -46,6 +46,22 @@ class DatasetMappingTest {
     }
 
     @Test
+    fun nonNounDisplayFormNeverCarriesAnArticle() {
+        val entry = dto(
+            """{"id":"a1-erster-num","lemma":"erster","level":"A1","pos":"num",
+               "article":"der","gender":"masculine","translations":["first"]}""",
+        ).toDomain()!!
+
+        assertEquals("erster", entry.displayForm) // not "der erster"
+
+        val noun = dto(
+            """{"id":"a1-haus-noun","lemma":"Haus","level":"A1","pos":"noun",
+               "article":"das","translations":["house"]}""",
+        ).toDomain()!!
+        assertEquals("das Haus", noun.displayForm)
+    }
+
+    @Test
     fun adjectiveMapsWithoutVerbOrArticle() {
         val entry = dto(
             """{"id":"a2-wichtig-adj","lemma":"wichtig","level":"A2","pos":"adj",

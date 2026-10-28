@@ -49,6 +49,25 @@ class KaikkiParserTest {
     }
 
     @Test
+    fun formOfSenseTagsDoNotImplyGender() {
+        val entry = parse(
+            """{"word":"erster","pos":"num",
+                "senses":[{"tags":["form-of","masculine","nominative","singular","strong"],
+                           "glosses":["inflection of erste:", "strong/mixed nominative masculine singular"]}]}""",
+        )
+        assertNull(entry.gender)
+    }
+
+    @Test
+    fun realNounSenseTagsStillYieldGender() {
+        val entry = parse(
+            """{"word":"Mann","pos":"noun",
+                "senses":[{"tags":["masculine"],"glosses":["adult male person"]}]}""",
+        )
+        assertEquals("masculine", entry.gender)
+    }
+
+    @Test
     fun quotedMeaningInFormOfGlossIsExtracted() {
         val entry = parse(
             """{"word":"alle","pos":"pron",

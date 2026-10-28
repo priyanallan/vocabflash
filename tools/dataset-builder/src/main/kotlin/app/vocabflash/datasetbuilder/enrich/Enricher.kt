@@ -42,8 +42,11 @@ object Enricher {
         /** Resolves a base lemma to its Kaikki entry, for inflected wordlist rows. */
         lookupBase: KaikkiIndexLookup? = null,
     ): DatasetEntry {
-        val gender = row.gender ?: kaikki?.gender
-        val article = row.article ?: articleForGender(gender)
+        // Articles/gender only exist for nouns. Adjectives/pronouns must never inherit one —
+        // Kaikki's form-of sense tags describe declension ("der erster"), not lexical gender.
+        val isNoun = (row.pos ?: kaikki?.pos) == "noun"
+        val gender = if (isNoun) row.gender ?: kaikki?.gender else null
+        val article = if (isNoun) row.article ?: articleForGender(gender) else row.article
 
         var translations: List<String> = LinkedHashSet<String>().apply {
             addAll(row.translations)

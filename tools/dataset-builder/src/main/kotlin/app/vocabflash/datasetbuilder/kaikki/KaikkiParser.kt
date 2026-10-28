@@ -260,8 +260,10 @@ object KaikkiParser {
                 args[key]?.let { normalizeGender(it.jsonPrimitive.contentOrNull)?.let { g -> return g } }
             }
         }
-        // 2) sense tags such as ["masculine"].
+        // 2) sense tags such as ["masculine"] — but NOT on form-of senses: their gender tags
+        //    describe the inflected form's declension ("der erster"), not the word's gender.
         for (sense in senses) {
+            if ("form-of" in sense.tags()) continue
             for (tag in sense.strList("tags")) {
                 when (tag.lowercase()) {
                     "masculine" -> return "masculine"

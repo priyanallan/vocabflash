@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
-    "datasetVersion": "2026.10-public.6",
-    "generatedAt": "2026-10-28T22:38:27.720828227Z",
+    "datasetVersion": "2026.10-public.7",
+    "generatedAt": "2026-10-28T22:42:09.874885607Z",
     "levels": [
         "A1",
         "A2",
@@ -395,8 +395,6 @@
             "normalizedLemma": "alle",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "all"
             ],
@@ -532,8 +530,6 @@
             "normalizedLemma": "allen",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "all"
             ],
@@ -573,8 +569,6 @@
             "normalizedLemma": "alles",
             "level": "A1",
             "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "everything; all",
                 "all",
@@ -799,8 +793,6 @@
             "normalizedLemma": "alte",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "old",
                 "ancient",
@@ -847,8 +839,6 @@
             "normalizedLemma": "alten",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "old",
                 "ancient",
@@ -891,8 +881,6 @@
             "normalizedLemma": "alter",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "old",
                 "ancient",
@@ -1053,8 +1041,6 @@
             "normalizedLemma": "andere",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "other, different",
                 "second"
@@ -1100,8 +1086,6 @@
             "normalizedLemma": "anderen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "other, different",
                 "second"
@@ -1137,8 +1121,6 @@
             "normalizedLemma": "anderer",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "other, different",
                 "second"
@@ -1186,8 +1168,6 @@
             "normalizedLemma": "anderes",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "other, different",
                 "second"
@@ -2769,8 +2749,6 @@
             "normalizedLemma": "beste",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -4333,8 +4311,6 @@
             "normalizedLemma": "das",
             "level": "A1",
             "pos": "article",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "the"
             ],
@@ -4475,8 +4451,6 @@
             "normalizedLemma": "daß",
             "level": "A1",
             "pos": "article",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "the"
             ],
@@ -4503,8 +4477,6 @@
             "normalizedLemma": "dein",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "thy, your"
             ],
@@ -4544,10 +4516,8 @@
             "normalizedLemma": "deine",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
-                "thy, your"
+                "yours, thine"
             ],
             "ipa": [
                 "/ˈdaɪ̯nə/"
@@ -4580,8 +4550,6 @@
             "normalizedLemma": "deinem",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "thy, your"
             ],
@@ -4627,8 +4595,6 @@
             "normalizedLemma": "deinen",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "thy, your"
             ],
@@ -4674,29 +4640,32 @@
             "lemma": "deiner",
             "normalizedLemma": "deiner",
             "level": "A1",
-            "pos": "det",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "pron",
             "translations": [
-                "thy, your"
+                "yours, thine"
             ],
             "ipa": [
                 "/ˈdaɪ̯nɐ/"
             ],
             "examples": [
                 {
-                    "de": "Wie geht es deiner Schwester?",
-                    "en": "How's your sister?",
+                    "de": "Welches Buch ist deins?",
+                    "en": "Which book is yours?",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Die Krawatte passt gut zu deiner Jacke.",
-                    "en": "The tie goes with your jacket.",
+                    "de": "Du kannst deinen Aufsatz jetzt beenden.",
+                    "en": "You can finish your essay now.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Wie lange wirst du bei deiner Tante bleiben?",
-                    "en": "How long will you stay with your aunt?",
+                    "de": "Er will nicht, dass du ihm von deinem Sexualleben erzählst.",
+                    "en": "He doesn't want you to tell him about your sex life.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Meinst du gerade, dass du absichtlich deine Schönheit versteckst?",
+                    "en": "You are saying you intentionally hide your good looks?",
                     "source": "tatoeba"
                 }
             ],
@@ -4711,8 +4680,6 @@
             "normalizedLemma": "dem",
             "level": "A1",
             "pos": "article",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "the"
             ],
@@ -4759,8 +4726,6 @@
             "normalizedLemma": "den",
             "level": "A1",
             "pos": "article",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "the"
             ],
@@ -5000,8 +4965,6 @@
             "normalizedLemma": "der",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "who; that; which"
             ],
@@ -5053,8 +5016,6 @@
             "normalizedLemma": "des",
             "level": "A1",
             "pos": "article",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "the"
             ],
@@ -5145,8 +5106,6 @@
             "normalizedLemma": "die",
             "level": "A1",
             "pos": "article",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "who; that; which"
             ],
@@ -5202,8 +5161,6 @@
             "normalizedLemma": "diese",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "this",
                 "\"this\"",
@@ -5251,8 +5208,6 @@
             "normalizedLemma": "diesem",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "this one, this",
                 "that one, that"
@@ -5289,8 +5244,6 @@
             "normalizedLemma": "diesen",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "this",
                 "\"this\"",
@@ -5381,8 +5334,6 @@
             "normalizedLemma": "dieses",
             "level": "A1",
             "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "this one, this",
                 "that one, that"
@@ -5896,8 +5847,6 @@
             "normalizedLemma": "ein",
             "level": "A1",
             "pos": "num",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "one",
                 "the same"
@@ -5950,8 +5899,6 @@
             "normalizedLemma": "eine",
             "level": "A1",
             "pos": "article",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "a, an"
             ],
@@ -5982,8 +5929,6 @@
             "normalizedLemma": "einem",
             "level": "A1",
             "pos": "article",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "a, an"
             ],
@@ -6014,11 +5959,19 @@
             "lemma": "einen",
             "normalizedLemma": "einen",
             "level": "A1",
-            "pos": "article",
-            "article": "der",
-            "gender": "masculine",
+            "pos": "verb",
+            "verb": {
+                "infinitive": "einen",
+                "praeteritum": "einte",
+                "partizipII": "geeint",
+                "partizipI": "einend",
+                "presentDu": "einst",
+                "presentEr": "eint",
+                "presentIhr": "eint"
+            },
             "translations": [
-                "a, an"
+                "to unite",
+                "to come to terms"
             ],
             "ipa": [
                 "/ˈaɪ̯nən/",
@@ -6027,14 +5980,24 @@
             ],
             "examples": [
                 {
+                    "de": "Eine Idee, die alle eint.",
+                    "en": "An idea that unites everybody.",
+                    "source": "kaikki"
+                },
+                {
                     "de": "Das war ein böses Kaninchen.",
                     "en": "That was an evil bunny.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Ich habe nicht viel von einem Reisenden.",
-                    "en": "I am not much of a traveller.",
+                    "de": "Dann haben wir ein Problem...",
+                    "en": "Then there is a problem...",
                     "source": "tatoeba"
+                },
+                {
+                    "de": "Nach langem Diskutieren haben sie sich endlich geeint.",
+                    "en": "After discussing for a long time, they have eventually come to an agreement.",
+                    "source": "kaikki"
                 }
             ],
             "sources": {
@@ -6047,12 +6010,11 @@
             "lemma": "einer",
             "normalizedLemma": "einer",
             "level": "A1",
-            "pos": "num",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "pron",
             "translations": [
                 "one",
-                "the same"
+                "someone, somebody",
+                "Used as a dummy object in some set phrases"
             ],
             "ipa": [
                 "/aɪ̯nar/",
@@ -6061,13 +6023,26 @@
             ],
             "examples": [
                 {
-                    "de": "Ich akzeptiere, aber nur unter einer Bedingung.",
-                    "en": "I accept, but only under one condition.",
+                    "de": "eine gewischt kriegen",
+                    "source": "kaikki"
+                },
+                {
+                    "de": "sich einen runterholen",
+                    "source": "kaikki"
+                },
+                {
+                    "de": "Ich habe nicht viel von einem Reisenden.",
+                    "en": "I am not much of a traveller.",
                     "source": "tatoeba"
                 },
                 {
                     "de": "Du wärst überrascht, was man in einer Woche lernen kann.",
                     "en": "You'd be surprised what you can learn in a week.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Es ist ein Wort, für das ich gerne einen Ersatz finden würde.",
+                    "en": "It's a word I'd like to find a substitute for.",
                     "source": "tatoeba"
                 }
             ],
@@ -6082,8 +6057,6 @@
             "normalizedLemma": "eines",
             "level": "A1",
             "pos": "article",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "a, an"
             ],
@@ -6614,8 +6587,6 @@
             "normalizedLemma": "ersten",
             "level": "A1",
             "pos": "num",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "first"
             ],
@@ -6656,8 +6627,6 @@
             "normalizedLemma": "erster",
             "level": "A1",
             "pos": "num",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "first"
             ],
@@ -6687,8 +6656,6 @@
             "normalizedLemma": "es",
             "level": "A1",
             "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "Refers to a neuter noun",
                 "it, they",
@@ -6821,8 +6788,6 @@
             "normalizedLemma": "etwas",
             "level": "A1",
             "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "something"
             ],
@@ -6960,8 +6925,6 @@
             "normalizedLemma": "eure",
             "level": "A1",
             "pos": "det",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "your (plural) (referring to a feminine or plural noun in the nominative or accusative)"
             ],
@@ -7161,8 +7124,6 @@
             "normalizedLemma": "falsche",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "false, unfactual, untrue",
                 "wrong",
@@ -8062,8 +8023,6 @@
             "normalizedLemma": "freiem",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "free; unenslaved; unimprisoned",
                 "free; unrestricted; more negative also: unrestrained; licentious",
@@ -8663,8 +8622,6 @@
             "normalizedLemma": "ganze",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "entire, whole, complete",
                 "all",
@@ -8721,8 +8678,6 @@
             "normalizedLemma": "ganzen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "entire, whole, complete",
                 "all",
@@ -8753,8 +8708,6 @@
             "normalizedLemma": "ganzes",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "entire, whole, complete",
                 "all",
@@ -9947,11 +9900,10 @@
             "lemma": "graue",
             "normalizedLemma": "graue",
             "level": "A1",
-            "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "verb",
             "translations": [
-                "grey, gray"
+                "to cause terror",
+                "to be terrified"
             ],
             "examples": [
                 {
@@ -10073,8 +10025,6 @@
             "normalizedLemma": "große",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "big, large, large-scale",
                 "great, grand",
@@ -10115,8 +10065,6 @@
             "normalizedLemma": "großen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "big, large, large-scale",
                 "great, grand",
@@ -10159,8 +10107,6 @@
             "normalizedLemma": "großes",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "big, large, large-scale",
                 "great, grand",
@@ -10278,8 +10224,6 @@
             "normalizedLemma": "gute",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -10330,8 +10274,6 @@
             "normalizedLemma": "guten",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -10367,8 +10309,6 @@
             "normalizedLemma": "guter",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -10915,12 +10855,13 @@
             "lemma": "heiße",
             "normalizedLemma": "heiße",
             "level": "A1",
-            "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "verb",
             "translations": [
-                "hot",
-                "hot; horny"
+                "to have a name; to be named; to be called; but implying that one “owns” this name, not necessarily that one goes by it",
+                "to mean, to signify; to have a meaning",
+                "to say, to be said; to go, run",
+                "to call",
+                "to order, to direct, to call to do something"
             ],
             "examples": [
                 {
@@ -12323,8 +12264,6 @@
             "normalizedLemma": "ihre",
             "level": "A1",
             "pos": "det",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "you, ye"
             ],
@@ -12359,8 +12298,6 @@
             "normalizedLemma": "ihrem",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "her, its, their (referring to a masculine or neuter object in the dative case)"
             ],
@@ -12400,8 +12337,6 @@
             "normalizedLemma": "ihren",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "you, ye"
             ],
@@ -12432,11 +12367,10 @@
             "lemma": "ihrer",
             "normalizedLemma": "ihrer",
             "level": "A1",
-            "pos": "det",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "pron",
             "translations": [
-                "her, their"
+                "of her",
+                "of them"
             ],
             "ipa": [
                 "/ˈiːʁɐ/"
@@ -12755,8 +12689,6 @@
             "normalizedLemma": "italienische",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "Italian"
             ],
@@ -12994,8 +12926,6 @@
             "normalizedLemma": "jede",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "each"
             ],
@@ -13040,8 +12970,6 @@
             "normalizedLemma": "jeden",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "each"
             ],
@@ -13611,8 +13539,6 @@
             "normalizedLemma": "keine",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "no; not a(n); not one; not any"
             ],
@@ -13657,8 +13583,6 @@
             "normalizedLemma": "keinen",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "no; not a(n); not one; not any"
             ],
@@ -13715,10 +13639,10 @@
             "normalizedLemma": "keiner",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
-                "no; not a(n); not one; not any"
+                "none",
+                "no one, nobody",
+                "neither"
             ],
             "ipa": [
                 "/ˈkaɪ̯nɐ/"
@@ -13730,14 +13654,19 @@
                     "source": "tatoeba"
                 },
                 {
-                    "de": "es bedarf keiner Gründe",
-                    "en": "there is no need for reasons",
+                    "de": "keiner von uns / euch / ihnen",
+                    "en": "neither of us / you / them",
                     "source": "kaikki"
                 },
                 {
-                    "de": "von keiner großen Bedeutung",
-                    "en": "of no great importance",
+                    "de": "Keiner fühlte sich verantwortlich.",
+                    "en": "Nobody felt responsible.",
                     "source": "kaikki"
+                },
+                {
+                    "de": "Ich kenne keines der beiden Mädchen.",
+                    "en": "I don't know either girl.",
+                    "source": "tatoeba"
                 },
                 {
                     "de": "Sie kann keiner Fliege was zu Leide tun.",
@@ -13747,11 +13676,6 @@
                 {
                     "de": "Ich wäre unglücklich, aber ich würde keinen Selbstmord begehen.",
                     "en": "I'd be unhappy, but I wouldn't kill myself.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Ich bin kein echter Fisch, ich bin nur ein einfaches Plüschtier.",
-                    "en": "I'm not a real fish, I'm just a mere plushy.",
                     "source": "tatoeba"
                 }
             ],
@@ -14209,8 +14133,6 @@
             "normalizedLemma": "kleine",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "small, little, wee",
                 "small, little, young",
@@ -14252,8 +14174,6 @@
             "normalizedLemma": "kleinen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "small, little, wee",
                 "small, little, young",
@@ -14295,8 +14215,6 @@
             "normalizedLemma": "kleiner",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "small, little, wee",
                 "small, little, young",
@@ -14338,8 +14256,6 @@
             "normalizedLemma": "kleines",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "small, little, wee",
                 "small, little, young",
@@ -15747,8 +15663,6 @@
             "normalizedLemma": "letzten",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "last"
             ],
@@ -15785,8 +15699,6 @@
             "normalizedLemma": "letzter",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "last"
             ],
@@ -15828,8 +15740,6 @@
             "normalizedLemma": "letztes",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "last"
             ],
@@ -15926,8 +15836,6 @@
             "normalizedLemma": "liebe",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "lovable; dear; darling; sweet; good-hearted; kind",
                 "good; well-behaved",
@@ -16889,10 +16797,8 @@
             "normalizedLemma": "meine",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
-                "my"
+                "mine"
             ],
             "ipa": [
                 "/ˈmaɪ̯nə/"
@@ -16933,8 +16839,6 @@
             "normalizedLemma": "meinem",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "my"
             ],
@@ -17040,24 +16944,17 @@
             "lemma": "meiner",
             "normalizedLemma": "meiner",
             "level": "A1",
-            "pos": "det",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "pron",
             "translations": [
-                "my"
+                "mine"
             ],
             "ipa": [
                 "/ˈmaɪ̯nɐ/"
             ],
             "examples": [
                 {
-                    "de": "Ich habe das Layout meiner Website geändert.",
-                    "en": "I've changed my website's layout.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Du bist an meiner Seite, jetzt ist alles gut.",
-                    "en": "You're by my side; everything's fine now.",
+                    "de": "Du bist die große Liebe meines Lebens.",
+                    "en": "You are the great love of my life.",
                     "source": "tatoeba"
                 },
                 {
@@ -17066,8 +16963,8 @@
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Meine Wahlunlust kommt von meiner Abneigung gegen Politik.",
-                    "en": "My apathy for voting comes from my distaste for politics.",
+                    "de": "Meinem Physiklehrer ist es egal, wenn ich den Unterricht schwänze.",
+                    "en": "My physics teacher doesn't care if I skip classes.",
                     "source": "tatoeba"
                 }
             ],
@@ -17081,9 +16978,7 @@
             "lemma": "meines",
             "normalizedLemma": "meines",
             "level": "A1",
-            "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
+            "pos": "det",
             "translations": [
                 "my"
             ],
@@ -17092,9 +16987,14 @@
             ],
             "examples": [
                 {
-                    "de": "dein Haus und meines",
-                    "en": "your house and mine",
+                    "de": "die Frau meines Bruders",
+                    "en": "my brother's wife",
                     "source": "kaikki"
+                },
+                {
+                    "de": "Das U.N.-Gebäude ist sehr imposant.",
+                    "en": "The U.N. building is very impressive.",
+                    "source": "tatoeba"
                 },
                 {
                     "de": "Du bist die große Liebe meines Lebens.",
@@ -17109,11 +17009,6 @@
                 {
                     "de": "Ich habe das Grab meines Vaters besucht.",
                     "en": "I visited my father's grave.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Der Tourismus ist wichtig für die Wirtschaft meines Landes.",
-                    "en": "Tourism is important to the economy of my country.",
                     "source": "tatoeba"
                 }
             ],
@@ -18842,8 +18737,6 @@
             "normalizedLemma": "neue",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "new",
                 "modern, recent, latest"
@@ -18879,8 +18772,6 @@
             "normalizedLemma": "neuen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "new",
                 "modern, recent, latest"
@@ -18918,8 +18809,6 @@
             "normalizedLemma": "neues",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "new",
                 "modern, recent, latest"
@@ -19052,8 +18941,6 @@
             "normalizedLemma": "nichts",
             "level": "A1",
             "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "nothing"
             ],
@@ -19474,8 +19361,6 @@
             "normalizedLemma": "nächste",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "near"
             ],
@@ -19527,8 +19412,6 @@
             "normalizedLemma": "nächsten",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "near"
             ],
@@ -19573,8 +19456,6 @@
             "normalizedLemma": "nächstes",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "besides, in addition to"
             ],
@@ -20851,8 +20732,6 @@
             "normalizedLemma": "richtigen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "correct, accurate, right",
                 "right, correct, good",
@@ -21353,8 +21232,6 @@
             "normalizedLemma": "schlechte",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "bad, evil, wicked",
                 "bad",
@@ -21979,8 +21856,6 @@
             "normalizedLemma": "schöner",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "beautiful, lovely, pretty, handsome",
                 "good, great, splendid",
@@ -22022,8 +21897,6 @@
             "normalizedLemma": "schönes",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "beautiful, lovely, pretty, handsome",
                 "good, great, splendid",
@@ -22371,14 +22244,8 @@
             "normalizedLemma": "seine",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
-                "forms the present perfect and past perfect tenses of certain verbs",
-                "As a copulative verb",
-                "to be",
-                "Used to indicate dates, times of day, time periods, etc., be",
-                "Used to indicate temperatures in degrees, be"
+                "his"
             ],
             "ipa": [
                 "/ˈzaɪ̯nə/",
@@ -22402,8 +22269,6 @@
             "normalizedLemma": "seinem",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "forms the present perfect and past perfect tenses of certain verbs",
                 "As a copulative verb",
@@ -22438,8 +22303,6 @@
             "normalizedLemma": "seinen",
             "level": "A1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "forms the present perfect and past perfect tenses of certain verbs",
                 "As a copulative verb",
@@ -22474,23 +22337,27 @@
             "lemma": "seiner",
             "normalizedLemma": "seiner",
             "level": "A1",
-            "pos": "det",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "pron",
             "translations": [
-                "forms the present perfect and past perfect tenses of certain verbs",
-                "As a copulative verb",
-                "to be",
-                "Used to indicate dates, times of day, time periods, etc., be",
-                "Used to indicate temperatures in degrees, be"
+                "his"
             ],
             "ipa": [
                 "/ˈzaɪ̯nɐ/"
             ],
             "examples": [
                 {
+                    "de": "Jeder Arbeiter ist seines Lohnes wert.",
+                    "en": "Every effort deserves a reward.",
+                    "source": "tatoeba"
+                },
+                {
                     "de": "Das Ganze ist mehr als die Summe seiner Teile.",
                     "en": "The whole is greater than the sum of the parts.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "In seinen Aufsätzen war immer zu viel Überflüssiges geschrieben.",
+                    "en": "There was always too much superfluous writing in his essays.",
                     "source": "tatoeba"
                 }
             ],
@@ -22807,8 +22674,6 @@
             "normalizedLemma": "sie",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "she; her",
                 "it",
@@ -23501,8 +23366,6 @@
             "normalizedLemma": "spanische",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "Spanish",
                 "strange, outlandish, suspicious, incomprehensible"
@@ -23720,10 +23583,8 @@
             "normalizedLemma": "später",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
-                "late"
+                "later"
             ],
             "ipa": [
                 "/ˈʃpɛːtɐ/",
@@ -24880,8 +24741,6 @@
             "normalizedLemma": "teuren",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "expensive, dear",
                 "dear"
@@ -25160,8 +25019,6 @@
             "normalizedLemma": "tolle",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "great, nice, wonderful",
                 "crazy, mad"
@@ -25299,8 +25156,6 @@
             "normalizedLemma": "traurigen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "sad"
             ],
@@ -26067,8 +25922,6 @@
             "normalizedLemma": "unsere",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "our"
             ],
@@ -26108,8 +25961,6 @@
             "normalizedLemma": "unseren",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "our"
             ],
@@ -26149,8 +26000,6 @@
             "normalizedLemma": "unserer",
             "level": "A1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "our"
             ],
@@ -26588,8 +26437,6 @@
             "normalizedLemma": "viele",
             "level": "A1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "much, a lot"
             ],
@@ -26629,8 +26476,6 @@
             "normalizedLemma": "vielen",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "much, a lot"
             ],
@@ -26806,8 +26651,6 @@
             "normalizedLemma": "vollem",
             "level": "A1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "full; filled",
                 "full",
@@ -26851,8 +26694,6 @@
             "normalizedLemma": "volles",
             "level": "A1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "full; filled",
                 "full",
@@ -27857,12 +27698,9 @@
             "lemma": "welche",
             "normalizedLemma": "welche",
             "level": "A1",
-            "pos": "det",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "pron",
             "translations": [
-                "which; what",
-                "which"
+                "some"
             ],
             "ipa": [
                 "/ˈvɛl.çə/",
@@ -27896,8 +27734,6 @@
             "normalizedLemma": "welches",
             "level": "A1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "which; what",
                 "which"
@@ -30752,8 +30588,6 @@
             "normalizedLemma": "aller",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "every"
             ],
@@ -30788,8 +30622,6 @@
             "normalizedLemma": "altes",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "old",
                 "ancient",
@@ -30900,8 +30732,6 @@
             "normalizedLemma": "anderem",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "other, different",
                 "second"
@@ -31615,8 +31445,6 @@
             "normalizedLemma": "arme",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "poor",
                 "low"
@@ -31659,8 +31487,6 @@
             "normalizedLemma": "armen",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "poor",
                 "low"
@@ -31698,8 +31524,6 @@
             "normalizedLemma": "armer",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "poor",
                 "low"
@@ -33218,12 +33042,9 @@
             "lemma": "beides",
             "normalizedLemma": "beides",
             "level": "A2",
-            "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
+            "pos": "conj",
             "translations": [
-                "both",
-                "two"
+                "both"
             ],
             "examples": [
                 {
@@ -33460,8 +33281,6 @@
             "normalizedLemma": "benutzten",
             "level": "A2",
             "pos": "verb",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "used"
             ],
@@ -33814,8 +33633,6 @@
             "normalizedLemma": "besseren",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -33858,8 +33675,6 @@
             "normalizedLemma": "besseres",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "better"
             ],
@@ -34271,9 +34086,8 @@
             "normalizedLemma": "bilder",
             "level": "A2",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
-            "plural": "Bilder",
+            "article": "das",
+            "gender": "neuter",
             "translations": [
                 "depiction, image, picture",
                 "digital image",
@@ -34291,18 +34105,18 @@
                     "source": "tatoeba"
                 },
                 {
+                    "de": "Gefallen dir einige dieser Bilder?",
+                    "en": "Do you like any of these pictures?",
+                    "source": "tatoeba"
+                },
+                {
                     "de": "Ich werde euch ein paar Bilder zeigen.",
                     "en": "I will show you some pictures.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Sie hat ihre Idee mit Bildern erklärt.",
-                    "en": "She explained her idea by means of pictures.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Sehen Sie den Unterschied zwischen diesen beiden Bildern?",
-                    "en": "Can you tell the difference between these two pictures?",
+                    "de": "Picasso malte weiterhin Bilder, bis er 91 Jahre alt war.",
+                    "en": "Picasso kept drawing pictures until he was 91 years old.",
                     "source": "tatoeba"
                 },
                 {
@@ -34492,8 +34306,6 @@
             "normalizedLemma": "blinder",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "blind",
                 "cloudy"
@@ -35693,8 +35505,6 @@
             "normalizedLemma": "coolen",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "cool",
                 "cool, calm, easy-going"
@@ -36522,9 +36332,7 @@
             "lemma": "deines",
             "normalizedLemma": "deines",
             "level": "A2",
-            "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
+            "pos": "det",
             "translations": [
                 "thy, your"
             ],
@@ -36533,18 +36341,18 @@
             ],
             "examples": [
                 {
-                    "de": "Deins ist dort.",
-                    "en": "Yours is over there.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "mein Haus und deines",
-                    "en": "my house and yours",
+                    "de": "die Frau deines Bruders",
+                    "en": "your brother's wife",
                     "source": "kaikki"
                 },
                 {
                     "de": "Welches Buch ist deins?",
                     "en": "Which book is yours?",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Das U.N.-Gebäude ist sehr imposant.",
+                    "en": "The U.N. building is very impressive.",
                     "source": "tatoeba"
                 },
                 {
@@ -36674,8 +36482,6 @@
             "normalizedLemma": "deutsche",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "German"
             ],
@@ -37611,8 +37417,6 @@
             "normalizedLemma": "echte",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "authentic, genuine, true",
                 "real; factual",
@@ -37928,8 +37732,6 @@
             "normalizedLemma": "ehrlicher",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "decent, honorable, honest",
                 "honest, truthful, true"
@@ -38069,8 +37871,6 @@
             "normalizedLemma": "eigene",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "own, peculiar or private to someone, idiosyncratic, proper or proprietary"
             ],
@@ -38105,8 +37905,6 @@
             "normalizedLemma": "eigenen",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "own, peculiar or private to someone, idiosyncratic, proper or proprietary"
             ],
@@ -38207,8 +38005,6 @@
             "normalizedLemma": "einige",
             "level": "A2",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "some, a few, plenty"
             ],
@@ -38428,8 +38224,6 @@
             "normalizedLemma": "einzige",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "only"
             ],
@@ -39188,8 +38982,6 @@
             "normalizedLemma": "erstes",
             "level": "A2",
             "pos": "num",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "first"
             ],
@@ -39477,8 +39269,6 @@
             "normalizedLemma": "eurem",
             "level": "A2",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "your (plural) (referring to a masculine or neuter object in the dative case)"
             ],
@@ -39515,8 +39305,6 @@
             "normalizedLemma": "euren",
             "level": "A2",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "your"
             ],
@@ -39558,8 +39346,6 @@
             "normalizedLemma": "eurer",
             "level": "A2",
             "pos": "det",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "your (plural)"
             ],
@@ -41415,8 +41201,6 @@
             "normalizedLemma": "frische",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "fresh",
                 "recent"
@@ -41706,8 +41490,6 @@
             "normalizedLemma": "furchtbares",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "terribly, awfully"
             ],
@@ -43308,8 +43090,6 @@
             "normalizedLemma": "gemeine",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "mean, nasty, wicked",
                 "ordinary, common, average",
@@ -44766,8 +44546,6 @@
             "normalizedLemma": "gleiche",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "equal",
                 "same; very similar",
@@ -45161,8 +44939,6 @@
             "normalizedLemma": "großer",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "big, large, large-scale",
                 "great, grand",
@@ -45481,8 +45257,6 @@
             "normalizedLemma": "größte",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "big, large, large-scale",
                 "great, grand",
@@ -45712,8 +45486,6 @@
             "normalizedLemma": "gutes",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -45894,8 +45666,6 @@
             "normalizedLemma": "halbe",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "half, halfway"
             ],
@@ -46359,8 +46129,6 @@
             "normalizedLemma": "harte",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "hard",
                 "severe, harsh",
@@ -46409,8 +46177,6 @@
             "normalizedLemma": "hartes",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "hard",
                 "severe, harsh",
@@ -48394,8 +48160,6 @@
             "normalizedLemma": "ihres",
             "level": "A2",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "her, its, their (referring to a masculine or neuter object in the genitive case)"
             ],
@@ -49142,8 +48906,6 @@
             "normalizedLemma": "jedem",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "each"
             ],
@@ -49240,8 +49002,6 @@
             "normalizedLemma": "jedes",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "each"
             ],
@@ -49314,8 +49074,6 @@
             "normalizedLemma": "jemand",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "someone, somebody"
             ],
@@ -49405,8 +49163,6 @@
             "normalizedLemma": "junge",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "young"
             ],
@@ -49472,8 +49228,6 @@
             "normalizedLemma": "junger",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "young"
             ],
@@ -49562,8 +49316,6 @@
             "normalizedLemma": "jüngere",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "young"
             ],
@@ -50025,8 +49777,6 @@
             "normalizedLemma": "keinem",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "no; not a(n); not one; not any"
             ],
@@ -50521,8 +50271,6 @@
             "normalizedLemma": "kleinere",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "small, little, wee",
                 "small, little, young",
@@ -51705,8 +51453,6 @@
             "normalizedLemma": "kurze",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "short, quick, brief",
                 "short",
@@ -52362,8 +52108,6 @@
             "normalizedLemma": "langer",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "long; lengthy",
                 "tall",
@@ -52775,8 +52519,6 @@
             "normalizedLemma": "lehrer",
             "level": "A2",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Lehrer",
             "translations": [
                 "one who teaches, teacher, instructor, especially a school teacher"
@@ -53192,23 +52934,14 @@
             "lemma": "lieber",
             "normalizedLemma": "lieber",
             "level": "A2",
-            "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
+            "pos": "adv",
             "translations": [
-                "lovable; dear; darling; sweet; good-hearted; kind",
-                "good; well-behaved",
-                "dear"
+                "rather, better, by preference"
             ],
             "ipa": [
                 "/ˈliːbɐ/"
             ],
             "examples": [
-                {
-                    "de": "(in a letter) Lieber Hans",
-                    "en": "Dear Johnny",
-                    "source": "kaikki"
-                },
                 {
                     "de": "Ich mag Dunkelrot lieber.",
                     "en": "I like dark red better.",
@@ -53223,6 +52956,11 @@
                     "de": "Ich wäre lieber ein Vogel als ein Fisch.",
                     "en": "I'd rather be a bird than a fish.",
                     "source": "tatoeba"
+                },
+                {
+                    "de": "Ich nehme lieber das Fahrrad als das Auto.",
+                    "en": "I would rather take the bicycle than the car.",
+                    "source": "kaikki"
                 },
                 {
                     "de": "Sie würde lieber Sätze auf Tatoeba übersetzen, als mit mir zu chatten.",
@@ -53284,8 +53022,6 @@
             "normalizedLemma": "liebsten",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "lovable; dear; darling; sweet; good-hearted; kind",
                 "good; well-behaved",
@@ -54023,8 +53759,6 @@
             "normalizedLemma": "manche",
             "level": "A2",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "many a; many; some"
             ],
@@ -54539,10 +54273,8 @@
             "normalizedLemma": "meisten",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
-                "much; many"
+                "much, a lot"
             ],
             "ipa": [
                 "/ˈmaɪ̯stn̩/"
@@ -54630,8 +54362,6 @@
             "normalizedLemma": "meister",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "much, a lot"
             ],
@@ -56230,9 +55960,7 @@
             "lemma": "nahe",
             "normalizedLemma": "nahe",
             "level": "A2",
-            "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "prep",
             "translations": [
                 "near"
             ],
@@ -56244,6 +55972,11 @@
                     "de": "Sie kam nahe zu mir.",
                     "en": "She came near to me.",
                     "source": "tatoeba"
+                },
+                {
+                    "de": "Brühl ist eine kleine Stadt nahe Köln.",
+                    "en": "Brühl is a small town near Cologne.",
+                    "source": "kaikki"
                 },
                 {
                     "de": "Seine Beschreibung kam der Wahrheit nahe.",
@@ -56634,8 +56367,6 @@
             "normalizedLemma": "nette",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "nice; friendly; likable",
                 "kind; sweet; helpful",
@@ -56679,8 +56410,6 @@
             "normalizedLemma": "netter",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "nice; friendly; likable",
                 "kind; sweet; helpful",
@@ -56724,8 +56453,6 @@
             "normalizedLemma": "nettes",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "nice; friendly; likable",
                 "kind; sweet; helpful",
@@ -56769,8 +56496,6 @@
             "normalizedLemma": "neuer",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "new",
                 "modern, recent, latest"
@@ -57081,8 +56806,6 @@
             "normalizedLemma": "normale",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "ordinary, normal"
             ],
@@ -60094,8 +59817,6 @@
             "normalizedLemma": "richtige",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "correct, accurate, right",
                 "right, correct, good",
@@ -60131,8 +59852,6 @@
             "normalizedLemma": "richtiger",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "correct, accurate, right",
                 "right, correct, good",
@@ -60372,8 +60091,6 @@
             "normalizedLemma": "rote",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "red",
                 "of the social democratic SPD or the more rigidly socialist Linke",
@@ -62184,15 +61901,9 @@
             "lemma": "schlechter",
             "normalizedLemma": "schlechter",
             "level": "A2",
-            "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
+            "pos": "adv",
             "translations": [
-                "bad, evil, wicked",
-                "bad",
-                "bad, off",
-                "sick, nauseated",
-                "dirty"
+                "worse"
             ],
             "ipa": [
                 "/ˈʃlɛçtɐ/"
@@ -62230,8 +61941,6 @@
             "normalizedLemma": "schlechtes",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "bad, evil, wicked",
                 "bad",
@@ -62400,12 +62109,9 @@
             "lemma": "schlimmer",
             "normalizedLemma": "schlimmer",
             "level": "A2",
-            "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
+            "pos": "adv",
             "translations": [
-                "bad, terrible, serious",
-                "hurting, ill, infected"
+                "worse"
             ],
             "ipa": [
                 "/ˈʃlɪmɐ/"
@@ -62619,8 +62325,6 @@
             "normalizedLemma": "schneller",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "quick, fast"
             ],
@@ -63076,8 +62780,6 @@
             "normalizedLemma": "schwarze",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "black, reflecting little or no light",
                 "illegal",
@@ -63136,8 +62838,6 @@
             "normalizedLemma": "schwarzen",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "black, reflecting little or no light",
                 "illegal",
@@ -63350,8 +63050,6 @@
             "normalizedLemma": "schwere",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "heavy, weighty",
                 "indigestible",
@@ -63395,8 +63093,6 @@
             "normalizedLemma": "schwerer",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "heavy, weighty",
                 "indigestible",
@@ -63742,8 +63438,6 @@
             "normalizedLemma": "schöne",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "beautiful, lovely, pretty, handsome",
                 "good, great, splendid",
@@ -63780,8 +63474,6 @@
             "normalizedLemma": "sechsten",
             "level": "A2",
             "pos": "num",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "sixth"
             ],
@@ -63865,9 +63557,7 @@
             "lemma": "seines",
             "normalizedLemma": "seines",
             "level": "A2",
-            "pos": "pron",
-            "article": "das",
-            "gender": "neuter",
+            "pos": "det",
             "translations": [
                 "forms the present perfect and past perfect tenses of certain verbs",
                 "As a copulative verb",
@@ -63880,13 +63570,18 @@
             ],
             "examples": [
                 {
-                    "de": "mein Haus und seines",
-                    "en": "my house and his",
+                    "de": "die Frau seines Bruders",
+                    "en": "his brother's wife",
                     "source": "kaikki"
                 },
                 {
                     "de": "Es ist seins, nicht wahr?",
                     "en": "It's his, isn't it?",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Das U.N.-Gebäude ist sehr imposant.",
+                    "en": "The U.N. building is very impressive.",
                     "source": "tatoeba"
                 },
                 {
@@ -63897,11 +63592,6 @@
                 {
                     "de": "Sein Selbstmord war eine Folge seines Liebeskummers.",
                     "en": "His suicide came as a result of his disappointment in love.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Wenn er dem Rat seines Arztes gefolgt wäre, wäre er vielleicht nicht gestorben.",
-                    "en": "Had he taken his doctor's advice, he might not have died.",
                     "source": "tatoeba"
                 },
                 {
@@ -64631,8 +64321,6 @@
             "normalizedLemma": "solche",
             "level": "A2",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "such"
             ],
@@ -65671,8 +65359,6 @@
             "normalizedLemma": "starke",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "strong",
                 "good, great, skilled",
@@ -66947,12 +66633,9 @@
             "lemma": "süße",
             "normalizedLemma": "süße",
             "level": "A2",
-            "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "verb",
             "translations": [
-                "sweet",
-                "cute"
+                "to sweeten"
             ],
             "examples": [
                 {
@@ -66992,8 +66675,6 @@
             "normalizedLemma": "süßer",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "sweet",
                 "cute"
@@ -68065,8 +67746,6 @@
             "normalizedLemma": "toten",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "dead, deceased",
                 "dead, in most of the senses also present in English",
@@ -69005,8 +68684,6 @@
             "normalizedLemma": "unserem",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "our"
             ],
@@ -69048,8 +68725,6 @@
             "normalizedLemma": "unseres",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "our"
             ],
@@ -70900,8 +70575,6 @@
             "normalizedLemma": "volle",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "full; filled",
                 "full",
@@ -70932,13 +70605,9 @@
             "lemma": "voller",
             "normalizedLemma": "voller",
             "level": "A2",
-            "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
+            "pos": "prep",
             "translations": [
-                "full; filled",
-                "full",
-                "drunk"
+                "full of"
             ],
             "ipa": [
                 "[ˈfɔlɐ]"
@@ -70968,6 +70637,16 @@
                     "de": "Junge Menschen sind normalerweise voller Energie.",
                     "en": "Young people are usually full of energy.",
                     "source": "tatoeba"
+                },
+                {
+                    "de": "Heute ist ein neuer Tag voller neuer Möglichkeiten.",
+                    "en": "Today is a new day full of new possibilities.",
+                    "source": "kaikki"
+                },
+                {
+                    "de": "Wir wünschen euch ein Leben voller Liebe und Glück.",
+                    "en": "We wish you all a life full of love and happiness.",
+                    "source": "kaikki"
                 }
             ],
             "sources": {
@@ -72387,8 +72066,6 @@
             "normalizedLemma": "weitere",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "wide",
                 "large",
@@ -72428,8 +72105,6 @@
             "normalizedLemma": "weiteren",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "wide",
                 "large",
@@ -72482,8 +72157,6 @@
             "normalizedLemma": "weiße",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "white"
             ],
@@ -72581,8 +72254,6 @@
             "normalizedLemma": "welchem",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "which; what",
                 "which"
@@ -72620,8 +72291,6 @@
             "normalizedLemma": "welchen",
             "level": "A2",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "which; what",
                 "which"
@@ -72812,8 +72481,6 @@
             "normalizedLemma": "wenige",
             "level": "A2",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "little, few"
             ],
@@ -73149,8 +72816,6 @@
             "normalizedLemma": "wetter",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "even, quits"
             ],
@@ -73207,8 +72872,6 @@
             "normalizedLemma": "wichtiger",
             "level": "A2",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "important, relevant, significant, weighty"
             ],
@@ -73250,8 +72913,6 @@
             "normalizedLemma": "wichtiges",
             "level": "A2",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "important, relevant, significant, weighty"
             ],
@@ -75263,8 +74924,6 @@
             "normalizedLemma": "zweiten",
             "level": "A2",
             "pos": "num",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "second"
             ],
@@ -78675,8 +78334,6 @@
             "normalizedLemma": "amerikanische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "American"
             ],
@@ -78718,8 +78375,6 @@
             "normalizedLemma": "amerikanischen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "American"
             ],
@@ -81338,8 +80993,6 @@
             "normalizedLemma": "arbeiter",
             "level": "B1",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Arbeiter",
             "translations": [
                 "worker (male or of unspecified gender)"
@@ -81567,8 +81220,6 @@
             "normalizedLemma": "armes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "poor",
                 "low"
@@ -85319,8 +84970,6 @@
             "normalizedLemma": "außergewöhnliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "exceptional, extraordinary"
             ],
@@ -88492,8 +88141,6 @@
             "normalizedLemma": "bekannte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "known, familiar"
             ],
@@ -88543,8 +88190,6 @@
             "normalizedLemma": "bekannten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "known, familiar"
             ],
@@ -88760,8 +88405,6 @@
             "normalizedLemma": "benutzte",
             "level": "B1",
             "pos": "verb",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "used"
             ],
@@ -89759,8 +89402,6 @@
             "normalizedLemma": "berühmte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "famous, well-known, renowned, celebrated, noted"
             ],
@@ -90430,8 +90071,6 @@
             "normalizedLemma": "besonderen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "special, particular, extraordinary"
             ],
@@ -90473,8 +90112,6 @@
             "normalizedLemma": "besonderes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "special, particular, extraordinary"
             ],
@@ -90746,8 +90383,6 @@
             "normalizedLemma": "besserer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -90999,8 +90634,6 @@
             "normalizedLemma": "bester",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -91092,8 +90725,6 @@
             "normalizedLemma": "bestimmte",
             "level": "B1",
             "pos": "verb",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "to determine"
             ],
@@ -91118,8 +90749,6 @@
             "normalizedLemma": "bestimmten",
             "level": "B1",
             "pos": "verb",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "to determine"
             ],
@@ -92759,8 +92388,6 @@
             "normalizedLemma": "blaue",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "blue",
                 "drunk",
@@ -93098,8 +92725,6 @@
             "normalizedLemma": "blöde",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "stupid, dim-witted",
                 "unfortunate, annoying",
@@ -93111,28 +92736,28 @@
             ],
             "examples": [
                 {
+                    "de": "Das war ein blöder Witz.",
+                    "en": "It was a stupid joke.",
+                    "source": "tatoeba"
+                },
+                {
                     "de": "Er stellt immer blöde Fragen.",
                     "en": "He's always asking silly questions.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Ich wollte diese blöde Reise sowieso nicht unternehmen.",
-                    "en": "I didn't want to go on this stupid trip anyway.",
+                    "de": "Sag nicht solche blöden Sachen.",
+                    "en": "Do not say such foolish things.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Schaust du schon wieder in das blöde Kastl, statt deine Hausaufgaben zu machen!",
-                    "en": "You're watching the idiot box again instead of doing your homework!",
+                    "de": "Warum hast du so etwas Blödes gesagt?",
+                    "en": "Why did you say such a stupid thing?",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Ich wollte nicht blöde erscheinen, also tat ich, als wüsste ich, was vor sich ging.",
-                    "en": "I didn't want to look stupid, so, I pretended like I knew what was going on.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Zuerst hielt ich es für eine blöde Idee, doch irgendwann merkte ich, wie gut sie war.",
-                    "en": "At first, I thought it was a stupid idea, but I eventually realized what a good idea it was.",
+                    "de": "Das ist das Blödeste, was ich je gehört habe.",
+                    "en": "That's the silliest thing I've ever heard.",
                     "source": "tatoeba"
                 }
             ],
@@ -93147,8 +92772,6 @@
             "normalizedLemma": "blöden",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "stupid, dim-witted",
                 "unfortunate, annoying",
@@ -93193,8 +92816,6 @@
             "normalizedLemma": "blöder",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "stupid, dim-witted",
                 "unfortunate, annoying",
@@ -93239,8 +92860,6 @@
             "normalizedLemma": "blödes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "stupid, dim-witted",
                 "unfortunate, annoying",
@@ -93906,8 +93525,6 @@
             "normalizedLemma": "braver",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "good, well-behaved or reliable, obedient",
                 "honest, upright, upstanding",
@@ -93953,8 +93570,6 @@
             "normalizedLemma": "braves",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "good, well-behaved or reliable, obedient",
                 "honest, upright, upstanding",
@@ -95213,8 +94828,6 @@
             "normalizedLemma": "bösen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "evil; malicious; wicked",
                 "bad; naughty",
@@ -95254,8 +94867,6 @@
             "normalizedLemma": "böser",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "evil; malicious; wicked",
                 "bad; naughty",
@@ -95295,8 +94906,6 @@
             "normalizedLemma": "böses",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "evil; malicious; wicked",
                 "bad; naughty",
@@ -97816,8 +97425,6 @@
             "normalizedLemma": "denselben",
             "level": "B1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "the same",
                 "selfsame",
@@ -97861,8 +97468,6 @@
             "normalizedLemma": "deren",
             "level": "B1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "who; that; which"
             ],
@@ -98300,8 +97905,6 @@
             "normalizedLemma": "deutschen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "German"
             ],
@@ -98503,13 +98106,10 @@
             "lemma": "dicke",
             "normalizedLemma": "dicke",
             "level": "B1",
-            "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "adv",
             "translations": [
-                "thick",
-                "fat",
-                "swollen"
+                "amply, sufficiently",
+                "absolutely, for sure"
             ],
             "ipa": [
                 "/ˈdɪkə/"
@@ -98565,8 +98165,6 @@
             "normalizedLemma": "dicken",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "thick",
                 "fat",
@@ -98610,8 +98208,6 @@
             "normalizedLemma": "dicker",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "thick",
                 "fat",
@@ -99000,8 +98596,6 @@
             "normalizedLemma": "dieselbe",
             "level": "B1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "the same",
                 "selfsame",
@@ -99163,8 +98757,6 @@
             "normalizedLemma": "direkte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "direct, straight, without deviation or interruption",
                 "direct, candid, forthright"
@@ -99202,8 +98794,6 @@
             "normalizedLemma": "direkten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "direct, straight, without deviation or interruption",
                 "direct, candid, forthright"
@@ -99642,8 +99232,6 @@
             "normalizedLemma": "doppelte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "double"
             ],
@@ -99797,8 +99385,6 @@
             "normalizedLemma": "dramatische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "dramatic"
             ],
@@ -100372,8 +99958,6 @@
             "normalizedLemma": "dritten",
             "level": "B1",
             "pos": "num",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "third"
             ],
@@ -100645,8 +100229,6 @@
             "normalizedLemma": "dumme",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "dumb, stupid"
             ],
@@ -100688,8 +100270,6 @@
             "normalizedLemma": "dummen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "dumb, stupid"
             ],
@@ -100731,8 +100311,6 @@
             "normalizedLemma": "dummer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "dumb, stupid"
             ],
@@ -100774,8 +100352,6 @@
             "normalizedLemma": "dummes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "dumb, stupid"
             ],
@@ -101005,8 +100581,6 @@
             "normalizedLemma": "dunkle",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "dark",
                 "deep",
@@ -101060,8 +100634,6 @@
             "normalizedLemma": "dunklen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "dark",
                 "deep",
@@ -101389,8 +100961,6 @@
             "normalizedLemma": "dämlichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "very stupid"
             ],
@@ -101685,8 +101255,6 @@
             "normalizedLemma": "echten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "authentic, genuine, true",
                 "real; factual",
@@ -101725,8 +101293,6 @@
             "normalizedLemma": "echter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "authentic, genuine, true",
                 "real; factual",
@@ -101773,8 +101339,6 @@
             "normalizedLemma": "echtes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "authentic, genuine, true",
                 "real; factual",
@@ -102257,8 +101821,6 @@
             "normalizedLemma": "eigener",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "own, peculiar or private to someone, idiosyncratic, proper or proprietary"
             ],
@@ -102290,8 +101852,6 @@
             "normalizedLemma": "eigenes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "own, peculiar or private to someone, idiosyncratic, proper or proprietary"
             ],
@@ -102663,8 +102223,6 @@
             "normalizedLemma": "einfache",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "easy",
                 "simple, plain, straightforward",
@@ -102709,8 +102267,6 @@
             "normalizedLemma": "einfachen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "easy",
                 "simple, plain, straightforward",
@@ -102750,8 +102306,6 @@
             "normalizedLemma": "einfacher",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "easy",
                 "simple, plain, straightforward",
@@ -103194,8 +102748,6 @@
             "normalizedLemma": "einiger",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "some, a few, plenty"
             ],
@@ -103236,11 +102788,9 @@
             "lemma": "einiges",
             "normalizedLemma": "einiges",
             "level": "B1",
-            "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
+            "pos": "pron",
             "translations": [
-                "some, a few, plenty"
+                "some things"
             ],
             "examples": [
                 {
@@ -103864,8 +103414,6 @@
             "normalizedLemma": "einzelne",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "single; lone",
                 "only, unique",
@@ -103909,8 +103457,6 @@
             "normalizedLemma": "einzelnen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "single; lone",
                 "only, unique",
@@ -104055,8 +103601,6 @@
             "normalizedLemma": "einzigen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "only"
             ],
@@ -104098,8 +103642,6 @@
             "normalizedLemma": "einziger",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "only"
             ],
@@ -104139,8 +103681,6 @@
             "normalizedLemma": "einziges",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "only"
             ],
@@ -104318,8 +103858,6 @@
             "normalizedLemma": "elektrische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "electric"
             ],
@@ -104361,8 +103899,6 @@
             "normalizedLemma": "elektrischen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "electric"
             ],
@@ -107858,8 +107394,6 @@
             "normalizedLemma": "ernstes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "serious, severe, grave"
             ],
@@ -108638,8 +108172,6 @@
             "normalizedLemma": "erwachsene",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "to grow up, to grow",
                 "to spring up, to spring from, to proceed from",
@@ -108698,8 +108230,6 @@
             "normalizedLemma": "erwachsenen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "to grow up, to grow",
                 "to spring up, to spring from, to proceed from",
@@ -109230,8 +108760,6 @@
             "normalizedLemma": "eures",
             "level": "B1",
             "pos": "det",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "your (plural) (referring to a masculine or neuter object in the genitive case)"
             ],
@@ -109464,8 +108992,6 @@
             "normalizedLemma": "ewige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "eternal, everlasting",
                 "constant, frequent"
@@ -109897,8 +109423,6 @@
             "normalizedLemma": "fahrer",
             "level": "B1",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Fahrer",
             "translations": [
                 "driver (person)"
@@ -110205,8 +109729,6 @@
             "normalizedLemma": "falscher",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "false, unfactual, untrue",
                 "wrong",
@@ -110251,8 +109773,6 @@
             "normalizedLemma": "falsches",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "false, unfactual, untrue",
                 "wrong",
@@ -111453,8 +110973,6 @@
             "normalizedLemma": "ferne",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "dated or northern colloquial predicative and adverbial form of fern"
             ],
@@ -111494,8 +111012,6 @@
             "normalizedLemma": "feste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "firm; compact; hard",
                 "firm; fixed; rigid",
@@ -111544,8 +111060,6 @@
             "normalizedLemma": "fester",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "firm; compact; hard",
                 "firm; fixed; rigid",
@@ -111796,8 +111310,6 @@
             "normalizedLemma": "fette",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "fat",
                 "rich, containing a lot of fat",
@@ -113154,8 +112666,6 @@
             "normalizedLemma": "folgendes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "following, subsequent"
             ],
@@ -113547,8 +113057,6 @@
             "normalizedLemma": "französische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "French",
                 "oral sex"
@@ -113586,8 +113094,6 @@
             "normalizedLemma": "französischen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "French",
                 "oral sex"
@@ -113740,8 +113246,6 @@
             "normalizedLemma": "freie",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "free; unenslaved; unimprisoned",
                 "free; unrestricted; more negative also: unrestrained; licentious",
@@ -113936,8 +113440,6 @@
             "normalizedLemma": "fremde",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "strange",
                 "foreign",
@@ -113976,8 +113478,6 @@
             "normalizedLemma": "fremden",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "strange",
                 "foreign",
@@ -114021,8 +113521,6 @@
             "normalizedLemma": "fremder",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "strange",
                 "foreign",
@@ -114713,8 +114211,6 @@
             "normalizedLemma": "frohe",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "glad",
                 "merry",
@@ -114923,8 +114419,6 @@
             "normalizedLemma": "fröhliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "merry; cheerful; either as a character trait or fleetingly"
             ],
@@ -114966,8 +114460,6 @@
             "normalizedLemma": "früheren",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "early"
             ],
@@ -115249,8 +114741,6 @@
             "normalizedLemma": "furchtbare",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "terribly, awfully"
             ],
@@ -116812,8 +116302,6 @@
             "normalizedLemma": "gefangenen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "caught",
                 "imprisoned",
@@ -116857,8 +116345,6 @@
             "normalizedLemma": "gefangener",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "caught",
                 "imprisoned",
@@ -116936,8 +116422,6 @@
             "normalizedLemma": "gefährliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "dangerous, hazardous"
             ],
@@ -117416,8 +116900,6 @@
             "normalizedLemma": "geheime",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "secret, clandestine",
                 "familiar, dear",
@@ -117462,8 +116944,6 @@
             "normalizedLemma": "geheimen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "secret, clandestine",
                 "familiar, dear",
@@ -117841,8 +117321,6 @@
             "normalizedLemma": "geister",
             "level": "B1",
             "pos": "name",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "a surname"
             ],
@@ -118502,8 +117980,6 @@
             "normalizedLemma": "gemeinsame",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "common, mutual, shared"
             ],
@@ -118855,8 +118331,6 @@
             "normalizedLemma": "genauer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "exact"
             ],
@@ -119670,8 +119144,6 @@
             "normalizedLemma": "gesamte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "total, whole, entire, overall, big"
             ],
@@ -119713,8 +119185,6 @@
             "normalizedLemma": "gesamten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "total, whole, entire, overall, big"
             ],
@@ -121057,8 +120527,6 @@
             "normalizedLemma": "gewinner",
             "level": "B1",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Gewinner",
             "translations": [
                 "winner"
@@ -121161,8 +120629,6 @@
             "normalizedLemma": "gewisse",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "certain"
             ],
@@ -121204,8 +120670,6 @@
             "normalizedLemma": "gewissen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "certain"
             ],
@@ -121252,8 +120716,6 @@
             "normalizedLemma": "gewisser",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "certain"
             ],
@@ -122010,8 +121472,6 @@
             "normalizedLemma": "glückliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "happy; both momentarily and generally in life",
                 "lucky; fortunate"
@@ -122054,8 +121514,6 @@
             "normalizedLemma": "glücklicher",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "happy; both momentarily and generally in life",
                 "lucky; fortunate"
@@ -122098,8 +121556,6 @@
             "normalizedLemma": "goldene",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "golden; gold",
                 "golden"
@@ -122158,8 +121614,6 @@
             "normalizedLemma": "goldenen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "golden; gold",
                 "golden"
@@ -122605,8 +122059,6 @@
             "normalizedLemma": "großartige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "terrific, superb, etc"
             ],
@@ -122802,8 +122254,6 @@
             "normalizedLemma": "größere",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "big, large, large-scale",
                 "great, grand",
@@ -122843,8 +122293,6 @@
             "normalizedLemma": "größeren",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "big, large, large-scale",
                 "great, grand",
@@ -123035,8 +122483,6 @@
             "normalizedLemma": "grüne",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "green",
                 "unripe",
@@ -123278,8 +122724,6 @@
             "normalizedLemma": "gutem",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "good",
                 "all right, fair, proper"
@@ -123624,11 +123068,9 @@
             "lemma": "halben",
             "normalizedLemma": "halben",
             "level": "B1",
-            "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
+            "pos": "postp",
             "translations": [
-                "half, halfway"
+                "for the sake of, because of"
             ],
             "ipa": [
                 "/ˈhalbn̩/"
@@ -123653,6 +123095,11 @@
                     "de": "Die Fläche des Raums misst zwei und einen halben Quadratmeter.",
                     "en": "The room's area is two and half square meters.",
                     "source": "tatoeba"
+                },
+                {
+                    "de": "1912, Martin Luther, Lutherbibel von 1912, Exodus 18:8 (with KJV translation)",
+                    "en": "And Moses told his father in law all that the Lord had done unto Pharaoh and to the Egyptians for Israel's sake, and all the travail that had come upon them by the way, and how the Lord delivered them.",
+                    "source": "kaikki"
                 }
             ],
             "sources": {
@@ -123666,8 +123113,6 @@
             "normalizedLemma": "halbes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "half, halfway"
             ],
@@ -124116,8 +123561,6 @@
             "normalizedLemma": "harten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "hard",
                 "severe, harsh",
@@ -124151,8 +123594,6 @@
             "normalizedLemma": "harter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "hard",
                 "severe, harsh",
@@ -124750,8 +124191,6 @@
             "normalizedLemma": "heilige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "holy",
                 "sacred"
@@ -125084,8 +124523,6 @@
             "normalizedLemma": "heißer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "hot",
                 "hot; horny"
@@ -125864,8 +125301,6 @@
             "normalizedLemma": "herzlichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "warm, warmhearted, friendly, affectionate, cordial",
                 "hearty"
@@ -126001,8 +125436,6 @@
             "normalizedLemma": "heutigen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "today's",
                 "contemporary; present-day"
@@ -127363,8 +126796,6 @@
             "normalizedLemma": "hohe",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "high, tall",
                 "high, great, immense",
@@ -127470,8 +126901,6 @@
             "normalizedLemma": "hohen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "high, tall",
                 "high, great, immense",
@@ -128288,8 +127717,6 @@
             "normalizedLemma": "höchste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "high, tall",
                 "high, great, immense",
@@ -128599,8 +128026,6 @@
             "normalizedLemma": "hübsche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "pretty, handsome",
                 "lovely, nice; great"
@@ -128643,8 +128068,6 @@
             "normalizedLemma": "hübschen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "pretty, handsome",
                 "lovely, nice; great"
@@ -128687,8 +128110,6 @@
             "normalizedLemma": "hübscher",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "pretty, handsome",
                 "lovely, nice; great"
@@ -128731,8 +128152,6 @@
             "normalizedLemma": "hübsches",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "pretty, handsome",
                 "lovely, nice; great"
@@ -129615,8 +129034,6 @@
             "normalizedLemma": "interessante",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "interestingly"
             ],
@@ -129658,8 +129075,6 @@
             "normalizedLemma": "interessanter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "interestingly"
             ],
@@ -129701,8 +129116,6 @@
             "normalizedLemma": "interessantes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "interestingly"
             ],
@@ -130129,8 +129542,6 @@
             "normalizedLemma": "irgendeine",
             "level": "B1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "some; any"
             ],
@@ -130172,8 +129583,6 @@
             "normalizedLemma": "irgendeinem",
             "level": "B1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "some; any"
             ],
@@ -130215,8 +129624,6 @@
             "normalizedLemma": "irgendeinen",
             "level": "B1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "some; any"
             ],
@@ -130253,8 +129660,6 @@
             "normalizedLemma": "irgendeiner",
             "level": "B1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "some; any"
             ],
@@ -130291,8 +129696,6 @@
             "normalizedLemma": "irgendjemand",
             "level": "B1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "someone, somebody",
                 "anyone, anybody, anyone at all, anybody at all, any person"
@@ -131041,8 +130444,6 @@
             "normalizedLemma": "jene",
             "level": "B1",
             "pos": "pron",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "that, that one"
             ],
@@ -131084,8 +130485,6 @@
             "normalizedLemma": "jenem",
             "level": "B1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "that, that one"
             ],
@@ -131293,8 +130692,6 @@
             "normalizedLemma": "jugendlichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "youthful"
             ],
@@ -131396,8 +130793,6 @@
             "normalizedLemma": "junges",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "young"
             ],
@@ -131729,8 +131124,6 @@
             "normalizedLemma": "kalte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "as base rent; excluding utilities"
             ],
@@ -131772,8 +131165,6 @@
             "normalizedLemma": "kalten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "as base rent; excluding utilities"
             ],
@@ -134762,8 +134153,6 @@
             "normalizedLemma": "komische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "comedic, comic, pertaining to comedy",
                 "funny, comical",
@@ -136602,8 +135991,6 @@
             "normalizedLemma": "kriminellen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "criminal"
             ],
@@ -137050,8 +136437,6 @@
             "normalizedLemma": "kurzem",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "short, quick, brief",
                 "short",
@@ -137091,8 +136476,6 @@
             "normalizedLemma": "kurzen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "short, quick, brief",
                 "short",
@@ -137371,8 +136754,6 @@
             "normalizedLemma": "käufer",
             "level": "B1",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Käufer",
             "translations": [
                 "shopper, buyer"
@@ -138466,8 +137847,6 @@
             "normalizedLemma": "langsamer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "slow"
             ],
@@ -138704,8 +138083,6 @@
             "normalizedLemma": "laute",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "loud, noisy"
             ],
@@ -138745,10 +138122,10 @@
             "normalizedLemma": "lauter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
-                "loud, noisy"
+                "sincere; honorable; of integrity; correct",
+                "genuine; pure",
+                "a lot of; a bunch of; much; many; several"
             ],
             "ipa": [
                 "/ˈlaʊ̯tɐ/"
@@ -138760,24 +138137,39 @@
                     "source": "tatoeba"
                 },
                 {
+                    "de": "Das ist lauterer Unsinn.",
+                    "en": "This is sheer nonsense.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Sie hat lautere Absichten.",
+                    "en": "Her intentions are honourable.",
+                    "source": "tatoeba"
+                },
+                {
                     "de": "Der Lärm wird immer lauter.",
                     "en": "The noise is getting louder and louder.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Kannst du bitte etwas lauter sprechen?",
-                    "en": "Could you speak a little louder please?",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Er sieht den Wald vor lauter Bäumen nicht.",
-                    "en": "He can't see the forest for the trees.",
-                    "source": "tatoeba"
+                    "de": "Der König trug einen Ring aus lauterem Gold.",
+                    "en": "The king wore a ring of genuine gold.",
+                    "source": "kaikki"
                 },
                 {
                     "de": "Bitte stelle den Fernseher nicht noch lauter.",
                     "en": "Don't turn up the volume of TV anymore.",
                     "source": "tatoeba"
+                },
+                {
+                    "de": "Ich hab auf der Party lauter alte Freunde getroffen.",
+                    "en": "I met a bunch of old friends at the party.",
+                    "source": "kaikki"
+                },
+                {
+                    "de": "Der Angeklagten können lautere Absichten nicht abgesprochen werden.",
+                    "en": "The defendant’s honorable intentions cannot be denied.",
+                    "source": "kaikki"
                 }
             ],
             "sources": {
@@ -138791,8 +138183,6 @@
             "normalizedLemma": "lautes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "loud, noisy"
             ],
@@ -138954,8 +138344,6 @@
             "normalizedLemma": "lebenden",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "living",
                 "live, alive"
@@ -139173,8 +138561,6 @@
             "normalizedLemma": "leere",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "empty"
             ],
@@ -139362,8 +138748,6 @@
             "normalizedLemma": "lehrerin",
             "level": "B1",
             "pos": "noun",
-            "article": "die",
-            "gender": "feminine",
             "plural": "Lehrerinnen",
             "translations": [
                 "teacher"
@@ -139503,8 +138887,6 @@
             "normalizedLemma": "leichte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "light",
                 "easy",
@@ -139549,8 +138931,6 @@
             "normalizedLemma": "leichter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "light",
                 "easy",
@@ -139840,8 +139220,6 @@
             "normalizedLemma": "leiser",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "quiet, soft, low",
                 "slight, faint, light"
@@ -140509,8 +139887,6 @@
             "normalizedLemma": "lichter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "sparse",
                 "bright, light",
@@ -140560,8 +139936,6 @@
             "normalizedLemma": "liebes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "lovable; dear; darling; sweet; good-hearted; kind",
                 "good; well-behaved",
@@ -140600,8 +139974,6 @@
             "normalizedLemma": "liebste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "lovable; dear; darling; sweet; good-hearted; kind",
                 "good; well-behaved",
@@ -140653,8 +140025,6 @@
             "normalizedLemma": "liebster",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "lovable; dear; darling; sweet; good-hearted; kind",
                 "good; well-behaved",
@@ -140996,8 +140366,6 @@
             "normalizedLemma": "linke",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "left",
                 "untrustworthy",
@@ -141455,8 +140823,6 @@
             "normalizedLemma": "loser",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "loose, slack"
             ],
@@ -142178,8 +141544,6 @@
             "normalizedLemma": "löwen",
             "level": "B1",
             "pos": "name",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "Louvain"
             ],
@@ -143338,12 +142702,12 @@
             "lemma": "mauer",
             "normalizedLemma": "mauer",
             "level": "B1",
-            "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
+            "pos": "verb",
             "translations": [
-                "unwell, queasy, poorly, ill",
-                "disappointing, bad, meagre"
+                "to build a wall, to lay bricks",
+                "to play defensively in a card game",
+                "to defend the goal with",
+                "to refuse to cooperate; to stonewall"
             ],
             "examples": [
                 {
@@ -143659,8 +143023,6 @@
             "normalizedLemma": "medizinische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "medicinal, medicated",
                 "medical"
@@ -143703,8 +143065,6 @@
             "normalizedLemma": "medizinischen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "medicinal, medicated",
                 "medical"
@@ -144043,8 +143403,6 @@
             "normalizedLemma": "meiste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "much, a lot"
             ],
@@ -144400,8 +143758,6 @@
             "normalizedLemma": "menschliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "human, manlike",
                 "humane, kind"
@@ -147344,8 +146700,6 @@
             "normalizedLemma": "mögliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "possible",
                 "potential; likely",
@@ -147392,8 +146746,6 @@
             "normalizedLemma": "möglichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "possible",
                 "potential; likely",
@@ -149286,8 +148638,6 @@
             "normalizedLemma": "netten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "nice; friendly; likable",
                 "kind; sweet; helpful",
@@ -149981,8 +149331,6 @@
             "normalizedLemma": "normalen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "ordinary, normal"
             ],
@@ -150019,8 +149367,6 @@
             "normalizedLemma": "normaler",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "ordinary, normal"
             ],
@@ -150101,8 +149447,6 @@
             "normalizedLemma": "normales",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "ordinary, normal"
             ],
@@ -150648,10 +149992,8 @@
             "normalizedLemma": "nächster",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
-                "near"
+                "next, following"
             ],
             "ipa": [
                 "/ˈnɛːstɐ/",
@@ -150660,23 +150002,28 @@
             ],
             "examples": [
                 {
-                    "de": "Wer ist als nächster an der Reihe?",
-                    "en": "Whose turn is it next?",
+                    "de": "Die Schule beginnt nächsten Montag.",
+                    "en": "School starts next Monday.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Ab nächster Woche esse ich weniger.",
-                    "en": "As of next week I am eating less.",
+                    "de": "Nächstes Jahr werde ich nach Amerika gehen.",
+                    "en": "I am going to go to America next year.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Wann geht Ihr nächster Zug nach Boston?",
-                    "en": "When is your next train for Boston?",
+                    "de": "Nächste Woche wird es vielleicht Frost geben.",
+                    "en": "It may freeze next week.",
                     "source": "tatoeba"
                 },
                 {
-                    "de": "Das hier sieht wie eine Schussverletzung aus nächster Nähe aus.",
-                    "en": "This looks like a close-range gunshot wound.",
+                    "de": "Wir waren schon in drei Kneipen und jetzt gehen wir zur nächsten.",
+                    "en": "We've already been to three pubs and now we're going to the next one.",
+                    "source": "kaikki"
+                },
+                {
+                    "de": "Wir haben die Produkte rechtzeitig bestellt. Trotzdem werden sie nicht vor nächstem Monat verschickt.",
+                    "en": "We ordered the products on time. However, they won’t be dispatched until next month.",
                     "source": "tatoeba"
                 }
             ],
@@ -151042,8 +150389,6 @@
             "normalizedLemma": "offene",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "openly"
             ],
@@ -151080,8 +150425,6 @@
             "normalizedLemma": "offenen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "openly"
             ],
@@ -153444,8 +152787,6 @@
             "normalizedLemma": "perfekte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "perfect"
             ],
@@ -153487,8 +152828,6 @@
             "normalizedLemma": "perfekten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "perfect"
             ],
@@ -153576,8 +152915,6 @@
             "normalizedLemma": "persönliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "personal",
                 "friendly"
@@ -153620,8 +152957,6 @@
             "normalizedLemma": "persönlichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "personal",
                 "friendly"
@@ -153664,8 +152999,6 @@
             "normalizedLemma": "persönliches",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "personal",
                 "friendly"
@@ -154664,8 +153997,6 @@
             "normalizedLemma": "platte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "flat",
                 "completely destroyed, razed to the ground",
@@ -154974,8 +154305,6 @@
             "normalizedLemma": "politische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "political"
             ],
@@ -155866,8 +155195,6 @@
             "normalizedLemma": "private",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "private"
             ],
@@ -158603,8 +157930,6 @@
             "normalizedLemma": "rechte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "right, right-hand",
                 "proper, correct, right",
@@ -159166,8 +158491,6 @@
             "normalizedLemma": "reicher",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "rich, wealthy",
                 "rich"
@@ -159398,8 +158721,6 @@
             "normalizedLemma": "reine",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "pure, clear, plain"
             ],
@@ -160689,8 +160010,6 @@
             "normalizedLemma": "richtiges",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "correct, accurate, right",
                 "right, correct, good",
@@ -161006,8 +160325,6 @@
             "normalizedLemma": "riesige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "gigantic, huge"
             ],
@@ -161044,8 +160361,6 @@
             "normalizedLemma": "riesigen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "gigantic, huge"
             ],
@@ -161308,8 +160623,6 @@
             "normalizedLemma": "romantische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "romantic"
             ],
@@ -161511,8 +160824,6 @@
             "normalizedLemma": "roten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "red",
                 "of the social democratic SPD or the more rigidly socialist Linke",
@@ -161763,8 +161074,6 @@
             "normalizedLemma": "ruhige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "quiet",
                 "calm"
@@ -161856,12 +161165,11 @@
             "lemma": "runde",
             "normalizedLemma": "runde",
             "level": "B1",
-            "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
+            "pos": "verb",
             "translations": [
-                "around",
-                "roughly, approximately, about"
+                "to round",
+                "to be or become round",
+                "to be completed or perfected"
             ],
             "examples": [
                 {
@@ -162048,8 +161356,6 @@
             "normalizedLemma": "russische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "Russian"
             ],
@@ -162089,8 +161395,6 @@
             "normalizedLemma": "russischen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "Russian"
             ],
@@ -162779,8 +162083,6 @@
             "normalizedLemma": "sanfte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "gentle"
             ],
@@ -164807,8 +164109,6 @@
             "normalizedLemma": "schlauer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "clever in a way that enables one to achieve one's goals; slightly sly or cunning",
                 "bright, intelligent, clever"
@@ -164851,8 +164151,6 @@
             "normalizedLemma": "schlechten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "bad, evil, wicked",
                 "bad",
@@ -165043,8 +164341,6 @@
             "normalizedLemma": "schlimme",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "bad, terrible, serious",
                 "hurting, ill, infected"
@@ -165077,13 +164373,52 @@
             }
         },
         {
+            "id": "b1-schlimmeres",
+            "lemma": "schlimmeres",
+            "normalizedLemma": "schlimmeres",
+            "level": "B1",
+            "pos": "adj",
+            "translations": [
+                "worse"
+            ],
+            "examples": [
+                {
+                    "de": "Wir haben schon Schlimmeres gesehen.",
+                    "en": "We've seen worse.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Es gibt Schlimmeres als allein sein.",
+                    "en": "There are worse things than being alone.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Es gibt nichts Schlimmeres als den Krieg.",
+                    "en": "Nothing is worse than war.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Schlimmeres ist uns beiden schon passiert.",
+                    "en": "Worse things have happened to both of us.",
+                    "source": "tatoeba"
+                },
+                {
+                    "de": "Du hast bestimmt schon weit Schlimmeres gesehen.",
+                    "en": "You've probably seen a lot worse.",
+                    "source": "tatoeba"
+                }
+            ],
+            "sources": {
+                "kaikki": true,
+                "tatoeba": true
+            }
+        },
+        {
             "id": "b1-schlimmes",
             "lemma": "schlimmes",
             "normalizedLemma": "schlimmes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "bad, terrible, serious",
                 "hurting, ill, infected"
@@ -165126,8 +164461,6 @@
             "normalizedLemma": "schlimmste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "bad, terrible, serious",
                 "hurting, ill, infected"
@@ -165170,8 +164503,6 @@
             "normalizedLemma": "schlimmsten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "bad, terrible, serious",
                 "hurting, ill, infected"
@@ -165828,8 +165159,6 @@
             "normalizedLemma": "schnelle",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "quick, fast"
             ],
@@ -165942,8 +165271,6 @@
             "normalizedLemma": "schreckliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "awful, terrible, horrible"
             ],
@@ -165985,8 +165312,6 @@
             "normalizedLemma": "schrecklichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "awful, terrible, horrible"
             ],
@@ -166028,8 +165353,6 @@
             "normalizedLemma": "schreckliches",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "awful, terrible, horrible"
             ],
@@ -167015,8 +166338,6 @@
             "normalizedLemma": "schwarzer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "black, reflecting little or no light",
                 "illegal",
@@ -167309,8 +166630,6 @@
             "normalizedLemma": "schwierige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "difficult, hard, challenging, tough",
                 "difficult, prickly"
@@ -167353,8 +166672,6 @@
             "normalizedLemma": "schwieriger",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "difficult, hard, challenging, tough",
                 "difficult, prickly"
@@ -167840,8 +167157,6 @@
             "normalizedLemma": "schönste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "beautiful, lovely, pretty, handsome",
                 "good, great, splendid",
@@ -167896,8 +167211,6 @@
             "normalizedLemma": "schönsten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "beautiful, lovely, pretty, handsome",
                 "good, great, splendid",
@@ -168803,8 +168116,6 @@
             "normalizedLemma": "seltsame",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "strange, weird, odd, funny, curious",
                 "rare, seldom"
@@ -169281,8 +168592,6 @@
             "normalizedLemma": "sexuelle",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "sexual"
             ],
@@ -169412,8 +168721,6 @@
             "normalizedLemma": "sicheren",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "safe, secure",
                 "sure, certain"
@@ -169451,8 +168758,6 @@
             "normalizedLemma": "sicherer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "safe, secure",
                 "sure, certain"
@@ -169774,8 +169079,6 @@
             "normalizedLemma": "sieger",
             "level": "B1",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Sieger",
             "translations": [
                 "winner, victor, champion"
@@ -170514,8 +169817,6 @@
             "normalizedLemma": "solchen",
             "level": "B1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "such"
             ],
@@ -170552,8 +169853,6 @@
             "normalizedLemma": "solcher",
             "level": "B1",
             "pos": "pron",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "such"
             ],
@@ -171214,8 +170513,6 @@
             "normalizedLemma": "spannende",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "thrilling, exciting, gripping, enthralling, spellbinding",
                 "interesting"
@@ -171638,8 +170935,6 @@
             "normalizedLemma": "spieler",
             "level": "B1",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Spieler",
             "translations": [
                 "player"
@@ -172726,8 +172021,6 @@
             "normalizedLemma": "starken",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "strong",
                 "good, great, skilled",
@@ -174694,8 +173987,6 @@
             "normalizedLemma": "strenge",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "archaic form of streng"
             ],
@@ -176033,8 +175324,6 @@
             "normalizedLemma": "süßes",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "sweet",
                 "cute"
@@ -177044,8 +176333,6 @@
             "normalizedLemma": "technische",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "technical",
                 "technological",
@@ -178092,8 +177379,6 @@
             "normalizedLemma": "tiefe",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "deep",
                 "deep, profound",
@@ -178150,8 +177435,6 @@
             "normalizedLemma": "tiefen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "deep",
                 "deep, profound",
@@ -178190,8 +177473,6 @@
             "normalizedLemma": "tiefer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "deep",
                 "deep, profound",
@@ -178581,8 +177862,6 @@
             "normalizedLemma": "toller",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "great, nice, wonderful",
                 "crazy, mad"
@@ -178625,8 +177904,6 @@
             "normalizedLemma": "tolles",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "great, nice, wonderful",
                 "crazy, mad"
@@ -178904,8 +178181,6 @@
             "normalizedLemma": "tote",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "dead, deceased",
                 "dead, in most of the senses also present in English",
@@ -178957,8 +178232,6 @@
             "normalizedLemma": "toter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "dead, deceased",
                 "dead, in most of the senses also present in English",
@@ -179542,8 +178815,6 @@
             "normalizedLemma": "traurige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "sad"
             ],
@@ -181837,8 +181108,6 @@
             "normalizedLemma": "unbekannte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "unknown, unbeknownst",
                 "unfamiliar"
@@ -181881,8 +181150,6 @@
             "normalizedLemma": "unbekannten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "unknown, unbeknownst",
                 "unfamiliar"
@@ -182568,8 +181835,6 @@
             "normalizedLemma": "unschuldige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "innocent",
                 "blameless",
@@ -182613,8 +181878,6 @@
             "normalizedLemma": "unschuldigen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "innocent",
                 "blameless",
@@ -182653,8 +181916,6 @@
             "normalizedLemma": "unschuldiger",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "innocent",
                 "blameless",
@@ -184751,8 +184012,6 @@
             "normalizedLemma": "verdammter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "damned"
             ],
@@ -184948,8 +184207,6 @@
             "normalizedLemma": "vereinigten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "united"
             ],
@@ -186254,8 +185511,6 @@
             "normalizedLemma": "verlierer",
             "level": "B1",
             "pos": "noun",
-            "article": "der",
-            "gender": "masculine",
             "plural": "Verlierer",
             "translations": [
                 "loser"
@@ -187074,8 +186329,6 @@
             "normalizedLemma": "verrückte",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "crazy, mad"
             ],
@@ -187117,8 +186370,6 @@
             "normalizedLemma": "verrückten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "crazy, mad"
             ],
@@ -187160,8 +186411,6 @@
             "normalizedLemma": "verrückter",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "crazy, mad"
             ],
@@ -187259,8 +186508,6 @@
             "normalizedLemma": "verschiedene",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "deceased",
                 "different",
@@ -187312,8 +186559,6 @@
             "normalizedLemma": "verschiedenen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "deceased",
                 "different",
@@ -188412,8 +187657,6 @@
             "normalizedLemma": "verwandten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "to use, to utilize"
             ],
@@ -189254,8 +188497,6 @@
             "normalizedLemma": "vollen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "full; filled",
                 "full",
@@ -190243,8 +189484,6 @@
             "normalizedLemma": "wache",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "awake"
             ],
@@ -190558,8 +189797,6 @@
             "normalizedLemma": "wahre",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "true, real",
                 "true, truthful"
@@ -190663,8 +189900,6 @@
             "normalizedLemma": "wahrer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "true, real",
                 "true, truthful"
@@ -190702,8 +189937,6 @@
             "normalizedLemma": "wahres",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "true, real",
                 "true, truthful"
@@ -191404,8 +190637,6 @@
             "normalizedLemma": "weibliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "female"
             ],
@@ -191775,8 +191006,6 @@
             "normalizedLemma": "weiterer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "wide",
                 "large",
@@ -191811,8 +191040,6 @@
             "normalizedLemma": "weiteres",
             "level": "B1",
             "pos": "adj",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "further, farther, more",
                 "on; expresses the continuation of an action"
@@ -192005,8 +191232,6 @@
             "normalizedLemma": "weißer",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "white"
             ],
@@ -192243,8 +191468,6 @@
             "normalizedLemma": "wenigen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "little, few"
             ],
@@ -193301,8 +192524,6 @@
             "normalizedLemma": "wichtige",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "important, relevant, significant, weighty"
             ],
@@ -193347,8 +192568,6 @@
             "normalizedLemma": "wichtigen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "important, relevant, significant, weighty"
             ],
@@ -193390,8 +192609,6 @@
             "normalizedLemma": "wichtigste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "important, relevant, significant, weighty"
             ],
@@ -193433,8 +192650,6 @@
             "normalizedLemma": "wichtigsten",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "important, relevant, significant, weighty"
             ],
@@ -193781,8 +192996,6 @@
             "normalizedLemma": "wilde",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "wild",
                 "wild, unrestrained, raucous",
@@ -193827,8 +193040,6 @@
             "normalizedLemma": "wilden",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "wild",
                 "wild, unrestrained, raucous",
@@ -193961,8 +193172,6 @@
             "normalizedLemma": "winzigen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "minute, tiny"
             ],
@@ -194666,8 +193875,6 @@
             "normalizedLemma": "wolken",
             "level": "B1",
             "pos": "name",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "a surname transferred from the given name"
             ],
@@ -195260,8 +194467,6 @@
             "normalizedLemma": "wunderbare",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "wonderful"
             ],
@@ -195373,8 +194578,6 @@
             "normalizedLemma": "wunderschöne",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "gorgeous, very beautiful"
             ],
@@ -195455,8 +194658,6 @@
             "normalizedLemma": "wundervolle",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "wonderful"
             ],
@@ -196074,8 +195275,6 @@
             "normalizedLemma": "wüste",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "desert, desolate",
                 "messy, chaotic",
@@ -196772,8 +195971,6 @@
             "normalizedLemma": "zentrale",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "central"
             ],
@@ -199220,8 +198417,6 @@
             "normalizedLemma": "zweiter",
             "level": "B1",
             "pos": "num",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "second"
             ],
@@ -199256,8 +198451,6 @@
             "normalizedLemma": "zweites",
             "level": "B1",
             "pos": "num",
-            "article": "das",
-            "gender": "neuter",
             "translations": [
                 "second"
             ],
@@ -199299,8 +198492,6 @@
             "normalizedLemma": "zwillinge",
             "level": "B1",
             "pos": "name",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "Gemini"
             ],
@@ -199806,8 +198997,6 @@
             "normalizedLemma": "ältere",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "old",
                 "ancient",
@@ -200163,8 +199352,6 @@
             "normalizedLemma": "öffentliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "public"
             ],
@@ -200214,8 +199401,6 @@
             "normalizedLemma": "öffentlichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "public"
             ],
@@ -200360,8 +199545,6 @@
             "normalizedLemma": "örtlichen",
             "level": "B1",
             "pos": "adj",
-            "article": "der",
-            "gender": "masculine",
             "translations": [
                 "local"
             ],
@@ -201589,8 +200772,6 @@
             "normalizedLemma": "übliche",
             "level": "B1",
             "pos": "adj",
-            "article": "die",
-            "gender": "feminine",
             "translations": [
                 "usual"
             ],

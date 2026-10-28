@@ -109,8 +109,10 @@ data class Entry(
     val conjugation: Conjugation? = null,
     val topic: String? = null,
 ) {
-    /** Form shown on the front of a recognition card, e.g. "der Baum". */
-    val displayForm: String get() = if (article != null) "$article $lemma" else lemma
+    /** Form shown on the front of a recognition card, e.g. "der Baum".
+     *  The article is a noun feature: adjectives/pronouns must never render "der erster". */
+    val displayForm: String
+        get() = if (partOfSpeech == PartOfSpeech.Noun && article != null) "$article $lemma" else lemma
 
     /** The one example shown on the back of a card; the rest live in Word Details. */
     val primaryExample: ExampleSentence? get() = examples.firstOrNull()
