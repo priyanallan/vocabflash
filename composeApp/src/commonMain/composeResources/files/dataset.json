@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
-    "datasetVersion": "2026.10-public.7",
-    "generatedAt": "2026-10-28T22:42:09.874885607Z",
+    "datasetVersion": "2026.10-public.8",
+    "generatedAt": "2026-10-28T22:45:12.082377516Z",
     "levels": [
         "A1",
         "A2",
@@ -4306,47 +4306,6 @@
             }
         },
         {
-            "id": "a1-das",
-            "lemma": "das",
-            "normalizedLemma": "das",
-            "level": "A1",
-            "pos": "article",
-            "translations": [
-                "the"
-            ],
-            "ipa": [
-                "/das/",
-                "/dɑs/",
-                "/daːs/"
-            ],
-            "examples": [
-                {
-                    "de": "Was ist das?",
-                    "en": "What is it?",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Ich war in den Bergen.",
-                    "en": "I was in the mountains.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Die Ausbildung in dieser Welt enttäuscht mich.",
-                    "en": "Education in this world disappoints me.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Heute ist der 18. Juni und das ist der Geburtstag von Muiriel!",
-                    "en": "Today is June 18th and it is Muiriel's birthday!",
-                    "source": "tatoeba"
-                }
-            ],
-            "sources": {
-                "kaikki": true,
-                "tatoeba": true
-            }
-        },
-        {
             "id": "a1-dass",
             "lemma": "dass",
             "normalizedLemma": "dass",
@@ -4960,57 +4919,6 @@
             }
         },
         {
-            "id": "a1-der",
-            "lemma": "der",
-            "normalizedLemma": "der",
-            "level": "A1",
-            "pos": "pron",
-            "translations": [
-                "who; that; which"
-            ],
-            "ipa": [
-                "/deːr/",
-                "[deːɐ̯]",
-                "[dɛɐ̯]"
-            ],
-            "examples": [
-                {
-                    "de": "Was ist das?",
-                    "en": "What is it?",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Ich war in den Bergen.",
-                    "en": "I was in the mountains.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Ich kenne einen Mann, der das kann.",
-                    "en": "I know a man who can do that.",
-                    "source": "kaikki"
-                },
-                {
-                    "de": "Morgen wird er auf dem Mond landen.",
-                    "en": "Tomorrow, he will land on the moon.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Die Ausbildung in dieser Welt enttäuscht mich.",
-                    "en": "Education in this world disappoints me.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Heute ist der 18. Juni und das ist der Geburtstag von Muiriel!",
-                    "en": "Today is June 18th and it is Muiriel's birthday!",
-                    "source": "tatoeba"
-                }
-            ],
-            "sources": {
-                "kaikki": true,
-                "tatoeba": true
-            }
-        },
-        {
             "id": "a1-des",
             "lemma": "des",
             "normalizedLemma": "des",
@@ -5092,61 +5000,6 @@
                 {
                     "de": "Ich werde mir Mühe geben, dich nicht beim Lernen zu stören.",
                     "en": "I'll do my best not to disturb your studying.",
-                    "source": "tatoeba"
-                }
-            ],
-            "sources": {
-                "kaikki": true,
-                "tatoeba": true
-            }
-        },
-        {
-            "id": "a1-die",
-            "lemma": "die",
-            "normalizedLemma": "die",
-            "level": "A1",
-            "pos": "article",
-            "translations": [
-                "who; that; which"
-            ],
-            "ipa": [
-                "/diː/",
-                "/dɪ/"
-            ],
-            "examples": [
-                {
-                    "de": "die Frau",
-                    "en": "the woman",
-                    "source": "kaikki"
-                },
-                {
-                    "de": "die Männer",
-                    "en": "the men",
-                    "source": "kaikki"
-                },
-                {
-                    "de": "Was ist das?",
-                    "en": "What is it?",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Ich war in den Bergen.",
-                    "en": "I was in the mountains.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Morgen wird er auf dem Mond landen.",
-                    "en": "Tomorrow, he will land on the moon.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Die Ausbildung in dieser Welt enttäuscht mich.",
-                    "en": "Education in this world disappoints me.",
-                    "source": "tatoeba"
-                },
-                {
-                    "de": "Heute ist der 18. Juni und das ist der Geburtstag von Muiriel!",
-                    "en": "Today is June 18th and it is Muiriel's birthday!",
                     "source": "tatoeba"
                 }
             ],

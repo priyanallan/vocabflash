@@ -77,13 +77,25 @@ data class PipelineResult(
  */
 class Pipeline(private val toolVersion: String = "0.1.0") {
 
+    /** Headwords that are grammar, not vocabulary; owned by the gender drill / article quiz. */
+    private val ARTICLE_HEADWORDS = setOf("der", "die", "das")
+
     fun run(config: PipelineConfig): PipelineResult {
         val allowedLevels = config.levels.map { it.uppercase() }.toSet()
         val notes = ArrayList<String>()
 
         // 1) Import the normalized wordlist (level authority).
-        val rows = WordListSource.read(config.wordlistPath, allowedLevels)
+        var rows = WordListSource.read(config.wordlistPath, allowedLevels)
             .let { if (config.rowLimit != null) it.take(config.rowLimit) else it }
+        // The definite articles are not vocabulary cards — nouns already carry their article, the
+        // study flow has a gender drill, and a dedicated der/die/das quiz deck is planned. Dropping
+        // them here keeps every rebuild consistent.
+        val articleRows = rows.count { it.lemma.lowercase() in ARTICLE_HEADWORDS }
+        rows = rows.filter { it.lemma.lowercase() !in ARTICLE_HEADWORDS }
+        if (articleRows > 0) {
+            notes.add("Skipped $articleRows wordlist rows for the definite articles " +
+                "(${ARTICLE_HEADWORDS.joinToString("/")}) — covered by the gender drill instead.")
+        }
 
         // 2) Stream Kaikki into a lemma index (bounded memory; whole file is never buffered).
         val index = KaikkiIndex()
