@@ -153,7 +153,15 @@ instead of truncating.
 AKKUSATIV/DATIV example sentences per lemma. Where UD has no sentence for a word, the panel is simply
 omitted (no noisy fallback).
 
-**D57. Dataset schema additions** (all optional; the app degrades gracefully when absent):
+### Round 12 — Audio decision
+
+**D58. Audio — bundle A1 Commons recordings; TTS for A2/B1.**
+At build time, download the Wikimedia Commons recordings Kaikki points at (`sounds[].audio` →
+`mp3_url`), look up each file's **licence and author via the Commons API** (verified: CC BY-SA 4.0,
+author *Jeuwre*), and bundle them for **A1 only** (~576 words, ≈7 MB). The 🔊 button plays bundled
+audio when available and **falls back to TTS** otherwise (A2/B1 words, or A1 words without a
+recording). No runtime network. Attribution required for the bundled recordings.
+*(Verified: Kaikki carries Commons audio for 3,832/3,857 of our words — 99.4%.)*
 ```json
 "examples": [ { "de": "...", "en": "...", "source": "kaikki|tatoeba" } ],
 "related":  [ { "word": "Akte", "relation": "similar|broader|narrower" } ],
