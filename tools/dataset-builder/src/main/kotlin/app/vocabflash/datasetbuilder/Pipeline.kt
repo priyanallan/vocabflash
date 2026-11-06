@@ -9,10 +9,12 @@ import app.vocabflash.datasetbuilder.emit.Tool
 import app.vocabflash.datasetbuilder.emit.UnmatchedLemma
 import app.vocabflash.datasetbuilder.enrich.EnrichLimits
 import app.vocabflash.datasetbuilder.enrich.Enricher
+import app.vocabflash.datasetbuilder.wordlist.WordListRow
 import app.vocabflash.datasetbuilder.wordlist.WordListSource
 import app.vocabflash.datasetbuilder.kaikki.CompactKaikki
 import app.vocabflash.datasetbuilder.kaikki.KaikkiIndex
 import app.vocabflash.datasetbuilder.kaikki.KaikkiReader
+import app.vocabflash.datasetbuilder.match.KaikkiIndexLookup
 import app.vocabflash.datasetbuilder.match.MatchResult
 import app.vocabflash.datasetbuilder.match.Matcher
 import app.vocabflash.datasetbuilder.model.DatasetEntry
@@ -99,7 +101,12 @@ class Pipeline(private val toolVersion: String = "0.1.0") {
 
         // 2) Stream Kaikki into a lemma index (bounded memory; whole file is never buffered).
         val index = KaikkiIndex()
-        val streamStats = KaikkiReader.stream(config.kaikkiPath) { index.add(it) }
+        // Reflexive readings ("sich erinnern") are separate meanings and get their own Entries.
+        val reflexiveByNorm = HashMap<String, CompactKaikki>()
+        val streamStats = KaikkiReader.stream(config.kaikkiPath) { base, reflexive ->
+            index.add(base)
+            reflexive?.let { r -> reflexiveByNorm[normalizeLemma(r.word)] = r }
+        }
 
         // 3) Match + enrich.
         val matcher = Matcher(index::lookup)
@@ -111,6 +118,35 @@ class Pipeline(private val toolVersion: String = "0.1.0") {
         val formToLemmas = HashMap<String, MutableSet<String>>()
         var matched = 0
         var droppedNoTranslation = 0
+        var reflexiveEmitted = 0
+
+        // Guarantee id uniqueness while keeping ids deterministic. Collisions happen only when the
+        // same lemma+level+pos repeats in the source; they are reported, never hidden.
+        fun unique(entry: DatasetEntry): DatasetEntry {
+            val seen = seenIds[entry.id] ?: run {
+                seenIds[entry.id] = 1
+                return entry
+            }
+            seenIds[entry.id] = seen + 1
+            val suffixed = entry.copy(id = "${entry.id}-$seen")
+            idCollisions.add("${entry.id} → ${suffixed.id} (${entry.level}: ${entry.lemma})")
+            return suffixed
+        }
+
+        // The enricher's "fall back to the base lemma" lookup also consults the REFLEXIVE sibling:
+        // the wordlist row "lohnt" is an inflected form of "lohnen", and "lohnen" exists only as
+        // "sich lohnen" (= to be worthwhile), so its meaning would otherwise disappear. The sibling
+        // is deliberately skipped for a row's own headword, so a split-off reading is never merged
+        // back into the very card it was separated from.
+        fun lookupForRow(row: WordListRow): KaikkiIndexLookup = KaikkiIndexLookup { term ->
+            val base = index.lookup(term)
+            val ownHeadword = normalizeLemma(term) == normalizeLemma(row.lemma)
+            if (base != null && (base.translations.isNotEmpty() || ownHeadword)) {
+                base
+            } else {
+                reflexiveByNorm["sich " + normalizeLemma(term)] ?: base
+            }
+        }
 
         for (row in rows) {
             val kaikki = when (val m = matcher.match(row)) {
@@ -118,29 +154,35 @@ class Pipeline(private val toolVersion: String = "0.1.0") {
                 is MatchResult.Unmatched -> { unmatched.add(UnmatchedLemma(row.level, m.lemma)); null }
             }
 
-            val entry = Enricher.enrich(row, kaikki, config.limits, lookupBase = index::lookup)
+            val entry = Enricher.enrich(row, kaikki, config.limits, lookupBase = lookupForRow(row))
+
+            // A REFLEXIVE reading of the same verb is a different meaning with different grammar
+            // ("erinnern" = to remind; "sich erinnern" = to remember) — it gets its own card. Some
+            // verbs are ONLY reflexive ("sich waschen"), so this is built before the drop check
+            // below, otherwise those words would vanish from the Dataset entirely.
+            val reflexive = reflexiveByNorm["sich " + normalizeLemma(row.lemma)]
+            val reflexiveEntry = if (reflexive == null) {
+                null
+            } else {
+                val reflRow = row.copy(lemma = reflexive.word)
+                Enricher.enrich(reflRow, reflexive, config.limits, lookupBase = lookupForRow(reflRow))
+                    .takeIf { it.translations.isNotEmpty() }
+            }
+
             // A card without any meaning is unusable in both study directions; wordlist rows like
             // "bist"/"warst"/"geschworen" are inflected verb forms, not vocabulary. Drop them and
             // say so in the QA report rather than shipping cards that show "—".
             if (entry.translations.isEmpty()) {
-                droppedNoTranslation++
-                continue
-            }
-            registerForms(formToLemmas, row.lemma, kaikki)
-
-            // Guarantee id uniqueness while keeping ids deterministic. Collisions happen only when
-            // the same lemma+level+pos repeats in the source; they are reported, never hidden.
-            val seen = seenIds[entry.id]
-            val finalEntry = if (seen == null) {
-                seenIds[entry.id] = 1
-                entry
+                if (reflexiveEntry == null) droppedNoTranslation++
             } else {
-                seenIds[entry.id] = seen + 1
-                val suffixed = entry.copy(id = "${entry.id}-$seen")
-                idCollisions.add("${entry.id} → ${suffixed.id} (${entry.level}: ${entry.lemma})")
-                suffixed
+                registerForms(formToLemmas, row.lemma, kaikki)
             }
-            entries.add(finalEntry)
+
+            if (entry.translations.isNotEmpty()) entries.add(unique(entry))
+            if (reflexiveEntry != null) {
+                entries.add(unique(reflexiveEntry))
+                reflexiveEmitted++
+            }
         }
 
         if (droppedNoTranslation > 0) {
@@ -266,8 +308,14 @@ class Pipeline(private val toolVersion: String = "0.1.0") {
             idCollisions = idCollisions,
             unmatchedLemmas = unmatched,
             notes = buildList {
-                add("Committed manually from the official Wortliste PDFs; PDFs are never read here.")
+                add("Level-tagged wordlist supplied on the command line; it is never read from PDFs here.")
                 add("Enrichment fields absent in Kaikki are left null (never fabricated).")
+                add(
+                    "$reflexiveEmitted reflexive readings (\"sich …\") were split out of their base verb " +
+                        "into Entries of their own: \"erinnern\" (to remind) and \"sich erinnern\" (to " +
+                        "remember) are different meanings. Such an Entry reuses the verb's Kaikki " +
+                        "paradigm and never carries an article, plural or gender.",
+                )
                 if (streamStats.linesSkipped > 0) {
                     add("${streamStats.linesSkipped} Kaikki lines were unparseable and skipped.")
                 }

@@ -15,7 +15,7 @@ import kotlin.test.assertNull
 class KaikkiParserTest {
 
     private fun parse(jsonText: String): CompactKaikki =
-        KaikkiParser.parse("erste", Json.parseToJsonElement(jsonText).jsonObject)
+        KaikkiParser.parse("erste", Json.parseToJsonElement(jsonText).jsonObject).base
 
     @Test
     fun inflectionGlossesAreNotTranslations() {

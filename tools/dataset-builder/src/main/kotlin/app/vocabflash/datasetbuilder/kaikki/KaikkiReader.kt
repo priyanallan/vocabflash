@@ -24,7 +24,7 @@ data class StreamStats(
  */
 object KaikkiReader {
 
-    fun stream(path: Path, onEntry: (CompactKaikki) -> Unit): StreamStats {
+    fun stream(path: Path, onEntry: (CompactKaikki, CompactKaikki?) -> Unit): StreamStats {
         var lines = 0L
         var parsed = 0L
         var skipped = 0L
@@ -43,7 +43,7 @@ object KaikkiReader {
                     skipped++
                 } else {
                     parsed++
-                    onEntry(entry)
+                    onEntry(entry.base, entry.reflexive)
                 }
             }
         }

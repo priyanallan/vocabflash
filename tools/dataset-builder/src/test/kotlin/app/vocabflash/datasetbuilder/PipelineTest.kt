@@ -127,6 +127,102 @@ class PipelineTest {
     }
 
     @Test
+    fun `reflexive senses become their own entry`() {
+        val out = createTempDirectory("dataset-builder-refl-test")
+        val kaikki = out.resolve("refl.jsonl")
+        val laufen = """
+            {"word":"laufen","lang":"German","lang_code":"de","pos":"verb",
+             "senses":[
+               {"glosses":["to run"],"translations":[{"lang":"English","word":"to run"}]},
+               {"glosses":["to jog oneself"],"tags":["reflexive"],
+                "translations":[{"lang":"English","word":"to jog oneself"}]}],
+             "forms":[{"form":"laufen","tags":["infinitive"]},
+                      {"form":"lief","tags":["past","third-person","singular"]},
+                      {"form":"gelaufen","tags":["past","participle"]}]}
+        """.trimIndent().replace("\n", "")
+        Files.writeString(kaikki, laufen)
+
+        val result = runPipeline(kaikki, out)
+        val byId = result.entries.associateBy { it.id }
+
+        // The plain reading keeps only its own meaning…
+        val base = assertNotNull(byId["a1-laufen-verb"])
+        assertEquals(listOf("to run"), base.translations)
+        assertEquals("laufen", base.verb?.infinitive)
+        // …and the reflexive reading becomes a separate Entry with its own id.
+        val reflexive = assertNotNull(byId["a1-sich-laufen-verb"])
+        assertEquals("sich laufen", reflexive.lemma)
+        assertEquals(listOf("to jog oneself"), reflexive.translations)
+        // Reflexives conjugate like their verb, so the Kaikki paradigm carries over; only the
+        // infinitive is rewritten with the pronoun, which is how the learner meets the word.
+        val verb = assertNotNull(reflexive.verb)
+        assertEquals("sich laufen", verb.infinitive)
+        assertEquals("lief", verb.praeteritum)
+        assertEquals("gelaufen", verb.partizipII)
+        // One extra Entry over the surviving wordlist rows: this fixture's Kaikki file describes
+        // only "laufen", so "schön" has no translation at all and is dropped (see the drop rule).
+        assertEquals(
+            setOf("a1-haus-noun", "a1-laufen-verb", "a1-sich-laufen-verb", "a2-unbekanntwort-noun"),
+            byId.keys,
+        )
+        assertEquals(4, result.qa.emittedEntries)
+    }
+
+    @Test
+    fun `a verb that is only reflexive keeps its card as sich-lemma`() {
+        val out = createTempDirectory("dataset-builder-refl-only")
+        val kaikki = out.resolve("only-refl.jsonl")
+        // "beeilen" exists in Wiktionary with a single reflexive sense: the learner word IS
+        // "sich beeilen". Splitting must not drop the vocabulary item along with its base entry.
+        Files.writeString(
+            kaikki,
+            """
+            {"word":"laufen","lang":"German","lang_code":"de","pos":"verb","senses":[
+             {"glosses":["to hurry","to hasten"],"tags":["reflexive","weak"]}]}
+            """.trimIndent().replace("\n", ""),
+        )
+        val byId = runPipeline(kaikki, out).entries.associateBy { it.id }
+        assertTrue("a1-sich-laufen-verb" in byId.keys, "reflexive card missing")
+        assertTrue("a1-laufen-verb" !in byId.keys, "no meaningless non-reflexive card should ship")
+        assertEquals(
+            listOf("to hurry", "to hasten"),
+            byId.getValue("a1-sich-laufen-verb").translations,
+        )
+    }
+
+    @Test
+    fun `an inflected form line is never turned into a sich form`() {
+        val out = createTempDirectory("dataset-builder-refl-formof")
+        val kaikki = out.resolve("formof.jsonl")
+        val wordlist = out.resolve("wordlist.tsv")
+        // Wordlist row "lohnt" is an inflected form; "lohnen" exists only reflexively.
+        Files.writeString(wordlist, "lemma\tlevel\tpos\nlohnt\tA2\tverb\n")
+        Files.writeString(
+            kaikki,
+            """
+            {"word":"lohnt","lang":"German","lang_code":"de","pos":"verb","senses":[
+             {"glosses":["inflection of lohnen:"],"tags":["form-of","present","third-person","singular"]}]}
+            """.trimIndent().replace("\n", "") + "\n" +
+                """
+            {"word":"lohnen","lang":"German","lang_code":"de","pos":"verb","senses":[
+             {"glosses":["to be worthwhile"],"tags":["reflexive","weak"]}]}
+            """.trimIndent().replace("\n", ""),
+        )
+        val config = PipelineConfig(
+            wordlistPath = wordlist,
+            kaikkiPath = kaikki,
+            outputDir = out,
+            datasetVersion = "form-of-test",
+            levels = listOf("A1", "A2", "B1"),
+            limits = EnrichLimits(),
+        )
+        val byId = Pipeline().run(config).entries.associateBy { it.id }
+        assertTrue("sich lohnt" !in byId.values.map { it.lemma }, "nonsense reflexive headword emitted")
+        // The inflected row still finds its meaning through the reflexive reading of its lemma.
+        assertTrue("to be worthwhile" in byId.getValue("a2-lohnt-verb").translations)
+    }
+
+    @Test
     fun `level filter drops levels not requested`() {
         val out = createTempDirectory("dataset-builder-level-test")
         val config = PipelineConfig(

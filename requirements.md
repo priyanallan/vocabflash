@@ -155,7 +155,8 @@ omitted (no noisy fallback).
 
 ### Round 12 — Audio decision
 
-**D58. Audio — bundle A1 Commons recordings; TTS for A2/B1.**
+**D64. Audio — bundle A1 Commons recordings; TTS for A2/B1.**
+*(Renumbered from D58, which the Grammar Deck round had already taken.)*
 At build time, download the Wikimedia Commons recordings Kaikki points at (`sounds[].audio` →
 `mp3_url`), look up each file's **licence and author via the Commons API** (verified: CC BY-SA 4.0,
 author *Jeuwre*), and bundle them for **A1 only** (~576 words, ≈7 MB). The 🔊 button plays bundled
@@ -172,7 +173,24 @@ recording). No runtime network. Attribution required for the bundled recordings.
 Sources for these: **Tatoeba** (examples, CC BY 2.0 FR), **OdeNet** (related, CC BY-SA 4.0),
 **UD German GSD** (case usage, CC BY-SA 4.0), **Kaikki** (verb forms, CC BY-SA 4.0).
 
-### Round 12 — Grammar Deck
+### Round 13 — Reflexive readings
+
+**D65. Reflexive readings are their own Entry.** Wiktionary/Kaikki does not list `sich erinnern` as a
+separate lemma — it tags the reflexive *sense* of `erinnern` (`tags: ["reflexive"]`). Merging that
+sense into the base card showed "to remind / to remember" on one card, which is wrong: they are
+different verbs for a learner (`erinnern` = to remind somebody, `sich erinnern` = to remember).
+`dataset-builder` therefore splits every reflexive sense of a German verb into a second Entry headed
+`sich <lemma>`, carrying only that sense's glosses and its own sense examples. **175** such Entries
+exist in `2026.10-public.9`.
+- The verb's Kaikki **paradigm is reused, not fabricated**: a reflexive verb conjugates exactly like
+  its verb (`sich waschen · wusch · gewaschen`); only the infinitive is re-headed with the pronoun.
+- Reflexive Entries never carry an article, gender or plural, and never a merged non-reflexive gloss.
+- Verbs that exist **only** reflexively (`sich waschen`, `sich beeilen`, `sich verlieben`, …) yield
+  exactly one Entry — the `sich …` one. Their wordlist row would otherwise be dropped for having no
+  non-reflexive senses.
+- Inflected-form lines (`lohnt`, `schäme`, `verlobte`) are **never** re-headed as `sich lohnt`; an
+  inflected row still resolves its meaning through the reflexive reading of its base lemma.
+
 
 **D58. Grammar Deck — a separate, browse-only reference deck below the Vocabulary Deck.**
 Opening it shows a **grid of Grammar Concepts** with the concept title above each snippet; tapping

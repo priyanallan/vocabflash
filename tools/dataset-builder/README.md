@@ -103,6 +103,15 @@ export JAVA_HOME=…            # JDK 21
   --dataset-version 2026.10-public.1"
 ```
 
+The exact command used for the bundled Dataset is captured in **`rebuild.sh`**, which reads the inputs
+from `input/` and stamps the version you pass:
+
+```bash
+cd tools/dataset-builder
+./rebuild.sh 2026.10-public.9
+cp out/dataset.json ../../composeApp/src/commonMain/composeResources/files/dataset.json
+```
+
 ### CLI
 
 ```

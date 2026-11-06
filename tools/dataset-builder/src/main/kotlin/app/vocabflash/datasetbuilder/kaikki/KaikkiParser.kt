@@ -67,12 +67,40 @@ object KaikkiParser {
         return words.all { it in DECLENSION_WORDS }
     }
 
-    fun parse(word: String, obj: JsonObject): CompactKaikki {
+    fun parse(word: String, obj: JsonObject): KaikkiParsed {
         val pos = obj.str("pos")
         val posKey = pos?.lowercase()
         val senseObjs = obj.arr("senses")?.mapNotNull { it as? JsonObject }.orEmpty()
+        val plainSenses = senseObjs.filter { "reflexive" !in it.tags() }
+        val reflexiveSenses = senseObjs.filter { "reflexive" in it.tags() }
 
-        val gender = extractGender(obj, senseObjs)
+        val base = build(word, pos, posKey, obj, plainSenses, reflexiveUsage = false)
+
+        // A REFLEXIVE sense of the same verb is a different meaning with different grammar
+        // ("erinnern" = to remind; "sich erinnern" = to remember). It becomes its own Entry,
+        // mirroring how learner resources teach reflexives. Only headword lines are split — an
+        // inflected-form line ("lohnt", "schäme") would yield nonsense like "sich lohnt".
+        val isInflectedFormLine = senseObjs.any { "form-of" in it.tags() }
+        val reflexive = if (posKey == "verb" && reflexiveSenses.isNotEmpty() && !isInflectedFormLine) {
+            build("sich " + word, pos, posKey, obj, reflexiveSenses, reflexiveUsage = true)
+        } else {
+            null
+        }
+        return KaikkiParsed(base = base, reflexive = reflexive)
+    }
+
+    private fun build(
+        word: String,
+        pos: String?,
+        posKey: String?,
+        obj: JsonObject,
+        senseObjs: List<JsonObject>,
+        reflexiveUsage: Boolean,
+    ): CompactKaikki {
+        // Gender/plural belong to nouns; a reflexive verb usage has none of its own.
+        val gender = if (reflexiveUsage) null else extractGender(obj, senseObjs)
+        // The forms are NOT dropped: "sich waschen" conjugates exactly like "waschen" — Kaikki only
+        // records the paradigm once, so the reflexive Entry reuses it (the pronoun is separate).
         val forms = obj.arr("forms")?.mapNotNull { it as? JsonObject }.orEmpty()
 
         // Inflection fields only make sense for the matching part of speech.
@@ -86,7 +114,11 @@ object KaikkiParser {
         }
 
         val infinitive = if (posKey == "verb") {
-            forms.firstOrNull { "infinitive" in it.tags() }?.str("form")
+            if (reflexiveUsage) {
+                word // Kaikki's infinitive form is the bare verb; the headword carries the pronoun.
+            } else {
+                forms.firstOrNull { "infinitive" in it.tags() }?.str("form")
+            }
         } else {
             null
         }
@@ -293,7 +325,13 @@ internal val KAIKKI_JSON: Json = Json {
     explicitNulls = false
 }
 
-internal fun parseKaikkiLine(line: String): CompactKaikki? {
+/** One Kaikki line, split into its plain and REFLEXIVE readings (D-refl). */
+data class KaikkiParsed(
+    val base: CompactKaikki,
+    val reflexive: CompactKaikki?,
+)
+
+internal fun parseKaikkiLine(line: String): KaikkiParsed? {
     val element: JsonElement = KAIKKI_JSON.parseToJsonElement(line)
     val obj = element as? JsonObject ?: return null
     val word = (obj["word"] as? JsonPrimitive)?.contentOrNull?.takeIf { it.isNotBlank() } ?: return null
