@@ -153,16 +153,7 @@ instead of truncating.
 AKKUSATIV/DATIV example sentences per lemma. Where UD has no sentence for a word, the panel is simply
 omitted (no noisy fallback).
 
-### Round 12 — Audio decision
-
-**D64. Audio — bundle A1 Commons recordings; TTS for A2/B1.**
-*(Renumbered from D58, which the Grammar Deck round had already taken.)*
-At build time, download the Wikimedia Commons recordings Kaikki points at (`sounds[].audio` →
-`mp3_url`), look up each file's **licence and author via the Commons API** (verified: CC BY-SA 4.0,
-author *Jeuwre*), and bundle them for **A1 only** (~576 words, ≈7 MB). The 🔊 button plays bundled
-audio when available and **falls back to TTS** otherwise (A2/B1 words, or A1 words without a
-recording). No runtime network. Attribution required for the bundled recordings.
-*(Verified: Kaikki carries Commons audio for 3,832/3,857 of our words — 99.4%.)*
+**D57. Dataset schema additions** (all optional; the app degrades gracefully when absent):
 ```json
 "examples": [ { "de": "...", "en": "...", "source": "kaikki|tatoeba" } ],
 "related":  [ { "word": "Akte", "relation": "similar|broader|narrower" } ],
@@ -173,24 +164,7 @@ recording). No runtime network. Attribution required for the bundled recordings.
 Sources for these: **Tatoeba** (examples, CC BY 2.0 FR), **OdeNet** (related, CC BY-SA 4.0),
 **UD German GSD** (case usage, CC BY-SA 4.0), **Kaikki** (verb forms, CC BY-SA 4.0).
 
-### Round 13 — Reflexive readings
-
-**D65. Reflexive readings are their own Entry.** Wiktionary/Kaikki does not list `sich erinnern` as a
-separate lemma — it tags the reflexive *sense* of `erinnern` (`tags: ["reflexive"]`). Merging that
-sense into the base card showed "to remind / to remember" on one card, which is wrong: they are
-different verbs for a learner (`erinnern` = to remind somebody, `sich erinnern` = to remember).
-`dataset-builder` therefore splits every reflexive sense of a German verb into a second Entry headed
-`sich <lemma>`, carrying only that sense's glosses and its own sense examples. **175** such Entries
-exist in `2026.10-public.9`.
-- The verb's Kaikki **paradigm is reused, not fabricated**: a reflexive verb conjugates exactly like
-  its verb (`sich waschen · wusch · gewaschen`); only the infinitive is re-headed with the pronoun.
-- Reflexive Entries never carry an article, gender or plural, and never a merged non-reflexive gloss.
-- Verbs that exist **only** reflexively (`sich waschen`, `sich beeilen`, `sich verlieben`, …) yield
-  exactly one Entry — the `sich …` one. Their wordlist row would otherwise be dropped for having no
-  non-reflexive senses.
-- Inflected-form lines (`lohnt`, `schäme`, `verlobte`) are **never** re-headed as `sich lohnt`; an
-  inflected row still resolves its meaning through the reflexive reading of its base lemma.
-
+### Round 12 — Grammar Deck
 
 **D58. Grammar Deck — a separate, browse-only reference deck below the Vocabulary Deck.**
 Opening it shows a **grid of Grammar Concepts** with the concept title above each snippet; tapping
@@ -221,6 +195,39 @@ case table (and verb conjugation) from Kaikki `de-ndecl`/`de-conj` tagged forms 
 
 **D63. Grammar scope — A1 content first, structure for A1–B1.** `grammar.json` schema is
 level-agnostic; B2 later is appended data, no schema change.
+
+### Round 13 — Audio
+
+**D64. Audio — TTS only; no bundled recordings.** *(Supersedes the earlier proposal to bundle
+Wikimedia Commons audio for A1.)*
+Audio comes from the native OS speech synthesiser (D9, D42): offline, 0 MB, no build-time download.
+The 🔊 button on the card back calls `Speech.speak(entry.displayForm)` and there is one code path for
+every word — no `audioUrl` field on `Entry`, no Commons fetch in `dataset-builder`, no per-file
+licence/author tracking, nothing added to the Attribution screen.
+*Rejected: bundling the recordings Kaikki points at.* They are verified available (`sounds[].audio`
+→ `mp3_url` for 3,832/3,857 of our words, CC BY-SA 4.0, author *Jeuwre*), but the cost was ≈7 MB of
+APK, a Commons API dependency in the build, and attribution bookkeeping per file — for a pronunciation
+gain over system TTS that does not justify it. The earlier A1-only split also bought nothing: it made
+audio quality depend on a word's CEFR level. Revisit only if TTS proves inadequate on a real device,
+in which case Piper (engine MIT, voice CC0, D42) is the more self-contained option than Commons files.
+
+### Round 14 — Reflexive readings
+
+**D65. Reflexive readings are their own Entry.** Wiktionary/Kaikki does not list `sich erinnern` as a
+separate lemma — it tags the reflexive *sense* of `erinnern` (`tags: ["reflexive"]`). Merging that
+sense into the base card showed "to remind / to remember" on one card, which is wrong: they are
+different verbs for a learner (`erinnern` = to remind somebody, `sich erinnern` = to remember).
+`dataset-builder` therefore splits every reflexive sense of a German verb into a second Entry headed
+`sich <lemma>`, carrying only that sense's glosses and its own sense examples. **175** such Entries
+exist in `2026.10-public.9`.
+- The verb's Kaikki **paradigm is reused, not fabricated**: a reflexive verb conjugates exactly like
+  its verb (`sich waschen · wusch · gewaschen`); only the infinitive is re-headed with the pronoun.
+- Reflexive Entries never carry an article, gender or plural, and never a merged non-reflexive gloss.
+- Verbs that exist **only** reflexively (`sich waschen`, `sich beeilen`, `sich verlieben`, …) yield
+  exactly one Entry — the `sich …` one. Their wordlist row would otherwise be dropped for having no
+  non-reflexive senses.
+- Inflected-form lines (`lohnt`, `schäme`, `verlobte`) are **never** re-headed as `sich lohnt`; an
+  inflected row still resolves its meaning through the reflexive reading of its base lemma.
 
 **D15. Onboarding — single screen: level picker + "study all my levels" toggle.**
 Level selection only filters which Entries become Cards; freely changeable. Placement quiz deferred.
@@ -349,7 +356,8 @@ at the cost of ~20–60 MB — fall back to system TTS.
 ## 3. Open Questions / Backlog
 
 - **B2 content** — no free standalone Goethe B2 list; decide source when B2 is started (D10).
-- **Audio** — deferred (D9); pick TTS or recorded audio when implemented.
+- **Audio** — settled: native TTS only, no bundled recordings (D42, D64). Revisit only if TTS
+  pronunciation proves inadequate on a real device.
 - **Typing/spelling mode** — next study mode after v1 modes ship (D8).
 - **Placement quiz, cloze, listening** — deferred (need enrichment data).
 - **Accessibility** — revisit if published (D22).
@@ -424,8 +432,8 @@ Recommended tech stack for a lightweight offline mobile app (from user's table, 
   **IPA**, so a separate IPA source is usually unnecessary. FreeDict/Ding (GPL/AGPL) and
   dict.cc/LEO/Linguee/DeepL (proprietary, no redistribution) were rejected.
 - **IPA:** Kaikki `sounds[]` primarily; WikiPron (CC BY-SA, ~2 MB) optional supplement.
-- **Audio:** native OS TTS (0 MB); optional fully-bundled **Piper** (engine MIT, voice CC0) if voice
-  quality/offline reliability matters.
+- **Audio:** native OS TTS (0 MB); no recorded audio is bundled (D64). Optional fully-bundled
+  **Piper** (engine MIT, voice CC0) if voice quality/offline reliability matters.
 - Open sources require an **attribution screen**; CC BY-SA is share-alike. The Goethe Dataset
   (ADR-0002) remains separate and private-only.
 - Entry model gains/wires up: `ipa`, and enrichment fields fed from the dictionary (D7).
